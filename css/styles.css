@@ -447,19 +447,16 @@ button { font-family: inherit; }
   transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
 }
 .about-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
-.about-card:nth-child(2) { margin-left: clamp(0rem, 3vw, 2.5rem); }
-.about-card:nth-child(3) { margin-left: clamp(0rem, 6vw, 5rem); }
 .about-card h3 { font-size: 1.12rem; margin-bottom: 0.4rem; }
 .about-card p { margin: 0; color: var(--muted); font-size: var(--text-sm); line-height: 1.7; }
 .about-card__icon {
   display: inline-flex; width: 44px; height: 44px;
   align-items: center; justify-content: center;
   border-radius: 12px;
-  background: var(--tint); color: var(--green-ink);
+  background: var(--tint); color: var(--green);
   margin-bottom: 0.9rem;
 }
 .about-card__icon svg { width: 24px; height: 24px; }
-.about-card--accent { border-top: 3px solid var(--green); }
 
 /* ============================================================
    What we do — capability grid
@@ -1418,7 +1415,6 @@ button { font-family: inherit; }
   .intel__grid, .retained__grid, .global__grid { grid-template-columns: 1fr; }
   .retained__number { max-width: 300px; }
   .about__grid { grid-template-columns: 1fr; }
-  .about-card:nth-child(2), .about-card:nth-child(3) { margin-left: 0; }
 }
 
 @media (max-width: 52em) {
