@@ -9,23 +9,26 @@ brand palette, messaging and credibility intact.
 
 No framework, no build step. Semantic HTML5, modern CSS (custom properties,
 `clamp()` fluid type, CSS grid, scroll-driven reveals) and ~280 lines of
-vanilla JS. Serve the folder with any static server:
+vanilla JS. Serve the repo root with any static server:
 
 ```sh
-python3 -m http.server 8742 --directory oakleaf-capabilities
+python3 -m http.server 8742
 ```
+
+Live at **cap.oakleafpartnership.com** (Vercel, auto-deploys from `main`),
+with a mirror at karlhelliwell.github.io/Claude (GitHub Pages).
 
 ## Structure
 
 ```
-oakleaf-capabilities/
 ├── index.html        # one-page site, JSON-LD structured data inline
 ├── css/styles.css    # design tokens (:root) + components + breakpoints
 ├── js/main.js        # nav, scrollspy, counters, parallax, carousel, filters
-└── assets/           # imagery extracted from the source Capabilities PDF
-    ├── logos/        # 34 client logo tiles (sliced from the PDF logo wall)
-    ├── people/       # testimonial portraits + organisation logos
-    └── community/    # community tiles (Academy, podcast, ProudHR, WOI…)
+├── assets/           # imagery extracted from the source Capabilities PDF
+│   ├── logos/        # 34 client logo tiles (sliced from the PDF logo wall)
+│   ├── people/       # testimonial portraits + organisation logos
+│   └── community/    # community tiles (Academy, podcast, ProudHR, WOI…)
+└── oakleaf-homepage/ # earlier homepage redesign project (separate)
 ```
 
 ## Design system
@@ -36,7 +39,8 @@ Palette sampled directly from the Capabilities document:
   mint `#a1fed0`
 - **Teals/blues** — bright teal `#26b2df`, petrol `#166484`, navy ink
   `#0e3a52`, blue `#1e72c6`, sky `#48bafe`
-- **Type** — Outfit (300–700), fluid sizes via `clamp()`
+- **Type** — DM Sans (200 display titles, 300 stat numerals, 500 component
+  headings) + Inter Tight (300 body), fluid sizes via `clamp()`
 
 ## Sections
 

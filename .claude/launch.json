@@ -4,7 +4,11 @@
     {
       "name": "oakleaf-capabilities",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8742", "--directory", "oakleaf-capabilities"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8742"
+      ],
       "port": 8742
     }
   ]
