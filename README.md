@@ -52,11 +52,19 @@ Global Reach (arc map + region bars) → Community (hover tiles) → Client wall
 (sector filtering) → Testimonials (swipeable carousel) → Contact (split CTA
 with a follow-up request form: name, email, phone, industry sector).
 
-The form posts via FormSubmit (`formsubmit.co`) to karlhelliwell@oakleaf.group
-— the first real submission triggers a one-time activation email to that
-address which must be confirmed before messages are forwarded. If the request
-fails (offline, blocked), the form falls back to opening the visitor's email
-client with a prefilled message to the same address.
+The form posts to `/api/follow-up`, a Vercel serverless function
+([api/follow-up.js](api/follow-up.js)) that validates the submission and
+relays it via Mailgun. Configure in Vercel → Settings → Environment Variables:
+
+- `MAILGUN_API_KEY` — Mailgun private API key
+- `MAILGUN_DOMAIN` — verified sending domain (e.g. `mg.oakleafpartnership.com`)
+- `MAILGUN_REGION` — `eu` (default) or `us`
+- `FORM_RECIPIENT` — destination inbox (defaults to karlhelliwell@oakleaf.group)
+
+If the endpoint is unavailable, the form falls back to opening the visitor's
+email client addressed to enquiries@oakleafpartnership.com. Note the GitHub
+Pages mirror has no serverless runtime, so the form only fully works on the
+Vercel-served domain.
 
 ## Accessibility & performance
 

@@ -271,7 +271,6 @@
   /* ----------------------------------------------------------
      Follow-up request form
      ---------------------------------------------------------- */
-  const FORM_RECIPIENT = "karlhelliwell@oakleaf.group";
   const form = document.getElementById("follow-up-form");
   const status = document.getElementById("form-status");
 
@@ -299,10 +298,7 @@
       name: data.get("name"),
       email: data.get("email"),
       phone: data.get("phone"),
-      "industry sector": data.get("sector"),
-      _subject: "Follow-up request — Oakleaf Capabilities site",
-      _template: "table",
-      _captcha: "false",
+      sector: data.get("sector"),
     };
 
     const submitBtn = form.querySelector(".contact-form__submit");
@@ -310,7 +306,7 @@
     submitBtn.textContent = "Sending…";
 
     try {
-      const res = await fetch("https://formsubmit.co/ajax/" + FORM_RECIPIENT, {
+      const res = await fetch("/api/follow-up", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(payload),
@@ -325,10 +321,10 @@
         "Follow-up request\n\nFull name: " + payload.name +
         "\nEmail: " + payload.email +
         "\nPhone: " + payload.phone +
-        "\nIndustry sector: " + payload["industry sector"]
+        "\nIndustry sector: " + payload.sector
       );
-      window.location.href = "mailto:" + FORM_RECIPIENT +
-        "?subject=" + encodeURIComponent(payload._subject) + "&body=" + body;
+      window.location.href = "mailto:enquiries@oakleafpartnership.com" +
+        "?subject=" + encodeURIComponent("Follow-up request — Oakleaf Capabilities site") + "&body=" + body;
       setStatus("We couldn't send your request directly, so we've opened your email client instead — just press send.", false);
       submitBtn.disabled = false;
       submitBtn.textContent = "Request a follow-up";
