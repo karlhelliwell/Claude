@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /oakleaf-homepage/
+
+Sitemap: https://cap.oakleafpartnership.com/sitemap.xml
