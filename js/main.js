@@ -180,17 +180,6 @@
   }
 
   /* ----------------------------------------------------------
-     Capability cards — expand / collapse
-     ---------------------------------------------------------- */
-  document.querySelectorAll(".cap-card").forEach((card) => {
-    const head = card.querySelector(".cap-card__head");
-    head.addEventListener("click", () => {
-      const open = card.classList.toggle("is-open");
-      head.setAttribute("aria-expanded", String(open));
-    });
-  });
-
-  /* ----------------------------------------------------------
      Client logo wall — sector filtering
      ---------------------------------------------------------- */
   const filterBtns = document.querySelectorAll(".filter-btn");
