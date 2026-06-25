@@ -274,6 +274,58 @@
     setTimeout(() => document.getElementById("ff-name").focus({ preventScroll: true }), 650);
   });
 
+  /* ----------------------------------------------------------
+     Floating CTA: Download PDF (browser print-to-PDF)
+     ---------------------------------------------------------- */
+  // Make sure animated counters/bars show their final values in the PDF,
+  // even for sections never scrolled into view.
+  function finalizeForPrint() {
+    document.querySelectorAll("[data-count]").forEach((el) => {
+      el.textContent = formatValue(parseFloat(el.dataset.count), el);
+    });
+    document.querySelectorAll(".reveal").forEach((el) => el.classList.add("is-revealed"));
+    document
+      .querySelectorAll(".intel__chart, .split-bar, .placements__stats, .global__cards")
+      .forEach((el) => el.classList.add("in-view"));
+  }
+  window.addEventListener("beforeprint", finalizeForPrint);
+  document.getElementById("float-pdf").addEventListener("click", () => {
+    finalizeForPrint();
+    window.print();
+  });
+
+  /* ----------------------------------------------------------
+     Floating CTA: Share (Web Share API on mobile, copy fallback)
+     ---------------------------------------------------------- */
+  const shareBtn = document.getElementById("float-share");
+  const toast = document.getElementById("float-toast");
+  let toastTimer;
+  function showToast(message) {
+    toast.textContent = message;
+    toast.classList.add("is-visible");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove("is-visible"), 2400);
+  }
+  shareBtn.addEventListener("click", async () => {
+    const shareData = {
+      title: document.title,
+      text: "Oakleaf Group — Specialist, Boutique HR Capabilities",
+      url: window.location.href,
+    };
+    if (navigator.share) {
+      try { await navigator.share(shareData); } catch (e) { /* user dismissed */ }
+    } else if (navigator.clipboard && navigator.clipboard.writeText) {
+      try {
+        await navigator.clipboard.writeText(shareData.url);
+        showToast("Link copied to clipboard");
+      } catch (e) {
+        showToast(shareData.url);
+      }
+    } else {
+      showToast(shareData.url);
+    }
+  });
+
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     if (!form.checkValidity()) {
