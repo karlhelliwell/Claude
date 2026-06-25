@@ -10,6 +10,27 @@
         "8742"
       ],
       "port": 8742
+    },
+    {
+      "name": "stjohns",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8123",
+        "--directory",
+        "/Users/karl/Documents/GitHub/stjohnthebaptist"
+      ],
+      "port": 8123
+    },
+    {
+      "name": "radarhr",
+      "runtimeExecutable": "sh",
+      "runtimeArgs": [
+        "-c",
+        "cd /Users/karl/Documents/GitHub/radarhr-bd-engine && npm run dev"
+      ],
+      "port": 3000
     }
   ]
 }
