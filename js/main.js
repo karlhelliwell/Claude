@@ -289,10 +289,13 @@
       .forEach((el) => el.classList.add("in-view"));
   }
   window.addEventListener("beforeprint", finalizeForPrint);
-  document.getElementById("float-pdf").addEventListener("click", () => {
-    finalizeForPrint();
-    window.print();
-  });
+  const pdfBtn = document.getElementById("float-pdf");
+  if (pdfBtn) {
+    pdfBtn.addEventListener("click", () => {
+      finalizeForPrint();
+      window.print();
+    });
+  }
 
   /* ----------------------------------------------------------
      Floating CTA: Share (Web Share API on mobile, copy fallback)
