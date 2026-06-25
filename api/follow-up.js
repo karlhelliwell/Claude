@@ -13,7 +13,7 @@ const SECTORS = [
   "Financial Services",
   "Payroll",
   "Executive Search",
-  "Tech, Media & Telco",
+  "Technology, Media & Telco",
   "Consumer",
   "Industry & Science",
   "Reward & Analytics",
