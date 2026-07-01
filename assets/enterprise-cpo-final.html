@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Enterprise CPO — final preview</title>
+<!-- PREVIEW ONLY: loads Open Sans so this local preview resembles your live site. NOT part of the WordPress block. -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800&display=swap" rel="stylesheet"></head>
+<body style="margin:0;background:#f4f4f2;padding:40px 20px;">
+
+<!-- ===================== PASTE EVERYTHING BELOW INTO A WORDPRESS "CUSTOM HTML" BLOCK ===================== -->
+<div class="oak-article">
+<style>
+  .oak-article{
+    --green:#69BC90;
+    --green-dark:#69BC90;
+    --green-deep:#69BC90;
+    --ink:#1f2933;
+    --muted:#5a5a5a;
+    --font-head:"NEU Semi-Bold","Neue Montreal","Helvetica Neue",Arial,sans-serif;
+    --font-body:"Open Sans","Helvetica Neue",Arial,sans-serif;
+    max-width:760px;
+    margin:0 auto;
+    font-family:var(--font-body);
+    line-height:1.6;
+    color:#2b2b2b;
+  }
+  /* body copy in the site body font (Open Sans); headings + names in the site heading font (NEU Semi-Bold) */
+  .oak-article p,.oak-article a,.oak-article span,.oak-article li,.oak-article cite,.oak-article div{font-family:var(--font-body);}
+  .oak-article h2,.oak-article h3,.oak-article .nm{font-family:var(--font-head);}
+  .oak-article .eyebrow{
+    text-transform:uppercase;letter-spacing:.14em;font-size:13px;
+    font-weight:700;color:var(--green-dark);margin:0 0 10px;
+  }
+  .oak-article .meta{
+    font-size:14px;color:var(--muted);margin:0 0 24px;
+    padding-bottom:18px;border-bottom:1px solid #E4E4E4;
+  }
+  .oak-article .lead{
+    font-size:20px;line-height:1.55;color:var(--ink);font-weight:500;
+    margin:0 0 24px;padding-left:20px;border-left:4px solid var(--green);
+  }
+  .oak-article p{margin:0 0 16px;}
+  .oak-article .speaker{color:var(--green-dark);font-weight:700;}
+
+  /* bolder, stand-out section headings */
+  .oak-article h2{
+    font-size:27px;font-weight:800;color:var(--green);line-height:1.22;
+    margin:34px 0 14px;padding:2px 0 2px 16px;border-left:6px solid var(--green);
+  }
+
+  /* event / inline image */
+  .oak-figure{margin:6px 0 24px;}
+  .oak-figure img{width:100%;height:auto;display:block;border-radius:10px;}
+  .oak-figure.ph{
+    min-height:140px;border:2px dashed var(--green);border-radius:10px;
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    color:var(--green-dark);font-weight:700;font-size:14px;background:#eef5ef;padding:22px;
+  }
+  .oak-figure figcaption{font-size:12.5px;color:var(--muted);margin-top:8px;text-align:center;}
+
+  /* pull quotes — premium tiles */
+  .oak-quote{
+    background:#fff;border:1px solid #ECECEC;border-radius:16px;
+    padding:30px 34px 26px;margin:32px 0;box-shadow:0 12px 32px rgba(31,41,51,.07);
+  }
+  .oak-quote::before{
+    content:"\201C";display:block;font-family:Georgia,"Times New Roman",serif;
+    font-size:66px;line-height:.55;color:var(--green);margin:0 0 6px;height:38px;
+  }
+  .oak-quote p{font-size:20px;line-height:1.5;font-weight:600;color:var(--ink);margin:0 0 18px;letter-spacing:-.005em;}
+  .oak-quote cite{
+    display:flex;align-items:center;gap:11px;font-size:12.5px;font-style:normal;
+    font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;
+  }
+  .oak-quote cite::before{content:"";flex:0 0 auto;width:22px;height:2px;background:var(--green);}
+
+  /* key takeaways callout */
+  .oak-takeaways{
+    background:#eef5ef;border:1px solid #d6e8db;border-radius:12px;
+    padding:24px 28px;margin:30px 0;
+  }
+  .oak-takeaways h3{font-size:18px;font-weight:800;color:var(--ink);margin:0 0 14px;}
+  .oak-takeaways ul{list-style:none;margin:0;padding:0;}
+  .oak-takeaways li{position:relative;padding:0 0 0 30px;margin:0 0 12px;font-size:15.5px;line-height:1.5;color:#2b2b2b;}
+  .oak-takeaways li:last-child{margin-bottom:0;}
+  .oak-takeaways li::before{
+    content:"";position:absolute;left:0;top:3px;width:18px;height:18px;border-radius:50%;
+    background:var(--green);
+    background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L19 7"/></svg>');
+    background-size:13px 13px;background-repeat:no-repeat;background-position:center;
+  }
+
+  /* speaker cards — the hero of the lower half */
+  .oak-article .intro{color:var(--muted);margin:0 0 18px;font-size:16px;line-height:1.55;}
+  .oak-speakers{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:20px 0 8px;}
+  .oak-spk{
+    background:#fff;border:1px solid #E4E4E4;border-radius:14px;padding:28px 20px;
+    text-align:center;box-shadow:0 4px 14px rgba(31,41,51,.06);
+  }
+  .oak-spk img{
+    width:112px;height:112px;border-radius:50%;object-fit:cover;
+    display:block;margin:0 auto 16px;border:4px solid var(--green);background:#eef1ea;
+  }
+  .oak-spk .nm{font-size:18px;font-weight:800;color:var(--ink);margin:0 0 4px;line-height:1.25;}
+  .oak-spk .tl{font-size:13px;color:var(--muted);margin:0 0 16px;line-height:1.45;}
+  .oak-spk a.li{
+    display:inline-flex;align-items:center;gap:7px;text-decoration:none;
+    font-size:13px;font-weight:700;color:#fff;background:var(--green);
+    border-radius:7px;padding:9px 18px;
+  }
+  .oak-spk a.li svg{width:15px;height:15px;fill:#fff;}
+
+  /* about boxes */
+  .oak-article .about{
+    background:#f8faf8;border:1px solid #E4E4E4;border-left:5px solid var(--green);
+    border-radius:10px;padding:22px 26px;margin:22px 0;
+  }
+  .oak-article .about h2{margin:0 0 6px;font-size:19px;border-left:0;padding-left:0;font-weight:800;}
+  .oak-article .about p:last-child{margin-bottom:0;}
+  .oak-article .about .logo{display:block;height:auto;max-height:44px;width:auto;margin:0 0 14px;}
+  .oak-article .about .website{display:inline-block;font-size:14px;font-weight:700;color:var(--green-dark);text-decoration:none;}
+
+  /* slim Oakleaf contact (kept understated so the speakers lead) */
+  .oak-contact{
+    display:flex;align-items:center;gap:16px;
+    background:#fff;border:1px solid #E4E4E4;border-radius:10px;
+    padding:14px 18px;margin:26px 0 0;
+  }
+  .oak-contact img{
+    width:58px;height:58px;border-radius:50%;object-fit:cover;flex:0 0 58px;
+    border:2px solid var(--green);background:#eef1ea;
+  }
+  .oak-contact .ct-body{flex:1 1 auto;min-width:0;}
+  .oak-contact .ct-eyebrow{
+    text-transform:uppercase;letter-spacing:.1em;font-size:10.5px;font-weight:700;
+    color:var(--green-dark);margin:0 0 2px;
+  }
+  .oak-contact .nm{font-size:15.5px;font-weight:800;color:var(--ink);margin:0;display:inline;}
+  .oak-contact .tl{font-size:12.5px;color:var(--muted);margin:2px 0 0;}
+  .oak-contact a.li{
+    flex:0 0 auto;text-decoration:none;font-size:13px;font-weight:700;color:#fff;
+    background:var(--green);border-radius:7px;padding:9px 16px;white-space:nowrap;
+  }
+
+  @media (max-width:600px){
+    .oak-speakers{grid-template-columns:1fr;max-width:330px;margin-left:auto;margin-right:auto;}
+    .oak-contact{flex-direction:column;text-align:center;}
+  }
+  @media (max-width:520px){
+    .oak-article .lead{font-size:18px;}
+    .oak-article h2{font-size:23px;}
+    .oak-quote p{font-size:19px;}
+  }
+</style>
+
+  <p class="eyebrow">Insights &middot; HR Leadership</p>
+  <p class="meta">Oakleaf Partnership &nbsp;|&nbsp; In partnership with The Coaching Solution</p>
+
+  <p class="lead">Oakleaf Partnership and The Coaching Solution recently brought senior HR leaders together at The Ivy, Liverpool Street to explore a major shift facing organisations today: the evolution of the Chief People Officer from functional specialist to enterprise leader.</p>
+
+  <figure class="oak-figure ph">Add a photo from the event here (optional) &mdash; e.g. the room at The Ivy, the speakers, or a branded graphic. 1600&times;900.</figure>
+
+  <p>Hosted in partnership with The Coaching Solution, the event also marked the launch of a new collaboration between the two organisations. By combining HR talent expertise with executive coaching, mentoring, leadership development and assessment, the partnership is designed to help businesses respond to increasingly complex people and organisational challenges.</p>
+
+  <p>The discussion was led by <span class="speaker">Liz Jewitt-Cross FCIPD</span> (Managing Director, Future HR), <span class="speaker">Perry Timms</span> (Founder and Chief Energy Officer, PTHR), and <span class="speaker">Selina Van Laere</span> (The Coaching Solution), and focused on how the Chief People Officer role is evolving &mdash; and why future HR leaders will need to operate well beyond the traditional boundaries of the function.</p>
+
+  <h2>From HR leader to enterprise leader</h2>
+  <p>Liz opened the session by setting out the scale of the challenge facing organisations. Leaders today are expected to deliver growth, drive transformation, improve productivity, manage costs, adopt AI, respond to changing workforce expectations and maintain customer trust &mdash; often all at once, and in a context of constant disruption.</p>
+  <p>These challenges rarely sit neatly within a single function. Instead, they cut across people, technology, operations, culture and commercial performance. As a result, the most effective Chief People Officers are no longer focused solely on the people agenda. They are increasingly acting as organisational diagnosticians and enterprise leaders, able to connect insights across the business and translate them into strategic action.</p>
+  <p>This shift demands a broader capability set. Tomorrow&rsquo;s CPO will need strong commercial awareness, financial literacy and enterprise-wide thinking, alongside the ability to influence at executive level, lead transformation and understand organisational effectiveness, systems thinking and emerging technologies such as AI.</p>
+
+  <blockquote class="oak-quote">
+    <p>CPOs are moving beyond being the HR expert in the room to becoming true enterprise leaders &mdash; helping shape strategy, priorities and execution.</p>
+    <cite>Liz Jewitt-Cross FCIPD, Future HR</cite>
+  </blockquote>
+
+  <p>This is a significant step change, and it raises an important question: are future HR leaders equipped and preparing to operate at this level? For years, HR has debated its place at the leadership table. Today, the more pressing question may be whether organisations are ready for what the Chief People Officer role is becoming.</p>
+
+  <h2>The rise of the Enterprise CPO</h2>
+  <p>Perry Timms explored the concept of the Enterprise CPO through the lens of the Polymorphous Organisation &mdash; an enterprise designed to intentionally change shape over time. In this model, structure is not fixed but adaptable. Leadership is not defined purely by hierarchy, but by context. Jobs are no longer seen as static roles, but as fluid combinations of skills, capabilities and outcomes.</p>
+
+  <figure class="oak-figure">
+    <img src="https://www.oakleafpartnership.com/wp-content/uploads/2026/06/9c467fe5-f13f-4b75-a2aa-cd7f0cb148c9_1376x768.webp" alt="The Polymorphic Organisation — the challenges facing organisations sit in the spaces between strategy and execution, technology and humanity, capability and performance, culture and structure, leadership and governance, and adaptation and stability.">
+    <figcaption>The Polymorphous Organisation &mdash; a model from Perry Timms, PTHR</figcaption>
+  </figure>
+  <p>Within this environment, complexity cuts across traditional organisational boundaries. AI is not just a technology issue. It is also a workforce issue, a capability issue, a leadership issue, a redesign issue and ultimately a strategic issue. Culture is shaped not only by stated values, but by operating models, decision rights, incentives, information flows and power structures.</p>
+
+  <blockquote class="oak-quote">
+    <p>Traditional executives optimise within their own function. Enterprise leaders focus on how the whole system performs and adapts.</p>
+    <cite>Perry Timms, PTHR</cite>
+  </blockquote>
+
+  <p>In this context, the Enterprise CPO helps the organisation understand how people, work, technology, leadership, culture and performance interact as a single system.</p>
+
+  <h2>Why coaching and mentoring become strategic infrastructure</h2>
+  <p>Selina Van Laere explored what this shift means for leadership development. As leadership becomes less about hierarchy and more about adaptability, coaching and mentoring are becoming a core part of how organisations build capability.</p>
+  <p>Leaders are expected to navigate ambiguity, balance competing priorities, influence without formal authority, and adapt both themselves and their organisations. Mentoring complements this by providing access to experience and judgement from those who have operated in similar environments. Transition coaching is especially important for senior hires, helping them understand organisational dynamics quickly and avoid early misalignment.</p>
+
+  <blockquote class="oak-quote">
+    <p>Coaching creates space to think &mdash; to reflect, test assumptions and improve decision making.</p>
+    <cite>Selina Van Laere, The Coaching Solution</cite>
+  </blockquote>
+
+  <h2>A new era for people leadership</h2>
+  <p>The role of the Chief People Officer is entering a new phase. Future CPOs will be judged on their ability to help organisations adapt, learn, perform and evolve. This requires understanding capability flow, identifying performance friction and recognising how systems and incentives shape behaviour. It also means viewing AI as a work design and organisational challenge, not just a technology issue.</p>
+  <p>As organisations become more complex and fluid, the Chief People Officer is increasingly one of the most important leadership roles in the enterprise.</p>
+
+  <div class="oak-takeaways">
+    <h3>Key takeaways</h3>
+    <ul>
+      <li>The CPO is becoming an enterprise leader, not solely a people specialist.</li>
+      <li>AI is a work-design and organisational challenge &mdash; not only a technology one.</li>
+      <li>Coaching and mentoring are now strategic infrastructure for building capability.</li>
+      <li>Future CPOs will be judged on how well they help organisations adapt and evolve.</li>
+    </ul>
+  </div>
+
+  <h2>Meet the speakers</h2>
+  <p class="intro">The discussion was led by three leaders shaping the future of people and organisational strategy.</p>
+  <div class="oak-speakers">
+    <div class="oak-spk">
+      <img src="https://www.oakleafpartnership.com/wp-content/uploads/2026/06/Liz.png" alt="Liz Jewitt-Cross">
+      <p class="nm">Liz Jewitt-Cross FCIPD</p>
+      <p class="tl">Managing Director, Future HR</p>
+      <a class="li" href="https://www.linkedin.com/in/lizjewittcross/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+        LinkedIn
+      </a>
+    </div>
+    <div class="oak-spk">
+      <img src="https://www.oakleafpartnership.com/wp-content/uploads/2026/06/Perry.jpg" alt="Perry Timms">
+      <p class="nm">Perry Timms</p>
+      <p class="tl">Founder &amp; Chief Energy Officer, PTHR</p>
+      <a class="li" href="https://www.linkedin.com/in/perrytimms/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+        LinkedIn
+      </a>
+    </div>
+    <div class="oak-spk">
+      <img src="https://www.oakleafpartnership.com/wp-content/uploads/2026/06/Selina.jpg" alt="Selina Van Laere">
+      <p class="nm">Selina Van Laere</p>
+      <p class="tl">The Coaching Solution</p>
+      <a class="li" href="https://www.linkedin.com/in/selinavanlaere/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+        LinkedIn
+      </a>
+    </div>
+  </div>
+
+  <div class="about">
+    <img class="logo" src="https://www.oakleafpartnership.com/wp-content/uploads/2026/06/the-coaching-solution-logo-colour-400px.png" alt="The Coaching Solution">
+    <h2>About The Coaching Solution</h2>
+    <p>The Coaching Solution is an award-winning consultancy providing business-focused development for senior leaders and their teams. They support organisations through coaching, mentoring, communication development and team-based leadership programmes, helping leaders operate effectively in complex environments.</p>
+    <p><a class="website" href="https://thecoachingsolution.co.uk/" target="_blank" rel="noopener">Visit thecoachingsolution.co.uk &rarr;</a></p>
+  </div>
+
+  <div class="about">
+    <img class="logo" src="https://www.oakleafpartnership.com/wp-content/uploads/2026/06/Email-SignOP.png" alt="Oakleaf Partnership">
+    <h2>About Oakleaf Partnership</h2>
+    <p>Oakleaf Partnership is a specialist HR executive search and recruitment firm operating globally across all industry sectors. The firm provides bespoke solutions across the full HR spectrum, including Chief People Officer, HR Director, talent, reward, organisational development and transformation roles.</p>
+    <p>With over 20 years of experience, Oakleaf combines deep market intelligence, an extensive global network and a partnership-led approach to support clients in accessing high-calibre HR talent. Oakleaf is known for its strong relationships within the HR community, its commitment to quality and its ability to deliver tailored search, market mapping and talent solutions that align with each client&rsquo;s strategic objectives.</p>
+  </div>
+
+  <div class="oak-contact">
+    <img src="https://www.oakleafpartnership.com/wp-content/uploads/2026/06/Sarah-A.jpg" alt="Sarah Alexander">
+    <div class="ct-body">
+      <p class="ct-eyebrow">Your Oakleaf contact</p>
+      <p><span class="nm">Sarah Alexander</span></p>
+      <p class="tl">Director HR Search, Oakleaf Partnership</p>
+    </div>
+    <a class="li" href="https://www.oakleafpartnership.com/about-us/our-people/sarah-alexander/" target="_blank" rel="noopener">Get in touch &rarr;</a>
+  </div>
+
+</div>
+<!-- ===================== END — STOP COPYING HERE ===================== -->
+
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Oakleaf at 21 — preview</title>
+<!-- PREVIEW ONLY: loads Open Sans so this local preview resembles your live site. NOT part of the WordPress block. -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800&display=swap" rel="stylesheet"></head>
+<body style="margin:0;background:#f4f4f2;padding:40px 20px;">
+
+<!-- ===================== PASTE EVERYTHING BELOW INTO A WORDPRESS "CUSTOM HTML" BLOCK ===================== -->
+<div class="oak-article">
+<style>
+  .oak-article{
+    --green:#69BC90;
+    --blue:#4C9AD6;
+    --ink:#1f2933;
+    --muted:#5a5a5a;
+    --font-head:"NEU Semi-Bold","Neue Montreal","Helvetica Neue",Arial,sans-serif;
+    --font-body:"Open Sans","Helvetica Neue",Arial,sans-serif;
+    max-width:760px;
+    margin:0 auto;
+    font-family:var(--font-body);
+    line-height:1.6;
+    color:#2b2b2b;
+  }
+  .oak-article p,.oak-article a,.oak-article span,.oak-article li,.oak-article cite,.oak-article div{font-family:var(--font-body);}
+  .oak-article h2,.oak-article h3,.oak-article .nm{font-family:var(--font-head);}
+  .oak-article .eyebrow{
+    text-transform:uppercase;letter-spacing:.14em;font-size:13px;
+    font-weight:700;color:var(--green);margin:0 0 10px;
+  }
+  .oak-article .meta{
+    font-size:14px;color:var(--muted);margin:0 0 24px;
+    padding-bottom:18px;border-bottom:1px solid #E4E4E4;
+  }
+  .oak-article .lead{
+    font-size:20px;line-height:1.55;color:var(--ink);font-weight:500;
+    margin:0 0 24px;padding-left:20px;border-left:4px solid var(--green);
+  }
+  .oak-article p{margin:0 0 16px;}
+
+  /* section headings */
+  .oak-article h2{
+    font-size:27px;font-weight:800;color:var(--green);line-height:1.22;
+    margin:34px 0 14px;padding:2px 0 2px 16px;border-left:6px solid var(--green);
+  }
+
+  /* pull quotes — premium tiles */
+  .oak-quote{
+    background:#fff;border:1px solid #ECECEC;border-radius:16px;
+    padding:30px 34px 28px;margin:32px 0;box-shadow:0 12px 32px rgba(31,41,51,.07);
+  }
+  .oak-quote::before{
+    content:"\201C";display:block;font-family:Georgia,"Times New Roman",serif;
+    font-size:66px;line-height:.55;color:var(--green);margin:0 0 6px;height:38px;
+  }
+  .oak-quote p{font-size:21px;line-height:1.45;font-weight:600;color:var(--ink);margin:0;letter-spacing:-.005em;}
+
+  /* by-the-numbers stat tiles */
+  .oak-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0 10px;}
+  .oak-stat{background:#eef5ef;border:1px solid #d6e8db;border-radius:14px;padding:24px 16px;text-align:center;}
+  .oak-stat .num{font-family:var(--font-head);font-size:38px;font-weight:800;color:var(--green);line-height:1;margin:0 0 8px;}
+  .oak-stat .lbl{font-size:13px;color:var(--muted);line-height:1.45;margin:0;}
+  .oak-source{font-size:12px;color:var(--muted);margin:0 0 8px;font-style:italic;}
+  .oak-stats.blue .oak-stat{background:#eef4fb;border-color:#d3e2f4;}
+  .oak-stats.blue .num{color:var(--blue);}
+
+  /* key takeaways callout */
+  .oak-takeaways{
+    background:#eef5ef;border:1px solid #d6e8db;border-radius:12px;
+    padding:24px 28px;margin:30px 0;
+  }
+  .oak-takeaways h3{font-size:18px;font-weight:800;color:var(--ink);margin:0 0 14px;}
+  .oak-takeaways ul{list-style:none;margin:0;padding:0;}
+  .oak-takeaways li{position:relative;padding:0 0 0 30px;margin:0 0 14px;font-size:15.5px;line-height:1.5;color:#2b2b2b;}
+  .oak-takeaways li:last-child{margin-bottom:0;}
+  .oak-takeaways li::before{
+    content:"";position:absolute;left:0;top:3px;width:18px;height:18px;border-radius:50%;
+    background:var(--green);
+    background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L19 7"/></svg>');
+    background-size:13px 13px;background-repeat:no-repeat;background-position:center;
+  }
+
+  /* about box */
+  .oak-article .about{
+    background:#f8faf8;border:1px solid #E4E4E4;border-left:5px solid var(--green);
+    border-radius:10px;padding:22px 26px;margin:26px 0;
+  }
+  .oak-article .about h2{margin:0 0 6px;font-size:19px;border-left:0;padding-left:0;font-weight:800;}
+  .oak-article .about p:last-child{margin-bottom:0;}
+  .oak-article .about .logo{display:block;height:auto;max-height:44px;width:auto;margin:0 0 14px;}
+
+  /* author sign-off card */
+  .oak-author{
+    display:flex;align-items:center;gap:16px;
+    background:#fff;border:1px solid #E4E4E4;border-radius:10px;
+    padding:16px 18px;margin:26px 0 0;
+  }
+  .oak-author img{
+    width:60px;height:60px;border-radius:50%;flex:0 0 60px;object-fit:cover;
+    border:2px solid var(--green);background:#eef1ea;
+  }
+  .oak-author .ph{
+    width:60px;height:60px;border-radius:50%;flex:0 0 60px;border:2px solid var(--green);
+    background:#eef1ea;display:flex;align-items:center;justify-content:center;
+    font-family:var(--font-head);font-weight:800;color:var(--green);font-size:20px;
+  }
+  .oak-author .ct-eyebrow{
+    text-transform:uppercase;letter-spacing:.1em;font-size:10.5px;font-weight:700;color:var(--green);margin:0 0 3px;
+  }
+  .oak-author .nm{font-size:16px;font-weight:800;color:var(--ink);margin:0;}
+  .oak-author .tl{font-size:12.5px;color:var(--muted);margin:2px 0 0;}
+
+  @media (max-width:600px){
+    .oak-stats{grid-template-columns:1fr;}
+    .oak-author{flex-direction:column;text-align:center;}
+  }
+  @media (max-width:520px){
+    .oak-article .lead{font-size:18px;}
+    .oak-article h2{font-size:23px;}
+    .oak-quote p{font-size:19px;}
+  }
+</style>
+
+  <p class="eyebrow">Insights &middot; Oakleaf at 21</p>
+  <p class="meta">By Richard Colgan, Group Founder &amp; CEO &nbsp;|&nbsp; 4 July 2026</p>
+
+  <p class="lead">As we celebrate the 21st anniversary of Oakleaf Partnership &mdash; and my 26th year working in partnership with the HR profession &mdash; I want to thank all the clients, candidates and friends who have helped us along on this incredible journey.</p>
+
+  <p>Twenty-one years ago, 4th July 2005 was my own personal &ldquo;Independence Day&rdquo;. As an entrepreneur, I soon realised that the motto of my alma mater, the Royal Military Academy Sandhurst &mdash; &ldquo;Serve to Lead&rdquo; &mdash; could not be more relevant: with the power to shape your own destiny comes great responsibility, and no less so than now, as we face an extremely challenging global economic and geopolitical environment. A healthy dose of resilience has proved quite useful, too.</p>
+
+  <h2>A profession under more pressure than ever</h2>
+  <p>As I reflect on the ups and downs of the last 26 years, I see a profession that feels under more pressure than I have ever witnessed. Recent data from the <em>Ultimate Resilience HR Wellbeing Report</em> and Stribe&rsquo;s <em>Big HR Check-in</em> reveals a profession under severe strain in the UK.</p>
+
+  <div class="oak-stats">
+    <div class="oak-stat"><p class="num">44%</p><p class="lbl">of UK HR workers now meet the threshold for clinically significant depression &mdash; more than double the general population</p></div>
+    <div class="oak-stat"><p class="num">39%</p><p class="lbl">often experience burnout</p></div>
+    <div class="oak-stat"><p class="num">38%</p><p class="lbl">are actively considering leaving the profession altogether</p></div>
+  </div>
+  <p class="oak-source">Sources: Ultimate Resilience HR Wellbeing Report; Stribe, &ldquo;Big HR Check-in&rdquo;.</p>
+
+  <p>HR seems caught in the middle &mdash; squeezed by executive demands, myriad compliance complexities and heightened employee expectations. The post-Covid bow wave continues to wash over us. Is this a profession that, as has happened before, still can&rsquo;t quite bring itself to say: &ldquo;enough is enough&rdquo;?</p>
+
+  <h2>AI: real gains, and new problems</h2>
+  <p>According to Gemini (ahem), generative AI has driven a 25% increase in HR department productivity. What it has also created, however, are legal, regulatory and ethical concerns that worry almost everyone I talk to. For many, the time savings are outweighed by the exponential growth of perfectly (AI-)crafted grievances &mdash; not to mention the rise of subject access requests (SARs). Contemporary research is clear that investing in technology alone is not enough.</p>
+
+  <blockquote class="oak-quote">
+    <p>Sustainable competitive advantage depends entirely on coupling AI with psychological safety, strategic upskilling and a genuinely human-centric culture.</p>
+  </blockquote>
+
+  <p>This is the heart of the current disconnect. Many HR functions remain both under-resourced and under-skilled for this new paradigm. The need for &ldquo;Enterprise HR leaders&rdquo; is 100% desirable as a concept and an aspiration &mdash; but I&rsquo;m not certain many HR leaders currently have the bandwidth to look beyond the end of the week. The void between expectation and reality has never been more startling.</p>
+
+  <h2>A changing recruitment landscape</h2>
+  <p>The recruitment landscape is undergoing rapid, AI-driven change. The current theme of &ldquo;skills-based recruitment&rdquo; &mdash; heavily driven by LinkedIn over the last decade &mdash; promises to remove human bias and discrimination (check out Mobley vs Workday). And yet AI screeners have shown a 67&ndash;82% preference bias towards AI-generated CVs. In the rapidly evolving world we live in, surely qualities like learning agility, resilience, potential and &mdash; dare I say it &mdash; culture fit are equally vital? &ldquo;Easy Apply&rdquo; is now being termed &ldquo;Easy Reject&rdquo; by many jobseekers (hence the growth of SARs). When did people stop caring about their employer brand?</p>
+
+  <div class="oak-stats blue">
+    <div class="oak-stat"><p class="num">25%</p><p class="lbl">increase in HR department productivity attributed to generative AI</p></div>
+    <div class="oak-stat"><p class="num">67&ndash;82%</p><p class="lbl">preference bias shown by AI screeners towards AI-generated CVs</p></div>
+    <div class="oak-stat"><p class="num">58%</p><p class="lbl">of HR teams currently prioritise short-term cost management</p></div>
+  </div>
+  <p class="oak-source">Figures cited from Gemini, sector research and CIPD.</p>
+
+  <h2>How Oakleaf has evolved</h2>
+  <p>Of course, Oakleaf has evolved over the years too, and continues to do so, to meet the environment we find ourselves in.</p>
+
+  <blockquote class="oak-quote">
+    <p>We are not, and never have been, transactional &ldquo;order takers&rdquo;.</p>
+  </blockquote>
+
+  <p>We have deep, long-lasting relationships and never differentiate between clients and candidates &mdash; both are customers to us. Our network, and our holistic view of the market and the profession, is our enduring strength. We offer true global, confidential consulting and rapid solutions for our customers &mdash; always have, and always will.</p>
+
+  <h2>My takeaways</h2>
+  <div class="oak-takeaways">
+    <h3>Where the profession stands today</h3>
+    <ul>
+      <li>There is a severe disconnect between expectation and reality. Are HR leaders challenging C-suite expectations strongly enough? Incoming CIPD boss Neil Carberry notes that almost half of UK organisations remain in the experimental stage of AI adoption &mdash; &ldquo;a huge opportunity for us as professionals&rdquo;. An opportunity, yes &mdash; but an opportunity cost, too.</li>
+      <li>HR functions seem universally under-resourced and, in places, short of evolving skills (even if most CVs now imply everyone is an AI &ldquo;black belt&rdquo;). Recent CIPD research suggests 58% of HR teams currently prioritise short-term cost management.</li>
+      <li>The relationship between employees and employers has fundamentally changed post-Covid, and expectations have risen. The need for HR has, arguably, never been greater.</li>
+      <li>Individual resilience is on the wane &mdash; researchers call it an &ldquo;Emotional Recession&rdquo;.</li>
+      <li>A function that is &ldquo;always on&rdquo; is not sustainable.</li>
+    </ul>
+  </div>
+
+  <h2>Reason for optimism</h2>
+  <p>I do, however, remain hugely optimistic about the opportunity the profession now has to finally secure its &mdash; well-deserved &mdash; seat at the top table.</p>
+
+  <blockquote class="oak-quote">
+    <p>It&rsquo;s all about moral courage.</p>
+  </blockquote>
+
+  <p>Happy Independence Day to you all &mdash; particularly our customers, and my wonderful Oakleaf team in the US.</p>
+
+  <div class="about">
+    <img class="logo" src="https://www.oakleafpartnership.com/wp-content/uploads/2026/06/Email-SignOP.png" alt="Oakleaf Partnership">
+    <h2>About Oakleaf Partnership</h2>
+    <p>Oakleaf Partnership is a specialist HR executive search and recruitment firm operating globally across all industry sectors. The firm provides bespoke solutions across the full HR spectrum, including Chief People Officer, HR Director, talent, reward, organisational development and transformation roles.</p>
+    <p>With over 20 years of experience, Oakleaf combines deep market intelligence, an extensive global network and a partnership-led approach to support clients in accessing high-calibre HR talent.</p>
+  </div>
+
+  <div class="oak-author">
+    <img src="https://www.oakleafpartnership.com/wp-content/uploads/2015/09/Richard-Colgan-2.png" alt="Richard Colgan">
+    <div>
+      <p class="ct-eyebrow">Written by</p>
+      <p class="nm">Richard Colgan</p>
+      <p class="tl">Group Founder &amp; CEO</p>
+    </div>
+  </div>
+
+</div>
+<!-- ===================== END — STOP COPYING HERE ===================== -->
+
+</body>
+</html>
