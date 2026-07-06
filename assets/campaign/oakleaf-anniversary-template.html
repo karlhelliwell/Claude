@@ -1,12 +1,10 @@
 <!--
-  OAKLEAF "HAPPY OP ANNIVERSARY" TEMPLATE
-  To make a new one, edit 3 lines below and add a photo:
-   1. Name  -> the <div class="name">...</div>
-   2. Role  -> the <div class="role">...</div>
-   3. Years -> the <b>...</b> inside <div class="celebrate">
-   4. Photo -> in the <div class="photo"> block, replace the placeholder with:
-        <div class="ph-img" style="background-image:url('HEADSHOT.jpg');"></div>
-  Then open in Chrome and screenshot / print-to-image at 1500x1000.
+  OAKLEAF "HAPPY OP ANNIVERSARY" TEMPLATE (cap-doc styled)
+  Edit: the <div class="name">, <div class="role">, and <b> inside <div class="celebrate">.
+  Photo: in <div class="photo">, replace the placeholder with:
+     <div class="ph-img" style="background-image:url('HEADSHOT.jpg');"></div>
+  Then open in Chrome and screenshot / print at 1500x1000.
+  Divider angle/width match the original example (12.9deg, 22px green line).
 -->
 <!DOCTYPE html><html><head><meta charset="utf-8">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,11 +17,11 @@
  background:linear-gradient(135deg,#ffffff 0%,#f3faf5 55%,#e9f6ef 100%);}
 .blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5;}
 /* diagonal photo panel */
-.edge{position:absolute;top:0;right:0;width:47%;height:100%;background:var(--grad);
- clip-path:polygon(20% 0,100% 0,100% 100%,6% 100%);}
-.photo{position:absolute;top:0;right:0;width:47%;height:100%;
- clip-path:polygon(23% 0,100% 0,100% 100%,9% 100%);background:var(--navy);}
-.ph-img{position:absolute;inset:0;background-size:cover;background-position:center top;}
+.edge{position:absolute;inset:0;background:var(--grad);
+ clip-path:polygon(62.33% 0,100% 0,100% 100%,47.63% 100%);}
+.photo{position:absolute;inset:0;
+ clip-path:polygon(63.8% 0,100% 0,100% 100%,49.1% 100%);background:var(--navy);}
+.ph-img{position:absolute;top:0;bottom:0;right:0;left:47%;background-size:cover;background-position:center top;}
 .ph-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;
  background:radial-gradient(circle at 60% 40%,#15455f,#0e3a52 70%);}
 .ph-placeholder span{color:rgba(161,254,208,.75);font-size:26px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;}
@@ -65,9 +63,9 @@
       <span class="rpo">real<em>pe<b>OP</b>le</em></span>
     </div>
     <h1 class="title">Happy <span class="op">OP</span><br>Anniversary</h1>
-    <div class="name">Alex Wade</div>
-    <div class="role">Senior Manager – Payroll</div>
-    <div class="celebrate">Celebrating <b>5 years</b></div>
+    <div class="name">Full Name</div>
+    <div class="role">Job Title, Team</div>
+    <div class="celebrate">Celebrating <b>X years</b></div>
     <div class="confetti">
       <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#69bc90" stroke-width="1.5" stroke-linecap="round"><path d="M4 20l5-13 8 8-13 5z"/><path d="M14 6l1.5-1.5M17 9l2-1M18 13l2 .3M9 4l.4 2"/></svg>
       <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#26b2df" stroke-width="1.5" stroke-linecap="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg>
