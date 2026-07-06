@@ -1,0 +1,79 @@
+<!--
+  OAKLEAF "HAPPY OP ANNIVERSARY" TEMPLATE
+  To make a new one, edit 3 lines below and add a photo:
+   1. Name  -> the <div class="name">...</div>
+   2. Role  -> the <div class="role">...</div>
+   3. Years -> the <b>...</b> inside <div class="celebrate">
+   4. Photo -> in the <div class="photo"> block, replace the placeholder with:
+        <div class="ph-img" style="background-image:url('HEADSHOT.jpg');"></div>
+  Then open in Chrome and screenshot / print-to-image at 1500x1000.
+-->
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&family=DM+Sans:opsz,wght@9..40,200..700&display=swap" rel="stylesheet">
+<style>
+:root{--green:#69bc90;--teal:#26b2df;--petrol:#166484;--navy:#0e3a52;--mint:#a1fed0;--muted:#5a6f72;--line:#e6ece9;
+ --disp:"DM Sans",sans-serif;--body:"Inter Tight",sans-serif;--grad:linear-gradient(120deg,#69bc90,#26b2df);}
+*{margin:0;padding:0;box-sizing:border-box;}
+.card{width:1500px;height:1000px;position:relative;overflow:hidden;font-family:var(--body);
+ background:linear-gradient(135deg,#ffffff 0%,#f3faf5 55%,#e9f6ef 100%);}
+.blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5;}
+/* diagonal photo panel */
+.edge{position:absolute;top:0;right:0;width:47%;height:100%;background:var(--grad);
+ clip-path:polygon(20% 0,100% 0,100% 100%,6% 100%);}
+.photo{position:absolute;top:0;right:0;width:47%;height:100%;
+ clip-path:polygon(23% 0,100% 0,100% 100%,9% 100%);background:var(--navy);}
+.ph-img{position:absolute;inset:0;background-size:cover;background-position:center top;}
+.ph-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;
+ background:radial-gradient(circle at 60% 40%,#15455f,#0e3a52 70%);}
+.ph-placeholder span{color:rgba(161,254,208,.75);font-size:26px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;}
+/* content */
+.wrap{position:absolute;inset:0;padding:80px 90px;display:flex;flex-direction:column;}
+.head{display:flex;align-items:center;gap:44px;width:930px;}
+.logo{height:74px;}
+.badge{display:flex;align-items:center;gap:14px;}
+.badge .roundel{width:70px;height:70px;border-radius:50%;background:var(--navy);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.badge .roundel strong{font-family:var(--disp);font-weight:600;font-size:26px;line-height:1;}
+.badge .roundel small{font-size:9px;letter-spacing:.22em;margin-top:2px;}
+.badge .strap{font-size:18px;font-weight:600;color:var(--navy);line-height:1.3;}
+.rpo{font-size:24px;font-weight:300;color:var(--navy);border:1px solid var(--line);background:#fff;padding:10px 22px;border-radius:999px;}
+.rpo b{font-weight:700;} .rpo em{font-style:normal;}
+.title{font-family:var(--disp);font-weight:200;font-size:104px;line-height:1.0;letter-spacing:-.02em;color:var(--navy);margin-top:58px;}
+.title .op{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:300;}
+.name{font-family:var(--disp);font-weight:300;font-size:66px;color:var(--navy);letter-spacing:-.01em;margin-top:64px;}
+.role{font-size:34px;font-weight:500;color:var(--green);margin-top:8px;}
+.celebrate{font-family:var(--disp);font-weight:300;font-size:52px;color:var(--petrol);margin-top:52px;}
+.celebrate b{font-weight:600;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.confetti{display:flex;gap:20px;margin-top:22px;}
+.spacer{flex:1;}
+.foot{width:640px;border-top:1px solid var(--line);padding-top:26px;display:flex;align-items:center;justify-content:space-between;}
+.foot a{font-size:26px;font-weight:600;color:var(--green);text-decoration:none;}
+.foot .rpo2{font-size:22px;font-weight:300;color:var(--navy);} .foot .rpo2 b{font-weight:700;}
+</style></head><body>
+<div class="card">
+  <span class="blob" style="width:520px;height:520px;background:#69bc90;top:-180px;left:-140px;opacity:.35;"></span>
+  <span class="blob" style="width:420px;height:420px;background:#26b2df;bottom:-160px;left:6%;opacity:.28;"></span>
+  <div class="edge"></div>
+  <div class="photo"><div class="ph-img ph-placeholder">
+            <svg width="150" height="150" viewBox="0 0 24 24" fill="none" stroke="#a1fed0" stroke-width="1.1" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+            <span>Add headshot</span></div></div>
+  <div class="wrap">
+    <div class="head">
+      <img class="logo" src="https://cap.oakleafpartnership.com/assets/oakleaf-partnership-navy.svg">
+      <div class="badge"><span class="roundel"><strong>21</strong><small>YEARS</small></span>
+        <span class="strap">&ldquo;Your trusted partner<br>for over 21 years&rdquo;</span></div>
+      <span class="rpo">real<em>pe<b>OP</b>le</em></span>
+    </div>
+    <h1 class="title">Happy <span class="op">OP</span><br>Anniversary</h1>
+    <div class="name">Alex Wade</div>
+    <div class="role">Senior Manager – Payroll</div>
+    <div class="celebrate">Celebrating <b>5 years</b></div>
+    <div class="confetti">
+      <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#69bc90" stroke-width="1.5" stroke-linecap="round"><path d="M4 20l5-13 8 8-13 5z"/><path d="M14 6l1.5-1.5M17 9l2-1M18 13l2 .3M9 4l.4 2"/></svg>
+      <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#26b2df" stroke-width="1.5" stroke-linecap="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg>
+      <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#166484" stroke-width="1.5" stroke-linecap="round"><path d="M4 20l5-13 8 8-13 5z"/><path d="M14 6l1.5-1.5M17 9l2-1M18 13l2 .3"/></svg>
+    </div>
+    <div class="spacer"></div>
+    <div class="foot"><a>oakleafpartnership.com</a><span class="rpo2">real<em>pe<b>OP</b></em>le</span></div>
+  </div>
+</div></body></html>
