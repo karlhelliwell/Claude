@@ -785,7 +785,6 @@ button { font-family: inherit; }
   transition: width 1.5s 0.3s var(--ease-out);
 }
 .in-view .placement-stat__bar::after { width: calc(var(--w) * 1%); }
-.placement-stat--hero { border-top: 3px solid var(--green); }
 
 /* ============================================================
    Retained search
