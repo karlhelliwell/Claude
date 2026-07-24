@@ -65,7 +65,7 @@ export default async function handler(req, res) {
   const params = new URLSearchParams({
     from: `Oakleaf Capabilities <follow-up@${domain}>`,
     to: recipient,
-    subject: `Follow-up request — ${data.name} (${data.sector})`,
+    subject: `Follow-up request from ${data.name} (${data.sector})`,
     text,
     "h:Reply-To": data.email,
   });

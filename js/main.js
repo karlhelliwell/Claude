@@ -1,4 +1,4 @@
-/* Oakleaf Group — Capabilities microsite interactions */
+/* Oakleaf Group: Capabilities microsite interactions */
 (function () {
   "use strict";
 
@@ -312,7 +312,7 @@
   shareBtn.addEventListener("click", async () => {
     const shareData = {
       title: document.title,
-      text: "Oakleaf Group — Specialist, Boutique HR Capabilities",
+      text: "Oakleaf Group: Specialist, Boutique HR Capabilities",
       url: window.location.href,
     };
     if (navigator.share) {
@@ -358,7 +358,7 @@
       if (!res.ok) throw new Error("Request failed: " + res.status);
       form.querySelector(".contact-form__grid").style.display = "none";
       submitBtn.style.display = "none";
-      setStatus("Thank you, " + payload.name.split(" ")[0] + " — your request has been sent. One of our specialists will be in touch shortly.", true);
+      setStatus("Thank you, " + payload.name.split(" ")[0] + ", your request has been sent. One of our specialists will be in touch shortly.", true);
     } catch (err) {
       // fall back to the user's email client with a prefilled message
       const body = encodeURIComponent(
@@ -368,8 +368,8 @@
         "\nIndustry sector: " + payload.sector
       );
       window.location.href = "mailto:enquiries@oakleafpartnership.com" +
-        "?subject=" + encodeURIComponent("Follow-up request — Oakleaf Capabilities site") + "&body=" + body;
-      setStatus("We couldn't send your request directly, so we've opened your email client instead — just press send.", false);
+        "?subject=" + encodeURIComponent("Follow-up request: Oakleaf Capabilities site") + "&body=" + body;
+      setStatus("We couldn't send your request directly, so we've opened your email client instead. Just press send.", false);
       submitBtn.disabled = false;
       submitBtn.textContent = "Request a follow-up";
     }
