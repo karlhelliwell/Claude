@@ -479,7 +479,7 @@ button { font-family: inherit; }
   transition: transform 0.4s var(--ease-out);
 }
 .cap-card__icon svg { width: 26px; height: 26px; }
-.cap-card:hover .cap-card__icon { transform: scale(1.08) rotate(-4deg); }
+.cap-card:hover .cap-card__icon { transform: scale(1.15); }
 
 .cap-card__title { flex: 1; margin: 0; font-weight: 600; font-size: 1.06rem; color: var(--navy); }
 
