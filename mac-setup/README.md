@@ -72,6 +72,25 @@ Two fixes:
   They keep you signed in, launch faster, and Teams can then show a red
   notification badge on its Dock icon.
 
+## Put them on their own screen (swipe over to them)
+
+To keep both open on a separate screen you swipe to, instead of on your
+main desktop:
+
+1. Open both with Work Split.
+2. Hover over the **green dot** on the Outlook window →
+   **Tile Window to Left of Screen**.
+3. Click the Teams window when macOS offers it for the right side.
+
+They merge into one full-screen split view on its own Space. Swipe with
+three fingers left/right (or **Ctrl+←/→**) to flick between it and your
+normal desktop. Nothing closes or reloads when you swipe away, so they're
+always ready. Hover the green dot again → "Exit Full Screen" to undo.
+
+Tip: in System Settings → Desktop & Dock → Mission Control, turn **off**
+"Automatically rearrange Spaces based on most recent use" so the screen
+stays in a predictable place.
+
 ## Notes
 
 - The script prefers **Google Chrome**, falling back to **Microsoft Edge**.
