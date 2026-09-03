@@ -10,13 +10,13 @@
 OUTLOOK_URL="https://outlook.office.com/mail/"
 TEAMS_URL="https://teams.microsoft.com/v2/"
 
-# Pick a browser (Edge preferred - it handles Microsoft 365 sign-in best)
-if [ -d "/Applications/Microsoft Edge.app" ]; then
-  BROWSER="Microsoft Edge"
-elif [ -d "/Applications/Google Chrome.app" ]; then
+# Pick a browser (Chrome preferred)
+if [ -d "/Applications/Google Chrome.app" ]; then
   BROWSER="Google Chrome"
+elif [ -d "/Applications/Microsoft Edge.app" ]; then
+  BROWSER="Microsoft Edge"
 else
-  osascript -e 'display alert "open-work-split" message "Please install Microsoft Edge or Google Chrome first."'
+  osascript -e 'display alert "open-work-split" message "Please install Google Chrome or Microsoft Edge first."'
   exit 1
 fi
 

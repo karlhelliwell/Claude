@@ -74,7 +74,7 @@ Two fixes:
 
 ## Notes
 
-- The script prefers **Microsoft Edge**, falling back to **Google Chrome**.
+- The script prefers **Google Chrome**, falling back to **Microsoft Edge**.
   Edit the `BROWSER` logic or the two URLs at the top of the script to taste.
 - It always opens fresh windows; close or hide old ones as you like.
 - If windows don't position themselves, go to System Settings →

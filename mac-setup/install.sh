@@ -8,12 +8,12 @@
 
 set -e
 
-if [ -d "/Applications/Microsoft Edge.app" ]; then
-  BROWSER="Microsoft Edge"
-elif [ -d "/Applications/Google Chrome.app" ]; then
+if [ -d "/Applications/Google Chrome.app" ]; then
   BROWSER="Google Chrome"
+elif [ -d "/Applications/Microsoft Edge.app" ]; then
+  BROWSER="Microsoft Edge"
 else
-  echo "Please install Microsoft Edge or Google Chrome first, then re-run this."
+  echo "Please install Google Chrome (or Microsoft Edge) first, then re-run this."
   exit 1
 fi
 
