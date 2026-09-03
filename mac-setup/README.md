@@ -3,7 +3,28 @@
 One keypress opens **Outlook web on the left half** of your screen and
 **Teams web on the right half**, each in its own window.
 
-## 1. Install the script
+## Easiest: one-command install
+
+Paste this into Terminal and press return:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/karlhelliwell/Claude/claude/outlook-teams-docker-windows-11p71h/mac-setup/install.sh | zsh
+```
+
+It builds a little app called **Work Split** in your `~/Applications`
+folder and opens that folder for you. Drag **Work Split** onto your Dock -
+that's your one-click button. The first time you click it, macOS asks a
+couple of permission questions ("Work Split wants to control Microsoft
+Edge/Finder") - click **OK/Allow**.
+
+Want a keyboard shortcut too? Open the **Shortcuts** app → **+** → add the
+**Open App** action → pick **Work Split** → ⓘ → **Add Keyboard Shortcut**
+(e.g. ⌃⌥⌘W).
+
+Note: don't double-click the downloaded `.sh` files themselves - macOS just
+opens them in a text editor. Use the Terminal command above.
+
+## Manual alternative: the script by itself
 
 Download `open-work-split.sh` from this folder to your Mac (e.g. into your
 home folder), then make it executable. In Terminal:
