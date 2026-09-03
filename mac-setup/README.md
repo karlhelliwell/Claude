@@ -72,6 +72,17 @@ Two fixes:
   They keep you signed in, launch faster, and Teams can then show a red
   notification badge on its Dock icon.
 
+## Using a second monitor?
+
+Work Split opens both windows on the **MacBook's built-in screen** whenever
+an external display is connected, keeping your main monitor free. With only
+one screen, it uses that one. If you installed an older version, re-run the
+one-command install above to update the app (you may get the "wants to
+control" permission prompt once more - click Allow).
+
+Windows stay on whichever display they're on, so you can also just drag
+them to any screen and they'll stay "pinned" there.
+
 ## Put them on their own screen (swipe over to them)
 
 To keep both open on a separate screen you swipe to, instead of on your
