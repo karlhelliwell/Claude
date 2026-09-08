@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="880" viewBox="0 0 840 880" fill="none">
+  <!-- Stem: flush under the arch at y=330, rounded foot -->
+  <path fill="#185590" d="M130 330 H270 V770 A70 70 0 0 1 130 770 Z"/>
+  <!-- Leg -->
+  <path stroke="#185590" stroke-width="140" stroke-linecap="round" d="M470 560 L640 770"/>
+  <!-- Bowl, lower right: continues the arch down toward the leg -->
+  <path stroke="#185590" stroke-width="140" d="M640 330 A220 220 0 0 1 495 537"/>
+  <!-- The arch: top half of the R's bowl -->
+  <path stroke="#EFEBE2" stroke-width="140" d="M200 330 A220 220 0 0 1 640 330"/>
+  <!-- Head -->
+  <circle cx="420" cy="300" r="62" fill="#10BEE0"/>
+  <!-- Body -->
+  <path fill="#59E389" stroke="#59E389" stroke-width="56" stroke-linejoin="round" d="M420 415 L550 645 H290 Z"/>
+</svg>
