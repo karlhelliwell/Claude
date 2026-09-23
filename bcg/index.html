@@ -723,5 +723,19 @@
   Download PDF
 </a>
 
+
+<script>
+  // Between phone and full desktop widths, scale the fixed 1280px pages to fit the window.
+  (function () {
+    function fit() {
+      var w = window.innerWidth;
+      document.body.style.zoom = (w > 900 && w < 1336) ? ((w - 40) / 1280).toFixed(3) : '';
+    }
+    fit();
+    window.addEventListener('resize', fit);
+    window.addEventListener('beforeprint', function () { document.body.style.zoom = ''; });
+    window.addEventListener('afterprint', fit);
+  })();
+</script>
 </body>
 </html>
