@@ -380,8 +380,15 @@
     .cover__client-card .img-client { width: 120px; }
 
     /* compact download button in the corner, clear of the text */
-    .pdf-fab { left: auto; right: 16px; bottom: 16px; transform: none; padding: 10px 16px; font-size: 13px; }
+    .pdf-fab { left: auto; right: 14px; bottom: 14px; transform: none; width: 48px; height: 48px; padding: 0; justify-content: center; border-radius: 50%; }
     .pdf-fab:hover { transform: none; }
+    .pdf-fab svg { width: 20px; height: 20px; }
+    .pdf-fab__label { display: none; }
+
+    /* contact: photo above details so long emails stay on one line */
+    .person { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .person .img-sarah, .person .img-richard { width: 64px; height: 64px; }
+    .person a { overflow-wrap: normal; word-break: normal; font-size: 14px; }
   }
 </style>
 </head>
@@ -846,11 +853,11 @@
   <div class="pagefoot"><span>L&rsquo;IMAD &middot; HR Search Case Studies</span><b>08</b></div>
 </section>
 
-<a class="pdf-fab" href="/limad/Oakleaf-Case-Studies-LIMAD.pdf" download>
+<a class="pdf-fab" href="/limad/Oakleaf-Case-Studies-LIMAD.pdf" download aria-label="Download PDF">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
     <path d="M12 3v12"/><path d="m6 11 6 6 6-6"/><path d="M4 21h16"/>
   </svg>
-  Download PDF
+  <span class="pdf-fab__label">Download PDF</span>
 </a>
 
 
