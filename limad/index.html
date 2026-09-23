@@ -274,19 +274,6 @@
 
 
 
-  /* single case study page: one wide card, sections side by side */
-  .cases__grid--single { grid-template-columns: 1fr; }
-  .case--wide { display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: auto auto auto 1fr; column-gap: 28px; padding: 26px 32px; }
-  .case--wide .case__top, .case--wide h3, .case--wide .case__meta { grid-column: 1 / -1; }
-  .case--wide h3 { font-size: 28px; min-height: 0; max-width: 32ch; margin-bottom: 14px; }
-  .case--wide section { margin-top: 0 !important; }
-  .case--wide section + section { margin-top: 0; }
-  .case--wide p { font-size: 14.6px; line-height: 1.7; }
-  .case--wide h4 { font-size: 11.5px; margin-bottom: 8px; }
-  .case--wide section.result { margin-top: 0; align-self: start; padding: 16px 20px; }
-  .case--wide .case__meta { margin-bottom: 22px; padding-bottom: 20px; }
-  .case--wide { padding: 34px 40px; row-gap: 0; }
-
   /* ---- floating PDF download ---- */
   .pdf-fab {
     position: fixed; bottom: 26px; left: 50%; transform: translateX(-50%); z-index: 50;
@@ -355,8 +342,6 @@
     .cases__head { display: block; }
     .cases__grid { grid-template-columns: 1fr; }
     .case section.result { margin-top: 12px; }
-    .case--wide { display: flex; padding: 18px 24px; }
-    .case--wide section + section, .case--wide section.result { margin-top: 12px !important; }
     .map-svg { height: auto; }
     .person a { overflow-wrap: anywhere; }
 
@@ -689,7 +674,7 @@
 </section>
 
 <!-- ============================================================
-     7. United Kingdom
+     7. United Kingdom and United States
      ============================================================ -->
 <section class="page">
   <div class="chrome">
@@ -700,11 +685,11 @@
     <div class="cases__head">
       <div>
         <p class="eyebrow">Case Studies</p>
-        <h2 class="section-title">United Kingdom</h2>
+        <h2 class="section-title">United Kingdom and United States</h2>
       </div>
     </div>
-    <div class="cases__grid cases__grid--single">
-      <article class="card case case--wide">
+    <div class="cases__grid">
+      <article class="card case">
         <div class="case__top"><span class="case__tag">Motorsport &middot; Private Equity</span><span class="case__num">09</span></div>
         <h3>CPO Appointment for a Private Equity Backed Motorsport and Engineering Business</h3>
         <div class="case__meta">
@@ -722,6 +707,26 @@
         <section class="result">
           <h4>Results</h4>
           <p>The appointed candidate brought extensive C suite HR leadership experience across engineering, manufacturing, automotive and energy, with a background in organisational transformation, leadership development, talent strategy, workforce planning and culture change within global businesses.</p>
+        </section>
+      </article>
+      <article class="card case">
+        <div class="case__top"><span class="case__tag">Financial Services &middot; Fintech</span><span class="case__num">10</span></div>
+        <h3>Empowering Leadership Development at a Global Fintech Firm</h3>
+        <div class="case__meta">
+          <span><svg><use href="#i-pin"/></svg>New York and London</span>
+          <span><svg><use href="#i-role"/></svg>Global Head of Executive Development</span>
+        </div>
+        <section>
+          <h4>Context</h4>
+          <p>The recruitment of a Global Head of Executive Development for a US headquartered investment research firm seeking to strengthen its senior leadership pipeline and drive ambitious growth goals.</p>
+        </section>
+        <section>
+          <h4>Methodology</h4>
+          <p>We conducted a targeted search, focusing on leadership development experts with experience of world class, market leading talent offerings. The search placed particular emphasis on matching each candidate's communication and delivery style to the firm's hands on, agile culture.</p>
+        </section>
+        <section class="result">
+          <h4>Results</h4>
+          <p>The appointed candidate reshaped the firm's executive talent team, using their subject matter expertise and pragmatic approach to refresh leadership development across the organisation. This contributed to the firm achieving its revenue and headcount growth objectives.</p>
         </section>
       </article>
     </div>
@@ -746,23 +751,23 @@
     </div>
     <div class="cases__grid">
       <article class="card case">
-        <div class="case__top"><span class="case__tag">Financial Services &middot; Fintech</span><span class="case__num">10</span></div>
-        <h3>Empowering Leadership Development at a Global Fintech Firm</h3>
+        <div class="case__top"><span class="case__tag">Brokerage &middot; Compensation</span><span class="case__num">11</span></div>
+        <h3>US Compensation Lead Appointment for a Global Brokerage</h3>
         <div class="case__meta">
-          <span><svg><use href="#i-pin"/></svg>New York and London</span>
-          <span><svg><use href="#i-role"/></svg>Global Head of Executive Development</span>
+          <span><svg><use href="#i-pin"/></svg>New York</span>
+          <span><svg><use href="#i-role"/></svg>US Compensation Lead</span>
         </div>
         <section>
           <h4>Context</h4>
-          <p>The recruitment of a Global Head of Executive Development for a US headquartered investment research firm seeking to strengthen its senior leadership pipeline and drive ambitious growth goals.</p>
+          <p>A global brokerage sought to appoint a US Compensation Lead to enhance and modernise its compensation framework across a large and complex employee population. The role covered compensation strategy, market benchmarking, incentive design and governance, and supporting senior leadership on reward decisions.</p>
         </section>
         <section>
           <h4>Methodology</h4>
-          <p>We conducted a targeted search, focusing on leadership development experts with experience of world class, market leading talent offerings. The search placed particular emphasis on matching each candidate's communication and delivery style to the firm's hands on, agile culture.</p>
+          <p>We focused on compensation leaders from complex, matrixed organisations, prioritising expertise in broad based compensation, salary structures, incentive programmes, market pricing and compensation governance, alongside the ability to influence senior stakeholders.</p>
         </section>
         <section class="result">
           <h4>Results</h4>
-          <p>The appointed candidate reshaped the firm's executive talent team, using their subject matter expertise and pragmatic approach to refresh leadership development across the organisation. This contributed to the firm achieving its revenue and headcount growth objectives.</p>
+          <p>We appointed an experienced compensation leader with a strong track record of developing and implementing compensation programmes within global organisations. They brought deep expertise across investment banking compensation strategy, incentive design, market benchmarking, executive compensation and governance, positioning them to support the brokerage's continued growth.</p>
         </section>
       </article>
       <article class="card case case--contact">
