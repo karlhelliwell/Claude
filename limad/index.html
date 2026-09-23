@@ -274,6 +274,10 @@
 
 
 
+  /* page with a regional heading over each case study */
+  .cases__grid--split .case-col { display: flex; flex-direction: column; min-height: 0; }
+  .cases__grid--split .case-col .case { flex: 1; }
+
   /* ---- floating PDF download ---- */
   .pdf-fab {
     position: fixed; bottom: 26px; left: 50%; transform: translateX(-50%); z-index: 50;
@@ -674,7 +678,7 @@
 </section>
 
 <!-- ============================================================
-     7. United Kingdom and United States
+     7. United Kingdom | United States
      ============================================================ -->
 <section class="page">
   <div class="chrome">
@@ -682,53 +686,63 @@
     <span class="img img-client" role="img" aria-label="L'IMAD"></span>
   </div>
   <div class="cases">
-    <div class="cases__head">
-      <div>
-        <p class="eyebrow">Case Studies</p>
-        <h2 class="section-title">United Kingdom and United States</h2>
+    <div class="cases__grid cases__grid--split">
+      <div class="case-col">
+        <div class="cases__head">
+          <div>
+            <p class="eyebrow">Case Studies</p>
+            <h2 class="section-title">United Kingdom</h2>
+          </div>
+        </div>
+        <article class="card case">
+          <div class="case__top"><span class="case__tag">Motorsport &middot; Private Equity</span><span class="case__num">09</span></div>
+          <h3>CPO Appointment for a Private Equity Backed Motorsport and Engineering Business</h3>
+          <div class="case__meta">
+            <span><svg><use href="#i-pin"/></svg>UK</span>
+            <span><svg><use href="#i-role"/></svg>Chief People Officer</span>
+          </div>
+          <section>
+            <h4>Context</h4>
+            <p>A private equity backed engineering organisation partnered with us to appoint its first CPO, to support a period of transformation and growth. The business needed a senior people leader able to strengthen organisational capability, embed a high performance culture and partner with the leadership team on strategic workforce priorities.</p>
+          </section>
+          <section>
+            <h4>Methodology</h4>
+            <p>We ran a search focused on HR leaders with experience in complex, international engineering and industrial environments, assessing each candidate's ability to lead change, influence senior stakeholders and align people strategy with business objectives. As the role was based in the Home Counties, we analysed talent pools in the relevant locations and advised on the travel and accommodation packages needed to attract the right calibre of leader.</p>
+          </section>
+          <section class="result">
+            <h4>Results</h4>
+            <p>The appointed candidate brought extensive C suite HR leadership experience across engineering, manufacturing, automotive and energy, with a background in organisational transformation, leadership development, talent strategy, workforce planning and culture change within global businesses.</p>
+          </section>
+        </article>
       </div>
-    </div>
-    <div class="cases__grid">
-      <article class="card case">
-        <div class="case__top"><span class="case__tag">Motorsport &middot; Private Equity</span><span class="case__num">09</span></div>
-        <h3>CPO Appointment for a Private Equity Backed Motorsport and Engineering Business</h3>
-        <div class="case__meta">
-          <span><svg><use href="#i-pin"/></svg>UK</span>
-          <span><svg><use href="#i-role"/></svg>Chief People Officer</span>
+      <div class="case-col">
+        <div class="cases__head">
+          <div>
+            <p class="eyebrow">Case Studies</p>
+            <h2 class="section-title">United States</h2>
+          </div>
         </div>
-        <section>
-          <h4>Context</h4>
-          <p>A private equity backed engineering organisation partnered with us to appoint its first CPO, to support a period of transformation and growth. The business needed a senior people leader able to strengthen organisational capability, embed a high performance culture and partner with the leadership team on strategic workforce priorities.</p>
-        </section>
-        <section>
-          <h4>Methodology</h4>
-          <p>We ran a search focused on HR leaders with experience in complex, international engineering and industrial environments, assessing each candidate's ability to lead change, influence senior stakeholders and align people strategy with business objectives. As the role was based in the Home Counties, we analysed talent pools in the relevant locations and advised on the travel and accommodation packages needed to attract the right calibre of leader.</p>
-        </section>
-        <section class="result">
-          <h4>Results</h4>
-          <p>The appointed candidate brought extensive C suite HR leadership experience across engineering, manufacturing, automotive and energy, with a background in organisational transformation, leadership development, talent strategy, workforce planning and culture change within global businesses.</p>
-        </section>
-      </article>
-      <article class="card case">
-        <div class="case__top"><span class="case__tag">Financial Services &middot; Fintech</span><span class="case__num">10</span></div>
-        <h3>Empowering Leadership Development at a Global Fintech Firm</h3>
-        <div class="case__meta">
-          <span><svg><use href="#i-pin"/></svg>New York and London</span>
-          <span><svg><use href="#i-role"/></svg>Global Head of Executive Development</span>
-        </div>
-        <section>
-          <h4>Context</h4>
-          <p>The recruitment of a Global Head of Executive Development for a US headquartered investment research firm seeking to strengthen its senior leadership pipeline and drive ambitious growth goals.</p>
-        </section>
-        <section>
-          <h4>Methodology</h4>
-          <p>We conducted a targeted search, focusing on leadership development experts with experience of world class, market leading talent offerings. The search placed particular emphasis on matching each candidate's communication and delivery style to the firm's hands on, agile culture.</p>
-        </section>
-        <section class="result">
-          <h4>Results</h4>
-          <p>The appointed candidate reshaped the firm's executive talent team, using their subject matter expertise and pragmatic approach to refresh leadership development across the organisation. This contributed to the firm achieving its revenue and headcount growth objectives.</p>
-        </section>
-      </article>
+        <article class="card case">
+          <div class="case__top"><span class="case__tag">Financial Services &middot; Fintech</span><span class="case__num">10</span></div>
+          <h3>Empowering Leadership Development at a Global Fintech Firm</h3>
+          <div class="case__meta">
+            <span><svg><use href="#i-pin"/></svg>New York and London</span>
+            <span><svg><use href="#i-role"/></svg>Global Head of Executive Development</span>
+          </div>
+          <section>
+            <h4>Context</h4>
+            <p>The recruitment of a Global Head of Executive Development for a US headquartered investment research firm seeking to strengthen its senior leadership pipeline and drive ambitious growth goals.</p>
+          </section>
+          <section>
+            <h4>Methodology</h4>
+            <p>We conducted a targeted search, focusing on leadership development experts with experience of world class, market leading talent offerings. The search placed particular emphasis on matching each candidate's communication and delivery style to the firm's hands on, agile culture.</p>
+          </section>
+          <section class="result">
+            <h4>Results</h4>
+            <p>The appointed candidate reshaped the firm's executive talent team, using their subject matter expertise and pragmatic approach to refresh leadership development across the organisation. This contributed to the firm achieving its revenue and headcount growth objectives.</p>
+          </section>
+        </article>
+      </div>
     </div>
   </div>
   <div class="pagefoot"><span>L&rsquo;IMAD &middot; HR Search Case Studies</span><b>07</b></div>
@@ -759,15 +773,15 @@
         </div>
         <section>
           <h4>Context</h4>
-          <p>A global brokerage sought to appoint a US Compensation Lead to enhance and modernise its compensation framework across a large and complex employee population. The role covered compensation strategy, market benchmarking, incentive design and governance, and supporting senior leadership on reward decisions.</p>
+          <p>A global brokerage sought a US Compensation Lead to modernise its compensation framework across a large, complex employee population, covering strategy, market benchmarking, incentive design, governance and advising senior leadership on reward.</p>
         </section>
         <section>
           <h4>Methodology</h4>
-          <p>We focused on compensation leaders from complex, matrixed organisations, prioritising expertise in broad based compensation, salary structures, incentive programmes, market pricing and compensation governance, alongside the ability to influence senior stakeholders.</p>
+          <p>We focused on compensation leaders from complex, matrixed organisations with expertise in broad based compensation, salary structures, incentive programmes, market pricing and governance, and the ability to influence senior stakeholders. The package was not comparable to sector benchmarks, which made engaging candidates a key challenge, so we spoke to more than 200 profiles and mapped across industries to broaden the talent pool.</p>
         </section>
         <section class="result">
           <h4>Results</h4>
-          <p>We appointed an experienced compensation leader with a strong track record of developing and implementing compensation programmes within global organisations. They brought deep expertise across investment banking compensation strategy, incentive design, market benchmarking, executive compensation and governance, positioning them to support the brokerage's continued growth.</p>
+          <p>The firm appointed an experienced compensation leader with a strong track record in global organisations and deep expertise in investment banking compensation strategy, incentive design, market benchmarking, executive compensation and governance, ready to support the brokerage's continued growth.</p>
         </section>
       </article>
       <article class="card case case--contact">
