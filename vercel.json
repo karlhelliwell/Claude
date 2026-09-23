@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/BCG", "destination": "/bcg/", "permanent": false },
+    { "source": "/BCG/", "destination": "/bcg/", "permanent": false }
+  ]
+}
