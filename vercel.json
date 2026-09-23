@@ -1,6 +1,10 @@
 {
   "redirects": [
-    { "source": "/BCG", "destination": "/bcg/", "permanent": false },
-    { "source": "/BCG/", "destination": "/bcg/", "permanent": false }
+    { "source": "/LIMAD", "destination": "/limad/", "permanent": false },
+    { "source": "/LIMAD/", "destination": "/limad/", "permanent": false },
+    { "source": "/BCG", "destination": "/limad/", "permanent": false },
+    { "source": "/BCG/", "destination": "/limad/", "permanent": false },
+    { "source": "/bcg", "destination": "/limad/", "permanent": false },
+    { "source": "/bcg/", "destination": "/limad/", "permanent": false }
   ]
 }
