@@ -273,6 +273,20 @@
   .case--contact .cap-link a { color: var(--mint); font-weight: 500; }
 
 
+
+  /* single case study page: one wide card, sections side by side */
+  .cases__grid--single { grid-template-columns: 1fr; }
+  .case--wide { display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: auto auto auto 1fr; column-gap: 28px; padding: 26px 32px; }
+  .case--wide .case__top, .case--wide h3, .case--wide .case__meta { grid-column: 1 / -1; }
+  .case--wide h3 { font-size: 28px; min-height: 0; max-width: 32ch; margin-bottom: 14px; }
+  .case--wide section { margin-top: 0 !important; }
+  .case--wide section + section { margin-top: 0; }
+  .case--wide p { font-size: 14.6px; line-height: 1.7; }
+  .case--wide h4 { font-size: 11.5px; margin-bottom: 8px; }
+  .case--wide section.result { margin-top: 0; align-self: start; padding: 16px 20px; }
+  .case--wide .case__meta { margin-bottom: 22px; padding-bottom: 20px; }
+  .case--wide { padding: 34px 40px; row-gap: 0; }
+
   /* ---- floating PDF download ---- */
   .pdf-fab {
     position: fixed; bottom: 26px; left: 50%; transform: translateX(-50%); z-index: 50;
@@ -341,6 +355,8 @@
     .cases__head { display: block; }
     .cases__grid { grid-template-columns: 1fr; }
     .case section.result { margin-top: 12px; }
+    .case--wide { display: flex; padding: 18px 24px; }
+    .case--wide section + section, .case--wide section.result { margin-top: 12px !important; }
     .map-svg { height: auto; }
     .person a { overflow-wrap: anywhere; }
 
@@ -587,23 +603,23 @@
         </section>
       </article>
       <article class="card case">
-        <div class="case__top"><span class="case__tag">Banking &middot; Change and Transformation</span><span class="case__num">06</span></div>
-        <h3>The Change Catalyst: A Strategic HR Director for a European Bank</h3>
+        <div class="case__top"><span class="case__tag">Fintech &middot; Reward</span><span class="case__num">06</span></div>
+        <h3>Reward Director Appointment for a Global Fintech</h3>
         <div class="case__meta">
-          <span><svg><use href="#i-pin"/></svg>London</span>
-          <span><svg><use href="#i-role"/></svg>HR Director</span>
+          <span><svg><use href="#i-pin"/></svg>London and Stockholm</span>
+          <span><svg><use href="#i-role"/></svg>Reward Director</span>
         </div>
         <section>
           <h4>Context</h4>
-          <p>We were engaged by a global bank with a significant presence in the Netherlands, which had recently appointed a new CEO to lead its UK operations as part of a wider strategic restructure and expansion of its UK offering. Although an HR Director with more than a decade of service was in place, the bank determined that a different skillset was needed to support the evolving business and change agenda.</p>
+          <p>A leading global fintech organisation needed a Reward Lead to build its international reward agenda during a period of rapid growth. Operating across multiple markets, it required a reward professional able to balance strategic design with hands on execution in a fast paced, technology driven environment, with a focus on executive compensation, equity programmes, governance and scalability, plus public company readiness.</p>
         </section>
         <section>
           <h4>Methodology</h4>
-          <p>We drew up an initial longlist of candidates with relevant sector experience, using both our HR network and extensive research. This was refined to a shortlist of 15, each fully interviewed by us against specific criteria within a four week timeframe. Five candidates met the executive hiring team in the Netherlands at first stage, and two progressed to final stages with the CEO and his leadership team.</p>
+          <p>We focused on senior reward leaders from technology, fintech and high growth environments, with particular emphasis on executive remuneration, equity and long term incentive plans, global job architecture and reward transformation. Candidates were assessed on technical capability and their ability to influence senior stakeholders, lead teams and build reward functions in ambiguous environments.</p>
         </section>
         <section class="result">
           <h4>Results</h4>
-          <p>The appointed candidate brought extensive HR leadership experience across trading, banking and insurance, with a strong track record in change and transformation.</p>
+          <p>The successful candidate brought reward experience from both consultancy and in house roles, spanning technology, professional services, financial services and high growth organisations across Europe, North America and Asia Pacific.</p>
         </section>
       </article>
     </div>
@@ -628,7 +644,27 @@
     </div>
     <div class="cases__grid">
       <article class="card case">
-        <div class="case__top"><span class="case__tag">Shipping &middot; PLC Reward</span><span class="case__num">07</span></div>
+        <div class="case__top"><span class="case__tag">Banking &middot; Change and Transformation</span><span class="case__num">07</span></div>
+        <h3>The Change Catalyst: A Strategic HR Director for a European Bank</h3>
+        <div class="case__meta">
+          <span><svg><use href="#i-pin"/></svg>London</span>
+          <span><svg><use href="#i-role"/></svg>HR Director</span>
+        </div>
+        <section>
+          <h4>Context</h4>
+          <p>We were engaged by a global bank with a significant presence in the Netherlands, which had recently appointed a new CEO to lead its UK operations as part of a wider strategic restructure and expansion of its UK offering. Although an HR Director with more than a decade of service was in place, the bank determined that a different skillset was needed to support the evolving business and change agenda.</p>
+        </section>
+        <section>
+          <h4>Methodology</h4>
+          <p>We drew up an initial longlist of candidates with relevant sector experience, using both our HR network and extensive research. This was refined to a shortlist of 15, each fully interviewed by us against specific criteria within a four week timeframe. Five candidates met the executive hiring team in the Netherlands at first stage, and two progressed to final stages with the CEO and his leadership team.</p>
+        </section>
+        <section class="result">
+          <h4>Results</h4>
+          <p>The appointed candidate brought extensive HR leadership experience across trading, banking and insurance, with a strong track record in change and transformation.</p>
+        </section>
+      </article>
+      <article class="card case">
+        <div class="case__top"><span class="case__tag">Shipping &middot; PLC Reward</span><span class="case__num">08</span></div>
         <h3>Navigating Transformation and Executive Remuneration for a UK Shipping Firm</h3>
         <div class="case__meta">
           <span><svg><use href="#i-pin"/></svg>UK Wide</span>
@@ -647,8 +683,29 @@
           <p>The appointed Head of Reward, a seasoned professional experienced in developing tailored compensation and benefits packages, designed and implemented an innovative reward strategy aligned with the firm's business objectives. This improved talent attraction and retention and enhanced employee engagement, particularly at executive level.</p>
         </section>
       </article>
-      <article class="card case">
-        <div class="case__top"><span class="case__tag">Motorsport &middot; Private Equity</span><span class="case__num">08</span></div>
+    </div>
+  </div>
+  <div class="pagefoot"><span>L&rsquo;IMAD &middot; HR Search Case Studies</span><b>06</b></div>
+</section>
+
+<!-- ============================================================
+     7. United Kingdom
+     ============================================================ -->
+<section class="page">
+  <div class="chrome">
+    <span class="img img-oakleaf" role="img" aria-label="Oakleaf Partnership"></span>
+    <span class="img img-client" role="img" aria-label="L'IMAD"></span>
+  </div>
+  <div class="cases">
+    <div class="cases__head">
+      <div>
+        <p class="eyebrow">Case Studies</p>
+        <h2 class="section-title">United Kingdom</h2>
+      </div>
+    </div>
+    <div class="cases__grid cases__grid--single">
+      <article class="card case case--wide">
+        <div class="case__top"><span class="case__tag">Motorsport &middot; Private Equity</span><span class="case__num">09</span></div>
         <h3>CPO Appointment for a Private Equity Backed Motorsport and Engineering Business</h3>
         <div class="case__meta">
           <span><svg><use href="#i-pin"/></svg>UK</span>
@@ -669,11 +726,11 @@
       </article>
     </div>
   </div>
-  <div class="pagefoot"><span>L&rsquo;IMAD &middot; HR Search Case Studies</span><b>06</b></div>
+  <div class="pagefoot"><span>L&rsquo;IMAD &middot; HR Search Case Studies</span><b>07</b></div>
 </section>
 
 <!-- ============================================================
-     7. United States
+     8. United States
      ============================================================ -->
 <section class="page">
   <div class="chrome">
@@ -689,7 +746,7 @@
     </div>
     <div class="cases__grid">
       <article class="card case">
-        <div class="case__top"><span class="case__tag">Financial Services &middot; Fintech</span><span class="case__num">09</span></div>
+        <div class="case__top"><span class="case__tag">Financial Services &middot; Fintech</span><span class="case__num">10</span></div>
         <h3>Empowering Leadership Development at a Global Fintech Firm</h3>
         <div class="case__meta">
           <span><svg><use href="#i-pin"/></svg>New York and London</span>
@@ -736,7 +793,7 @@
       </article>
     </div>
   </div>
-  <div class="pagefoot"><span>L&rsquo;IMAD &middot; HR Search Case Studies</span><b>07</b></div>
+  <div class="pagefoot"><span>L&rsquo;IMAD &middot; HR Search Case Studies</span><b>08</b></div>
 </section>
 
 <a class="pdf-fab" href="/limad/Oakleaf-Case-Studies-LIMAD.pdf" download>
