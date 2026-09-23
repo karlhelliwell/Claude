@@ -350,7 +350,38 @@
     .person a { overflow-wrap: anywhere; }
 
 
-    .pdf-fab { bottom: 16px; padding: 11px 20px; font-size: 14px; }
+    /* readable case study text on phones */
+    .case { padding: 20px 20px 22px; }
+    .case h3 { font-size: 20px; min-height: 0; }
+    .case p { font-size: 14.5px; line-height: 1.62; }
+    .case h4 { font-size: 11px; margin-bottom: 4px; }
+    .case__tag { font-size: 10.5px; letter-spacing: 0.14em; }
+    .case__meta span { font-size: 12.5px; padding: 5px 11px; }
+    .case section + section, .case section.result { margin-top: 14px; }
+    .cases__grid { gap: 14px; }
+    .cases__grid--split .case-col + .case-col { margin-top: 12px; }
+
+    /* contact card */
+    .case--contact { padding: 26px 22px; }
+    .case--contact h3 { font-size: 26px; }
+    .case--contact p.lede { font-size: 14.5px; }
+    .person a { font-size: 14px; line-height: 1.7; }
+
+    /* maps: one region per row so each map is legible */
+    .reach__maps { grid-template-columns: 1fr; row-gap: 28px; }
+    .region, .region:nth-child(2), .region:nth-child(3) { grid-column: auto; }
+    .map-svg { max-height: 300px; }
+    .region p { min-height: 0; font-size: 13px; }
+    .region h3 { font-size: 12px; }
+
+    /* cover */
+    .cover__right { height: 300px; }
+    .cover__client-card { padding: 20px 26px; }
+    .cover__client-card .img-client { width: 120px; }
+
+    /* compact download button in the corner, clear of the text */
+    .pdf-fab { left: auto; right: 16px; bottom: 16px; transform: none; padding: 10px 16px; font-size: 13px; }
+    .pdf-fab:hover { transform: none; }
   }
 </style>
 </head>
