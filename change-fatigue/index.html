@@ -11,11 +11,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&family=DM+Sans:opsz,wght@9..40,100..700&display=swap" rel="stylesheet">
 <style>
+  /* ============================================================
+     Oakleaf Partnership, Change Fatigue roundtable deck
+     Design tokens and components shared with the EOQ deck
+     ============================================================ */
   :root {
     --green: #69bc90; --green-ink: #2e6b4e; --mint: #a1fed0; --teal: #26b2df;
-    --petrol: #166484; --navy: #0e3a52; --ink: #15333f; --muted: #5a6f72;
-    --bg: #f5f3f6; --line: #e2e6ea; --tint: #e3eee8;
+    --petrol: #166484; --navy: #0e3a52; --sky: #48bafe;
+    --ink: #15333f; --muted: #5a6f72; --bg: #ffffff; --tint: #f4f8f6; --line: #e6ece9;
     --grad-brand: linear-gradient(120deg, var(--green) 0%, var(--teal) 100%);
+    --grad-deep: linear-gradient(135deg, #0f4257 0%, #166484 55%, #1b7d8f 100%);
+    --grad-text: linear-gradient(100deg, var(--mint) 0%, #7fe0b4 45%, var(--sky) 100%);
     --font: "Inter Tight", "Helvetica Neue", Arial, sans-serif;
     --font-display: "DM Sans", "Helvetica Neue", Arial, sans-serif;
     --radius: 14px; --radius-lg: 22px;
@@ -33,139 +39,190 @@
     width: 1280px; height: 720px; background: var(--bg);
     margin: 0 auto 28px; position: relative; overflow: hidden;
     box-shadow: var(--shadow-md);
-    padding: 52px 64px 96px;
+    padding: 54px 64px 92px;
     display: flex; flex-direction: column;
   }
-  .page::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 14px; background: var(--green); }
 
+  /* ---- footer: partner logos on every slide ---- */
   .pagefoot {
-    position: absolute; left: 64px; right: 56px; bottom: 26px;
+    position: absolute; left: 64px; right: 64px; bottom: 26px; z-index: 5;
     display: flex; align-items: center; justify-content: space-between;
-    font-size: 12px; letter-spacing: 0.08em; color: var(--muted);
+    padding-top: 16px; border-top: 1px solid var(--line);
+    font-size: 11px; letter-spacing: 0.08em; color: var(--muted);
   }
   .pagefoot .num { font-weight: 500; color: var(--navy); }
   .logos { display: flex; align-items: center; }
   .logos img { width: auto; }
   .logos--foot { gap: 30px; }
-  .logos--foot img { height: 30px; }
-  .page--cover .pagefoot, .page--panel .pagefoot { right: 560px; }
+  .logos--foot img { height: 25px; }
+  .page--panel .pagefoot { right: 590px; }
+  .page--dark .pagefoot { border-top-color: rgba(255, 255, 255, 0.16); }
+  .page--dark .pagefoot .num { color: #fff; }
+  .page--dark .logos--foot img { opacity: 0.92; }
 
+  /* ---- type ---- */
   .eyebrow, .label {
-    font-size: 13px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--green-ink);
+    font-size: 12px; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: var(--green-ink);
   }
   .eyebrow { margin-bottom: 10px; }
-  .title { font-family: var(--font-display); font-weight: 200; font-size: 50px; line-height: 1.08; color: var(--navy); letter-spacing: -0.015em; }
-  .title b { font-weight: 500; }
-  .head { margin-bottom: 26px; }
-  .sub { font-size: 20px; color: var(--muted); margin-top: 8px; }
+  h1, h2, h3 { font-family: var(--font-display); color: var(--navy); letter-spacing: -0.015em; }
+  .section-title { font-size: 42px; font-weight: 200; line-height: 1.1; }
+  .section-title b { font-weight: 500; }
+  .head { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; margin-bottom: 26px; }
+  .lede { font-size: 19px; color: var(--muted); margin: -8px 0 18px; }
+  .rule { width: 74px; height: 4px; border-radius: 4px; background: var(--grad-brand); }
 
+  /* ---- components ---- */
   .card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-sm); }
+  .chip {
+    display: inline-flex; align-items: center; gap: 8px; flex: none;
+    border: 1px solid var(--line); border-radius: 999px; background: #fff;
+    padding: 8px 17px; font-size: 14px; font-weight: 500; color: var(--navy);
+  }
+  .chip::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--grad-brand); }
   .ic { display: inline-flex; }
   .ic svg { width: 100%; height: 100%; }
-  .dot { flex: none; width: 54px; height: 54px; border-radius: 50%; background: var(--green); color: #fff; display: inline-flex; align-items: center; justify-content: center; }
-  .dot .ic { width: 28px; height: 28px; }
-  .dot--lg { width: 64px; height: 64px; }
-  .dot--lg .ic { width: 32px; height: 32px; }
+  .dot { flex: none; width: 50px; height: 50px; border-radius: 50%; background: var(--grad-brand); color: #fff; display: inline-flex; align-items: center; justify-content: center; }
+  .dot .ic { width: 26px; height: 26px; }
   .photo { border-radius: var(--radius-lg); object-fit: cover; box-shadow: var(--shadow-md); }
-
-  /* photo panels: diagonal green edge from the event graphic */
   .panel { position: absolute; right: 0; top: 0; width: 563px; height: 720px; }
+  .ring { position: absolute; border-radius: 50%; border: 1.5px solid rgba(161, 254, 208, 0.3); pointer-events: none; }
 
-  /* cover */
-  .page--cover { padding: 46px 64px 40px; }
-  .cover { width: 640px; display: flex; flex-direction: column; height: 100%; }
-  .logos--cover { gap: 30px; margin-bottom: 44px; }
-  .logos--cover img { height: 44px; }
-  .cover__kicker { font-size: 26px; color: var(--navy); font-weight: 300; }
+  /* navy callout band, as on the EOQ client book slide */
+  .band {
+    margin-top: auto; display: flex; align-items: center; gap: 26px;
+    padding: 20px 32px; border-radius: var(--radius); background: var(--navy); color: #fff;
+  }
+  .band__big { font-family: var(--font-display); font-weight: 200; font-size: 56px; line-height: 1; letter-spacing: -0.02em; background: var(--grad-text); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .band__label { font-size: 11.5px; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: var(--mint); }
+  .band__text { font-size: 19px; color: rgba(255, 255, 255, 0.92); }
+  .band--slim { padding: 16px 26px; gap: 16px; }
+  .band--slim .ic { width: 26px; height: 26px; color: var(--mint); }
+
+  /* ---- dark slides ---- */
+  .page--dark { background: var(--grad-deep); color: #fff; }
+  .page--dark .eyebrow { color: var(--mint); }
+  .page--glowbg::before {
+    content: ""; position: absolute; inset: 0;
+    background:
+      radial-gradient(700px 520px at 85% 10%, rgba(161, 254, 208, 0.14), transparent 60%),
+      radial-gradient(700px 560px at 8% 95%, rgba(38, 178, 223, 0.2), transparent 62%);
+  }
+  .page--glowbg > * { position: relative; }
+  .page--glowbg > .ring { position: absolute; }
+  .page--glowbg > .pagefoot { position: absolute; }
+  .ring--a { left: -60px; top: -60px; width: 200px; height: 200px; }
+  .ring--b { right: -90px; bottom: -90px; width: 280px; height: 280px; }
+
+  /* ---- 1 cover and 13 close ---- */
+  .page--cover { padding: 44px 64px 40px; }
+  .cover, .closing { width: 660px; height: 100%; display: flex; flex-direction: column; }
+  .logos--cover { gap: 30px; }
+  .logos--cover img { height: 42px; }
+  .cover__main { margin: auto 0; }
+  .cover__kicker { font-size: 22px; color: var(--navy); }
   .cover__kicker b { font-weight: 700; }
-  .cover__title { font-family: var(--font-display); font-weight: 200; font-size: 58px; line-height: 1.06; color: var(--green); letter-spacing: -0.02em; margin-top: 10px; }
-  .cover__sub { font-family: var(--font-display); font-size: 38px; color: var(--navy); font-weight: 300; margin-top: 8px; }
+  .cover__title { font-weight: 200; font-size: 58px; line-height: 1.05; color: var(--green); letter-spacing: -0.02em; margin-top: 8px; }
+  .cover__sub { font-family: var(--font-display); font-size: 36px; font-weight: 300; color: var(--navy); margin-top: 8px; }
   .cover__sub b { font-weight: 700; }
-  .cover__with { font-size: 17px; color: var(--muted); margin-top: 26px; }
-  .speaker { display: flex; align-items: center; gap: 18px; margin-top: 10px; }
-  .speaker img { width: 92px; height: 92px; }
-  .speaker__name { font-family: var(--font-display); font-weight: 700; font-size: 28px; color: var(--green); line-height: 1.1; }
-  .speaker__co { font-size: 18px; color: var(--muted); }
-  .cover__meta { margin-top: auto; display: flex; flex-direction: column; gap: 6px; font-size: 16px; color: var(--navy); font-weight: 500; }
-  .cover__meta span { display: inline-flex; align-items: center; gap: 10px; }
-  .cover__meta .ic { width: 20px; height: 20px; color: var(--green); }
+  .cover .rule { margin: 26px 0 24px; }
+  .speaker { display: flex; align-items: center; gap: 18px; }
+  .speaker img { width: 84px; height: 84px; }
+  .speaker__with { font-size: 13px; color: var(--muted); }
+  .speaker__name { font-family: var(--font-display); font-weight: 500; font-size: 26px; color: var(--navy); line-height: 1.15; }
+  .speaker__co { font-size: 16px; color: var(--green-ink); font-weight: 500; }
+  .cover__meta { font-size: 12.5px; white-space: nowrap; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  .cover__meta b { color: var(--green-ink); font-weight: 600; }
 
-  /* bio */
-  .bio { width: 620px; }
-  .bio .title { font-size: 56px; }
-  .bio__co { font-size: 21px; color: var(--green-ink); font-weight: 500; margin: 6px 0 24px; }
-  .ticks li { position: relative; padding-left: 30px; font-size: 19px; color: var(--navy); line-height: 1.45; margin-bottom: 13px; }
+  .closing { justify-content: center; }
+  .closing__title { font-weight: 100; font-size: 124px; line-height: 1; letter-spacing: -0.02em; color: var(--navy); }
+  .closing__title b { font-weight: 300; background: var(--grad-brand); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .closing .rule { margin: 28px 0 22px; }
+  .closing__sub { font-size: 22px; color: var(--muted); max-width: 22em; }
+  .closing__partners { margin-top: 54px; }
+  .closing__partners .label { margin-bottom: 16px; }
+  .logos--big { gap: 28px; }
+  .logos--big img { height: 37px; }
+
+  /* ---- 2 speaker ---- */
+  .bio { width: 630px; margin: auto 0; }
+  .bio__name { font-weight: 200; font-size: 64px; line-height: 1.05; margin-bottom: 14px; }
+  .bio__name b { font-weight: 500; }
+  .ticks { margin-top: 26px; }
+  .ticks li { position: relative; padding-left: 30px; font-size: 18.5px; color: var(--ink); line-height: 1.45; margin-bottom: 12px; }
   .ticks li::before { content: ""; position: absolute; left: 2px; top: 9px; width: 11px; height: 11px; border-radius: 50%; background: var(--grad-brand); }
 
-  /* agenda */
-  .agenda { display: flex; flex-direction: column; gap: 9px; }
-  .agenda li { display: flex; align-items: center; gap: 28px; padding: 9px 12px; font-size: 20px; color: var(--navy); }
-  .agenda .time { flex: none; width: 180px; text-align: center; padding: 6px 0; border-radius: 999px; background: var(--tint); color: var(--green-ink); font-weight: 600; font-size: 17px; }
+  /* ---- 3 agenda ---- */
+  .agenda { padding: 6px 30px; flex: 1; display: flex; flex-direction: column; }
+  .agenda li { flex: 1; display: flex; align-items: center; gap: 30px; border-bottom: 1px solid var(--line); }
+  .agenda li:last-child { border-bottom: none; }
+  .agenda__n { font-size: 13px; font-weight: 600; letter-spacing: 0.08em; color: var(--green-ink); width: 26px; }
+  .agenda__time { font-family: var(--font-display); font-weight: 300; font-size: 23px; color: var(--petrol); width: 200px; letter-spacing: -0.01em; }
+  .agenda__time i { font-style: normal; font-size: 14px; color: var(--muted); padding: 0 3px; }
+  .agenda__what { font-size: 20px; color: var(--navy); }
 
-  /* framing */
-  .split { display: grid; grid-template-columns: 1fr 560px; gap: 48px; align-items: center; flex: 1; }
-  .theme { font-family: var(--font-display); font-weight: 200; font-size: 44px; line-height: 1.1; color: var(--green); }
-  .theme__sub { font-family: var(--font-display); font-size: 30px; color: var(--navy); margin-top: 10px; }
+  /* ---- 4 framing ---- */
+  .split { display: grid; grid-template-columns: 1fr 580px; gap: 56px; align-items: center; flex: 1; }
+  .theme { font-family: var(--font-display); font-weight: 200; font-size: 50px; line-height: 1.1; color: var(--navy); letter-spacing: -0.02em; }
+  .theme b { font-weight: 300; color: var(--green); }
+  .split .rule { margin: 26px 0 20px; }
+  .theme__sub { font-family: var(--font-display); font-size: 30px; font-weight: 300; color: var(--navy); }
   .theme__sub b { font-weight: 700; }
-  .split__photo { width: 560px; height: 380px; }
+  .split__photo { width: 580px; height: 400px; }
 
-  /* quote */
-  .quote { flex: 1; position: relative; display: flex; align-items: center; padding: 40px 80px 40px 120px; margin: 4px 40px 0; }
-  .quote__mark { position: absolute; left: 40px; top: 6px; font-family: Georgia, serif; font-size: 160px; line-height: 1; color: var(--green); }
-  .quote p { font-family: var(--font-display); font-weight: 300; font-size: 38px; line-height: 1.3; color: var(--navy); }
+  /* ---- 5 statement and 14 divider ---- */
+  .statement, .divider { margin: auto 0; max-width: 980px; }
+  .statement__q { font-family: var(--font-display); font-weight: 200; font-size: 54px; line-height: 1.2; letter-spacing: -0.02em; color: #fff; margin: 14px 0 34px; }
+  .statement__q b { font-weight: 300; background: var(--grad-text); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .divider__title { font-weight: 100; font-size: 140px; line-height: 1; letter-spacing: -0.02em; color: #fff; margin-bottom: 30px; }
+  .divider__title b { font-weight: 300; background: var(--grad-text); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
-  /* pulse */
-  .pulse { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-top: 10px; }
-  .pulse__card { padding: 30px 30px; display: flex; flex-direction: column; gap: 24px; min-height: 300px; }
-  .pulse__top { display: flex; align-items: center; justify-content: space-between; }
-  .pulse__n { font-family: var(--font-display); font-weight: 300; font-size: 36px; color: var(--green); }
-  .pulse__card p { font-size: 24px; line-height: 1.35; color: var(--navy); }
+  /* ---- 6 pulse ---- */
+  .pulse { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; flex: 1; }
+  .pulse__card { padding: 30px 32px; display: flex; flex-direction: column; }
+  .pulse__n { font-family: var(--font-display); font-weight: 200; font-size: 76px; line-height: 1; letter-spacing: -0.03em; color: var(--green); }
+  .pulse__t { font-size: 24px; line-height: 1.35; color: var(--navy); margin-top: 18px; }
+  .pulse__card .dot { margin-top: auto; }
 
-  /* perspectives */
-  .hero-photo { width: 680px; height: 440px; margin: 0 auto; }
+  /* ---- 7 perspectives ---- */
+  .wide-photo { width: 100%; flex: 1; min-height: 0; object-position: 50% 42%; }
 
-  /* question slides */
-  .qgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
-  .qcard { padding: 30px 34px 34px; }
-  .qcard__top { display: flex; align-items: center; gap: 18px; margin-bottom: 20px; }
-  .qcard__q { font-size: 25px; line-height: 1.35; font-style: italic; color: var(--navy); }
-  .chip-line { margin-top: auto; display: flex; align-items: center; gap: 12px; padding: 14px 24px; border-radius: 999px; background: var(--tint); color: var(--green-ink); font-weight: 600; font-size: 19px; }
-  .chip-line .ic { width: 24px; height: 24px; }
+  /* ---- 8 and 10 questions ---- */
+  .qgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .qcard { padding: 28px 32px 32px; }
+  .qcard__top { display: flex; align-items: center; gap: 16px; margin-bottom: 18px; }
+  .qcard__q { font-family: var(--font-display); font-weight: 300; font-size: 26px; line-height: 1.32; color: var(--navy); letter-spacing: -0.01em; }
 
-  /* activity slides */
-  .act { display: grid; grid-template-columns: 1fr 520px; gap: 54px; align-items: center; flex: 1; }
-  .act--left { grid-template-columns: 520px 1fr; }
-  .act__photo { width: 520px; height: 420px; }
-  .act__side .label { margin-bottom: 18px; }
-  .act__row { display: flex; align-items: center; gap: 20px; padding: 16px 20px; font-size: 26px; color: var(--navy); margin-bottom: 16px; }
+  /* ---- 9 and 11 activity ---- */
+  .act { display: grid; grid-template-columns: 1fr 640px; gap: 28px; flex: 1; min-height: 0; }
+  .act--left { grid-template-columns: 640px 1fr; }
+  .act__photo { width: 100%; height: 100%; min-height: 0; object-position: 30% 50%; }
+  .act__panel {
+    position: relative; overflow: hidden; border-radius: var(--radius-lg);
+    background: var(--grad-deep); color: #fff; padding: 36px 40px;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .act__panel .eyebrow { color: var(--mint); }
+  .act__panel .ring--a { left: auto; right: -50px; top: -50px; width: 170px; height: 170px; }
+  .act__panel .ring--b { right: auto; left: -70px; bottom: -70px; width: 200px; height: 200px; }
+  .act__big { display: flex; align-items: center; gap: 20px; margin: 10px 0 26px; }
+  .act__big b { font-family: var(--font-display); font-weight: 100; font-size: 150px; line-height: 0.9; letter-spacing: -0.04em; background: var(--grad-text); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .act__big span { font-family: var(--font-display); font-weight: 300; font-size: 30px; line-height: 1.15; }
+  .act__row { display: flex; align-items: center; gap: 14px; font-size: 22px; padding-top: 22px; border-top: 1px solid rgba(255, 255, 255, 0.18); }
+  .act__row .ic { width: 30px; height: 30px; color: var(--mint); }
 
-  /* reflections */
-  .refl { display: grid; grid-template-columns: 1fr 440px; gap: 40px; flex: 1; }
+  /* ---- 12 reflections ---- */
+  .refl { display: grid; grid-template-columns: 1fr 430px; gap: 36px; flex: 1; min-height: 0; }
   .refl__cards { display: flex; flex-direction: column; gap: 16px; }
+  .refl__cards .lede { margin: -8px 0 2px; }
   .refl__card { display: flex; align-items: center; gap: 22px; padding: 22px 26px; }
-  .refl__q { font-size: 23px; font-style: italic; color: var(--navy); line-height: 1.3; margin-top: 4px; }
-  .refl__photo { width: 440px; height: 400px; margin-top: -6px; }
+  .refl__q { font-family: var(--font-display); font-weight: 300; font-size: 23px; color: var(--navy); line-height: 1.3; margin-top: 4px; }
+  .refl__photo { width: 100%; height: 100%; min-height: 0; margin-top: -8px; }
 
-  /* close */
-  .close { display: grid; grid-template-columns: 1fr 520px; gap: 50px; align-items: center; }
-  .close__title { font-family: var(--font-display); font-weight: 200; font-size: 84px; color: var(--green); line-height: 1; }
-  .close__thanks { font-size: 28px; color: var(--navy); margin-top: 18px; line-height: 1.3; }
-  .close__photo { width: 520px; height: 330px; }
-  .close__partners { margin-top: auto; }
-  .close__partners .label { margin-bottom: 16px; }
-  .logos--big { gap: 54px; }
-  .logos--big img { height: 62px; }
-  .page--close .pagefoot .logos { display: none; }
-  .page--close .pagefoot { justify-content: flex-end; }
-
-  /* divider */
-  .divider { margin: auto 0; }
-  .divider__title { font-family: var(--font-display); font-weight: 200; font-size: 110px; color: var(--green); line-height: 1; }
-
-  /* logistics */
-  .log { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
-  .log__card { display: flex; align-items: center; gap: 24px; padding: 34px 32px; }
-  .log__card p { font-size: 25px; color: var(--navy); line-height: 1.3; }
+  /* ---- 15 logistics ---- */
+  .log { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; flex: 1; }
+  .log__card { display: flex; flex-direction: column; justify-content: center; gap: 16px; padding: 28px 34px; }
+  .log__card h3 { font-weight: 400; font-size: 25px; line-height: 1.25; }
 
   /* ============================================================
      Presenter mode
@@ -246,14 +303,24 @@
 
   /* the EOQ presenter shows the active slide as a block; these slides lay out as a column */
   body.is-presenting .page.is-active { display: flex; }
+
+  /* entrance: each element eases up as its slide arrives */
+  @keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: no-preference) {
+    body.is-presenting .page.is-active .a {
+      animation: rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+      animation-delay: calc(var(--i, 0) * 90ms + 80ms);
+    }
+  }
+
   /* print: one slide per page */
   @page { size: 1280px 720px; margin: 0; }
   @media print {
     html { background: #fff; }
-    .deck { padding: 0; }
+    .deck { padding: 0; zoom: 1 !important; }
     .page { margin: 0; box-shadow: none; page-break-after: always; }
     .present-open, .present-ui { display: none !important; }
-    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; box-shadow: none !important; }
   }
 </style>
 </head>
@@ -264,19 +331,18 @@
   <section class="page page--cover" aria-label="Cover">
     <img class="panel" src="/change-fatigue/img/cover-panel.png" alt="Hands fitting wooden puzzle pieces together">
     <div class="cover">
-      <div class="logos logos--cover"><img src="/change-fatigue/img/oakleaf.png" alt="Oakleaf Partnership"><img src="/change-fatigue/img/tcs.png" alt="The Coaching Solution"><img src="/change-fatigue/img/futurehr.png" alt="Future HR"><img src="/change-fatigue/img/newtribe.png" alt="New Tribe Consulting"></div>
-      <p class="cover__kicker">Breakfast <b>Roundtable</b></p>
-      <h1 class="cover__title">Navigating Organisational<br>Change Fatigue</h1>
-      <p class="cover__sub">in the age of <b>AI</b></p>
-      <p class="cover__with">With guest speaker</p>
-      <div class="speaker">
-        <img src="/change-fatigue/img/martin-circle.png" alt="Martin Tynan">
-        <div><p class="speaker__name">Martin Tynan</p><p class="speaker__co">New Tribe Consulting</p></div>
+      <div class="logos logos--cover a"><img src="/change-fatigue/img/oakleaf.png" alt="Oakleaf Partnership"><img src="/change-fatigue/img/tcs.png" alt="The Coaching Solution"><img src="/change-fatigue/img/futurehr.png" alt="Future HR"><img src="/change-fatigue/img/newtribe.png" alt="New Tribe Consulting"></div>
+      <div class="cover__main">
+        <p class="cover__kicker a" style="--i:1">Breakfast <b>Roundtable</b></p>
+        <h1 class="cover__title a" style="--i:2">Navigating Organisational<br>Change Fatigue</h1>
+        <p class="cover__sub a" style="--i:3">in the age of <b>AI</b></p>
+        <div class="rule a" style="--i:4"></div>
+        <div class="speaker a" style="--i:5">
+          <img src="/change-fatigue/img/martin-circle.png" alt="Martin Tynan">
+          <div><p class="speaker__with">With guest speaker</p><p class="speaker__name">Martin Tynan</p><p class="speaker__co">New Tribe Consulting</p></div>
+        </div>
       </div>
-      <div class="cover__meta">
-        <span><span class="ic"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m0 18H4V8h16z"></path></svg></span>Thursday 8 October 2026 &middot; 8.30am to 10.30am</span>
-        <span><span class="ic"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7m0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5"></path></svg></span>Vinoteca City, Cannon Street, London EC4N 8AR</span>
-      </div>
+      <p class="cover__meta a" style="--i:6"><b>Thursday 8 October 2026</b> &middot; 8.30am to 10.30am &middot; Vinoteca City, London</p>
     </div>
     
   </section>
@@ -284,147 +350,191 @@
   <section class="page page--panel" aria-label="Martin Tynan">
     <img class="panel" src="/change-fatigue/img/martin-panel.png" alt="Martin Tynan">
     <div class="bio">
-      <p class="eyebrow">Guest speaker</p>
-      <h2 class="title">Martin <b>Tynan</b></h2>
-      <p class="bio__co">New Tribe Consulting</p>
+      <p class="eyebrow a">Guest speaker</p>
+      <h2 class="bio__name a" style="--i:1">Martin <b>Tynan</b></h2>
+      <p class="a" style="--i:2"><span class="chip">New Tribe Consulting</span></p>
       <ul class="ticks">
-        <li>Extensive global experience as an HR leader and Chief People Officer</li>
-        <li>Scale up, pre IPO, IPO, VC and PE backed experience</li>
-        <li>BSc HRM, MSc HR Consulting and Doctor of Business Administration (DBA), Maastricht University</li>
-        <li>Author of &lsquo;7 Entrepreneurial Workouts: A guide to developing entrepreneurial leadership in teams&rsquo;</li>
-        <li>Has lived and worked around the world, currently based in London</li>
+        <li class="a" style="--i:3">Extensive global experience as an HR leader and Chief People Officer</li>
+        <li class="a" style="--i:4">Scale up, pre IPO, IPO, VC and PE backed experience</li>
+        <li class="a" style="--i:5">BSc HRM, MSc HR Consulting and Doctor of Business Administration (DBA), Maastricht University</li>
+        <li class="a" style="--i:6">Author of &lsquo;7 Entrepreneurial Workouts: A guide to developing entrepreneurial leadership in teams&rsquo;</li>
+        <li class="a" style="--i:7">Has lived and worked around the world, currently based in London</li>
       </ul>
     </div>
     <footer class="pagefoot"><span class="logos logos--foot"><img src="/change-fatigue/img/oakleaf.png" alt="Oakleaf Partnership"><img src="/change-fatigue/img/tcs.png" alt="The Coaching Solution"><img src="/change-fatigue/img/futurehr.png" alt="Future HR"><img src="/change-fatigue/img/newtribe.png" alt="New Tribe Consulting"></span><span class="num">02 / 15</span></footer>
   </section>
 
-  <section class="page " aria-label="Session timings">
-    <div class="head"><h2 class="title">Session <b>Timings</b></h2></div>
-    <ol class="agenda"><li class="card"><span class="time">8:30 to 8:45</span><span>Welcome and introduction from Liz</span></li><li class="card"><span class="time">8:45 to 9:00</span><span>Framing the session</span></li><li class="card"><span class="time">9:00 to 9:15</span><span>Small group discussion</span></li><li class="card"><span class="time">9:15 to 9:45</span><span>Group discussion</span></li><li class="card"><span class="time">9:45 to 10:00</span><span>Small group action planning</span></li><li class="card"><span class="time">10:00 to 10:15</span><span>Action planning discussion</span></li><li class="card"><span class="time">10:15 to 10:30</span><span>Closing and reflections</span></li></ol>
+  <section class="page" aria-label="Session timings">
+    <header class="head a">
+      <div><p class="eyebrow">Agenda</p><h2 class="section-title">Session <b>Timings</b></h2></div>
+      <span class="chip a" style="--i:1">Thursday 8 October &middot; 8.30am to 10.30am</span>
+    </header>
+    <ol class="agenda card"><li class="a" style="--i:1"><span class="agenda__n">01</span><span class="agenda__time">8:30 <i>to</i> 8:45</span><span class="agenda__what">Welcome and introduction from Liz</span></li><li class="a" style="--i:2"><span class="agenda__n">02</span><span class="agenda__time">8:45 <i>to</i> 9:00</span><span class="agenda__what">Framing the session</span></li><li class="a" style="--i:3"><span class="agenda__n">03</span><span class="agenda__time">9:00 <i>to</i> 9:15</span><span class="agenda__what">Small group discussion</span></li><li class="a" style="--i:4"><span class="agenda__n">04</span><span class="agenda__time">9:15 <i>to</i> 9:45</span><span class="agenda__what">Group discussion</span></li><li class="a" style="--i:5"><span class="agenda__n">05</span><span class="agenda__time">9:45 <i>to</i> 10:00</span><span class="agenda__what">Small group action planning</span></li><li class="a" style="--i:6"><span class="agenda__n">06</span><span class="agenda__time">10:00 <i>to</i> 10:15</span><span class="agenda__what">Action planning discussion</span></li><li class="a" style="--i:7"><span class="agenda__n">07</span><span class="agenda__time">10:15 <i>to</i> 10:30</span><span class="agenda__what">Closing and reflections</span></li></ol>
     <footer class="pagefoot"><span class="logos logos--foot"><img src="/change-fatigue/img/oakleaf.png" alt="Oakleaf Partnership"><img src="/change-fatigue/img/tcs.png" alt="The Coaching Solution"><img src="/change-fatigue/img/futurehr.png" alt="Future HR"><img src="/change-fatigue/img/newtribe.png" alt="New Tribe Consulting"></span><span class="num">03 / 15</span></footer>
   </section>
 
-  <section class="page " aria-label="Framing our session">
-    <div class="head"><h2 class="title">Framing our <b>Session</b></h2></div>
+  <section class="page" aria-label="Framing our session">
+    <header class="head a">
+      <div><p class="eyebrow">Framing</p><h2 class="section-title">Framing our <b>Session</b></h2></div>
+      <span class="chip a" style="--i:1">8:45 to 9:00</span>
+    </header>
     <div class="split">
-      <div class="split__text">
-        <p class="theme">Navigating Organisational Change Fatigue</p>
+      <div class="split__text a" style="--i:1">
+        <p class="theme">Navigating Organisational <b>Change Fatigue</b></p>
+        <div class="rule"></div>
         <p class="theme__sub">in the age of <b>AI</b></p>
       </div>
-      <img class="photo split__photo" src="/change-fatigue/img/lens.jpg" alt="A hand holding a lens over a mountain landscape">
+      <img class="photo split__photo a" style="--i:2" src="/change-fatigue/img/lens.jpg" alt="A hand holding a camera lens up to a mountain lake, bringing the view into focus">
     </div>
     <footer class="pagefoot"><span class="logos logos--foot"><img src="/change-fatigue/img/oakleaf.png" alt="Oakleaf Partnership"><img src="/change-fatigue/img/tcs.png" alt="The Coaching Solution"><img src="/change-fatigue/img/futurehr.png" alt="Future HR"><img src="/change-fatigue/img/newtribe.png" alt="New Tribe Consulting"></span><span class="num">04 / 15</span></footer>
   </section>
 
-  <section class="page " aria-label="Co-creating our space together">
-    <div class="head"><h2 class="title">Co-Creating our <b>Space Together</b></h2></div>
-    <div class="card quote">
-      <span class="quote__mark" aria-hidden="true">&ldquo;</span>
-      <p>How do we best create a space that enables us to get what we want from the session this morning?</p>
+  <section class="page page--glowbg page--dark" aria-label="Co-creating our space together">
+    <span class="ring ring--a"></span><span class="ring ring--b"></span>
+    <div class="statement">
+      <p class="eyebrow a">Co-Creating our Space Together</p>
+      <p class="statement__q a" style="--i:1">How do we best create a space that enables us to <b>get what we want</b> from the session this morning?</p>
+      <div class="rule a" style="--i:2"></div>
     </div>
-    <footer class="pagefoot"><span class="logos logos--foot"><img src="/change-fatigue/img/oakleaf.png" alt="Oakleaf Partnership"><img src="/change-fatigue/img/tcs.png" alt="The Coaching Solution"><img src="/change-fatigue/img/futurehr.png" alt="Future HR"><img src="/change-fatigue/img/newtribe.png" alt="New Tribe Consulting"></span><span class="num">05 / 15</span></footer>
+    <footer class="pagefoot"><span class="logos logos--foot"><img src="/change-fatigue/img/oakleaf-white.png" alt="Oakleaf Partnership"><img src="/change-fatigue/img/tcs-white.png" alt="The Coaching Solution"><img src="/change-fatigue/img/futurehr-white.png" alt="Future HR"><img src="/change-fatigue/img/newtribe-white.png" alt="New Tribe Consulting"></span><span class="num">05 / 15</span></footer>
   </section>
 
-  <section class="page " aria-label="Introductions and pulse check">
-    <div class="head"><h2 class="title">Introductions and <b>Pulse Check</b></h2><p class="sub">Around the table, please share:</p></div>
-    <div class="pulse"><div class="card pulse__card"><div class="pulse__top"><span class="dot"><span class="ic"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 5.9a2.1 2.1 0 1 1 0 4.2 2.1 2.1 0 0 1 0-4.2m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4m0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4"></path></svg></span></span><span class="pulse__n">01</span></div><p>Who am I?</p></div><div class="card pulse__card"><div class="pulse__top"><span class="dot"><span class="ic"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M13 8.57a1.43 1.43 0 1 0 0 2.86 1.43 1.43 0 0 0 0-2.86"></path><path d="M13 3C9.25 3 6.2 5.94 6.02 9.64L4.1 12.2a.5.5 0 0 0 .4.8H6v3c0 1.1.9 2 2 2h1v3h7v-4.68A6.999 6.999 0 0 0 13 3m3 7c0 .13-.01.26-.02.39l.83.66c.08.06.1.16.05.25l-.8 1.39c-.05.09-.16.12-.24.09l-.99-.4c-.21.16-.43.29-.67.39L14 13.83c-.01.1-.1.17-.2.17h-1.6c-.1 0-.18-.07-.2-.17l-.15-1.06c-.25-.1-.47-.23-.68-.39l-.99.4c-.09.03-.2 0-.25-.09l-.8-1.39a.19.19 0 0 1 .05-.25l.84-.66c-.01-.13-.02-.26-.02-.39s.02-.27.04-.39l-.85-.66c-.08-.06-.1-.16-.05-.26l.8-1.38c.05-.09.15-.12.24-.09l1 .4c.2-.15.43-.29.67-.39L12 6.17c.02-.1.1-.17.2-.17h1.6c.1 0 .18.07.2.17l.15 1.06c.24.1.46.23.67.39l1-.4c.09-.03.2 0 .24.09l.8 1.38a.2.2 0 0 1-.05.26l-.85.66c.03.12.04.25.04.39"></path></svg></span></span><span class="pulse__n">02</span></div><p>One thing that is on your CEO&rsquo;s or leaders&rsquo; mind about AI and people</p></div><div class="card pulse__card"><div class="pulse__top"><span class="dot"><span class="ic"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M14.4 6 14 4H5v17h2v-7h5.6l.4 2h7V6z"></path></svg></span></span><span class="pulse__n">03</span></div><p>One thing you would like to get from today</p></div></div>
+  <section class="page" aria-label="Introductions and pulse check">
+    <header class="head a">
+      <div><p class="eyebrow">Around the table</p><h2 class="section-title">Introductions and <b>Pulse Check</b></h2></div>
+      <span class="chip a" style="--i:1">Please share</span>
+    </header>
+    <div class="pulse"><div class="card pulse__card a" style="--i:1"><p class="pulse__n">01</p><p class="pulse__t">Who am I?</p><span class="dot"><span class="ic"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 5.9a2.1 2.1 0 1 1 0 4.2 2.1 2.1 0 0 1 0-4.2m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4m0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4"></path></svg></span></span></div><div class="card pulse__card a" style="--i:2"><p class="pulse__n">02</p><p class="pulse__t">One thing that is on your CEO&rsquo;s or leaders&rsquo; mind about AI and people</p><span class="dot"><span class="ic"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M13 8.57a1.43 1.43 0 1 0 0 2.86 1.43 1.43 0 0 0 0-2.86"></path><path d="M13 3C9.25 3 6.2 5.94 6.02 9.64L4.1 12.2a.5.5 0 0 0 .4.8H6v3c0 1.1.9 2 2 2h1v3h7v-4.68A6.999 6.999 0 0 0 13 3m3 7c0 .13-.01.26-.02.39l.83.66c.08.06.1.16.05.25l-.8 1.39c-.05.09-.16.12-.24.09l-.99-.4c-.21.16-.43.29-.67.39L14 13.83c-.01.1-.1.17-.2.17h-1.6c-.1 0-.18-.07-.2-.17l-.15-1.06c-.25-.1-.47-.23-.68-.39l-.99.4c-.09.03-.2 0-.25-.09l-.8-1.39a.19.19 0 0 1 .05-.25l.84-.66c-.01-.13-.02-.26-.02-.39s.02-.27.04-.39l-.85-.66c-.08-.06-.1-.16-.05-.26l.8-1.38c.05-.09.15-.12.24-.09l1 .4c.2-.15.43-.29.67-.39L12 6.17c.02-.1.1-.17.2-.17h1.6c.1 0 .18.07.2.17l.15 1.06c.24.1.46.23.67.39l1-.4c.09-.03.2 0 .24.09l.8 1.38a.2.2 0 0 1-.05.26l-.85.66c.03.12.04.25.04.39"></path></svg></span></span></div><div class="card pulse__card a" style="--i:3"><p class="pulse__n">03</p><p class="pulse__t">One thing you would like to get from today</p><span class="dot"><span class="ic"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M14.4 6 14 4H5v17h2v-7h5.6l.4 2h7V6z"></path></svg></span></span></div></div>
     <footer class="pagefoot"><span class="logos logos--foot"><img src="/change-fatigue/img/oakleaf.png" alt="Oakleaf Partnership"><img src="/change-fatigue/img/tcs.png" alt="The Coaching Solution"><img src="/change-fatigue/img/futurehr.png" alt="Future HR"><img src="/change-fatigue/img/newtribe.png" alt="New Tribe Consulting"></span><span class="num">06 / 15</span></footer>
   </section>
 
-  <section class="page " aria-label="Perspectives for our discussion">
-    <div class="head"><h2 class="title">Perspectives for our <b>Discussion</b></h2></div>
-    <img class="photo hero-photo" src="/change-fatigue/img/frame.jpg" alt="A hand holding an empty picture frame up to a coastline">
+  <section class="page" aria-label="Perspectives for our discussion">
+    <header class="head a">
+      <div><p class="eyebrow">Perspectives</p><h2 class="section-title">Perspectives for our <b>Discussion</b></h2></div>
+      
+    </header>
+    <img class="photo wide-photo a" style="--i:1" src="/change-fatigue/img/frame.jpg" alt="A hand holding an empty picture frame up to a coastline">
     <footer class="pagefoot"><span class="logos logos--foot"><img src="/change-fatigue/img/oakleaf.png" alt="Oakleaf Partnership"><img src="/change-fatigue/img/tcs.png" alt="The Coaching Solution"><img src="/change-fatigue/img/futurehr.png" alt="Future HR"><img src="/change-fatigue/img/newtribe.png" alt="New Tribe Consulting"></span><span class="num">07 / 15</span></footer>
   </section>
 
-  <section class="page " aria-label="Change discussion">
-    <div class="head"><h2 class="title">Change <b>Discussion</b></h2><p class="sub">In groups of three, explore these two questions:</p></div>
+  <section class="page" aria-label="Change discussion">
+    <header class="head a">
+      <div><p class="eyebrow">Small group discussion</p><h2 class="section-title">Change <b>Discussion</b></h2></div>
+      <span class="chip a" style="--i:1">9:00 to 9:15</span>
+    </header>
+    <p class="lede a" style="--i:1">In groups of three, explore these two questions:</p>
     <div class="qgrid">
-      <div class="card qcard">
+      <div class="card qcard a" style="--i:2">
           <div class="qcard__top"><span class="dot"><span class="ic"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M11 18h2v-2h-2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4"></path></svg></span></span><span class="label">Question 1</span></div>
           <p class="qcard__q">&ldquo;What is the biggest barrier in my organisation to change and AI adoption?&rdquo;</p>
         </div>
-      <div class="card qcard">
+      <div class="card qcard a" style="--i:3">
           <div class="qcard__top"><span class="dot"><span class="ic"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1m-4 6V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1"></path></svg></span></span><span class="label">Question 2</span></div>
           <p class="qcard__q">&ldquo;What role does the People function play in helping the organisation overcome that barrier?&rdquo;</p>
         </div>
     </div>
-    <div class="chip-line"><span class="ic"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2M12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8"></path><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"></path></svg></span><span>Let&rsquo;s spend 15 minutes discussing in groups, then prepare to share with the wider group</span></div>
+    <div class="band a" style="--i:4">
+      <span class="band__big">15</span>
+      <div><p class="band__label">Minutes</p><p class="band__text">Discuss in your groups, then prepare to share with the wider group</p></div>
+    </div>
     <footer class="pagefoot"><span class="logos logos--foot"><img src="/change-fatigue/img/oakleaf.png" alt="Oakleaf Partnership"><img src="/change-fatigue/img/tcs.png" alt="The Coaching Solution"><img src="/change-fatigue/img/futurehr.png" alt="Future HR"><img src="/change-fatigue/img/newtribe.png" alt="New Tribe Consulting"></span><span class="num">08 / 15</span></footer>
   </section>
 
-  <section class="page " aria-label="Change <b>Fatigue</b>">
-    <div class="head"><h2 class="title">Change <b>Fatigue</b></h2></div>
-    <div class="act"><div class="act__side">
-        <p class="label">Activity</p>
-        <div class="card act__row"><span class="dot"><span class="ic"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 12.75c1.63 0 3.07.39 4.24.9 1.08.48 1.76 1.56 1.76 2.73V18H6v-1.61c0-1.18.68-2.26 1.76-2.73 1.17-.52 2.61-.91 4.24-.91M4 13c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2m1.13 1.1c-.37-.06-.74-.1-1.13-.1-.99 0-1.93.21-2.78.58A2.01 2.01 0 0 0 0 16.43V18h4.5v-1.61c0-.83.23-1.61.63-2.29M20 13c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2m4 3.43c0-.81-.48-1.53-1.22-1.85A6.95 6.95 0 0 0 20 14c-.39 0-.76.04-1.13.1.4.68.63 1.46.63 2.29V18H24zM12 6c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3"></path></svg></span></span>Group discussion</div>
-        <div class="card act__row"><span class="dot"><span class="ic"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2M12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8"></path><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"></path></svg></span></span>15 minute activity</div>
-      </div><img class="photo act__photo" src="/change-fatigue/img/goldfish.jpg" alt="Goldfish leaping between bowls"></div>
+  <section class="page" aria-label="Group discussion">
+    <header class="head a">
+      <div><p class="eyebrow">Group discussion</p><h2 class="section-title">Change <b>Fatigue</b></h2></div>
+      <span class="chip a" style="--i:1">9:15 to 9:45</span>
+    </header>
+    <div class="act"><div class="act__panel a" style="--i:2">
+        <span class="ring ring--a"></span><span class="ring ring--b"></span>
+        <p class="eyebrow">Activity</p>
+        <p class="act__big"><b>15</b><span>minute<br>activity</span></p>
+        <p class="act__row"><span class="ic"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 12.75c1.63 0 3.07.39 4.24.9 1.08.48 1.76 1.56 1.76 2.73V18H6v-1.61c0-1.18.68-2.26 1.76-2.73 1.17-.52 2.61-.91 4.24-.91M4 13c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2m1.13 1.1c-.37-.06-.74-.1-1.13-.1-.99 0-1.93.21-2.78.58A2.01 2.01 0 0 0 0 16.43V18h4.5v-1.61c0-.83.23-1.61.63-2.29M20 13c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2m4 3.43c0-.81-.48-1.53-1.22-1.85A6.95 6.95 0 0 0 20 14c-.39 0-.76.04-1.13.1.4.68.63 1.46.63 2.29V18H24zM12 6c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3"></path></svg></span>Group discussion</p>
+      </div><img class="photo act__photo a" style="--i:1" src="/change-fatigue/img/goldfish.jpg" alt="A goldfish leaping out of its bowl towards open water"></div>
     <footer class="pagefoot"><span class="logos logos--foot"><img src="/change-fatigue/img/oakleaf.png" alt="Oakleaf Partnership"><img src="/change-fatigue/img/tcs.png" alt="The Coaching Solution"><img src="/change-fatigue/img/futurehr.png" alt="Future HR"><img src="/change-fatigue/img/newtribe.png" alt="New Tribe Consulting"></span><span class="num">09 / 15</span></footer>
   </section>
 
-  <section class="page " aria-label="Action planning discussion">
-    <div class="head"><h2 class="title">Action Planning <b>Discussion</b></h2><p class="sub">In groups of three, explore these two questions:</p></div>
+  <section class="page" aria-label="Action planning discussion">
+    <header class="head a">
+      <div><p class="eyebrow">Small group action planning</p><h2 class="section-title">Action Planning <b>Discussion</b></h2></div>
+      <span class="chip a" style="--i:1">9:45 to 10:00</span>
+    </header>
+    <p class="lede a" style="--i:1">In groups of three, explore these two questions:</p>
     <div class="qgrid">
-      <div class="card qcard">
+      <div class="card qcard a" style="--i:2">
           <div class="qcard__top"><span class="dot"><span class="ic"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 12.75c1.63 0 3.07.39 4.24.9 1.08.48 1.76 1.56 1.76 2.73V18H6v-1.61c0-1.18.68-2.26 1.76-2.73 1.17-.52 2.61-.91 4.24-.91M4 13c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2m1.13 1.1c-.37-.06-.74-.1-1.13-.1-.99 0-1.93.21-2.78.58A2.01 2.01 0 0 0 0 16.43V18h4.5v-1.61c0-.83.23-1.61.63-2.29M20 13c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2m4 3.43c0-.81-.48-1.53-1.22-1.85A6.95 6.95 0 0 0 20 14c-.39 0-.76.04-1.13.1.4.68.63 1.46.63 2.29V18H24zM12 6c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3"></path></svg></span></span><span class="label">Question 1</span></div>
           <p class="qcard__q">&ldquo;What conversation should I be having with my People team about helping the organisation navigate this change?&rdquo;</p>
         </div>
-      <div class="card qcard">
+      <div class="card qcard a" style="--i:3">
           <div class="qcard__top"><span class="dot"><span class="ic"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0zm10 5h4v2h-4zm0 0h4v2h-4z"></path><path d="M10 16v-1H3.01L3 19c0 1.11.89 2 2 2h14c1.11 0 2-.89 2-2v-4h-7v1zm10-9h-4.01V5l-2-2h-4l-2 2v2H4c-1.1 0-2 .9-2 2v3c0 1.11.89 2 2 2h6v-2h4v2h6c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2m-6 0h-4V5h4z"></path></svg></span></span><span class="label">Question 2</span></div>
           <p class="qcard__q">&ldquo;What conversation should I be having with my Executive team based on the discussion today?&rdquo;</p>
         </div>
     </div>
-    <div class="chip-line"><span class="ic"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2M12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8"></path><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"></path></svg></span><span>Let&rsquo;s spend 15 minutes discussing in groups, then prepare to share with the wider group</span></div>
+    <div class="band a" style="--i:4">
+      <span class="band__big">15</span>
+      <div><p class="band__label">Minutes</p><p class="band__text">Discuss in your groups, then prepare to share with the wider group</p></div>
+    </div>
     <footer class="pagefoot"><span class="logos logos--foot"><img src="/change-fatigue/img/oakleaf.png" alt="Oakleaf Partnership"><img src="/change-fatigue/img/tcs.png" alt="The Coaching Solution"><img src="/change-fatigue/img/futurehr.png" alt="Future HR"><img src="/change-fatigue/img/newtribe.png" alt="New Tribe Consulting"></span><span class="num">10 / 15</span></footer>
   </section>
 
-  <section class="page " aria-label="Action <b>Planning</b>">
-    <div class="head"><h2 class="title">Action <b>Planning</b></h2></div>
-    <div class="act act--left"><img class="photo act__photo" src="/change-fatigue/img/goldfish.jpg" alt="Goldfish leaping between bowls"><div class="act__side">
-        <p class="label">Activity</p>
-        <div class="card act__row"><span class="dot"><span class="ic"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 12.75c1.63 0 3.07.39 4.24.9 1.08.48 1.76 1.56 1.76 2.73V18H6v-1.61c0-1.18.68-2.26 1.76-2.73 1.17-.52 2.61-.91 4.24-.91M4 13c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2m1.13 1.1c-.37-.06-.74-.1-1.13-.1-.99 0-1.93.21-2.78.58A2.01 2.01 0 0 0 0 16.43V18h4.5v-1.61c0-.83.23-1.61.63-2.29M20 13c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2m4 3.43c0-.81-.48-1.53-1.22-1.85A6.95 6.95 0 0 0 20 14c-.39 0-.76.04-1.13.1.4.68.63 1.46.63 2.29V18H24zM12 6c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3"></path></svg></span></span>Group discussion</div>
-        <div class="card act__row"><span class="dot"><span class="ic"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2M12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8"></path><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"></path></svg></span></span>15 minute activity</div>
+  <section class="page" aria-label="Action planning discussion">
+    <header class="head a">
+      <div><p class="eyebrow">Action planning discussion</p><h2 class="section-title">Action <b>Planning</b></h2></div>
+      <span class="chip a" style="--i:1">10:00 to 10:15</span>
+    </header>
+    <div class="act act--left"><img class="photo act__photo a" style="--i:1" src="/change-fatigue/img/goldfish.jpg" alt="A goldfish leaping out of its bowl towards open water"><div class="act__panel a" style="--i:2">
+        <span class="ring ring--a"></span><span class="ring ring--b"></span>
+        <p class="eyebrow">Activity</p>
+        <p class="act__big"><b>15</b><span>minute<br>activity</span></p>
+        <p class="act__row"><span class="ic"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 12.75c1.63 0 3.07.39 4.24.9 1.08.48 1.76 1.56 1.76 2.73V18H6v-1.61c0-1.18.68-2.26 1.76-2.73 1.17-.52 2.61-.91 4.24-.91M4 13c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2m1.13 1.1c-.37-.06-.74-.1-1.13-.1-.99 0-1.93.21-2.78.58A2.01 2.01 0 0 0 0 16.43V18h4.5v-1.61c0-.83.23-1.61.63-2.29M20 13c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2m4 3.43c0-.81-.48-1.53-1.22-1.85A6.95 6.95 0 0 0 20 14c-.39 0-.76.04-1.13.1.4.68.63 1.46.63 2.29V18H24zM12 6c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3"></path></svg></span>Group discussion</p>
       </div></div>
     <footer class="pagefoot"><span class="logos logos--foot"><img src="/change-fatigue/img/oakleaf.png" alt="Oakleaf Partnership"><img src="/change-fatigue/img/tcs.png" alt="The Coaching Solution"><img src="/change-fatigue/img/futurehr.png" alt="Future HR"><img src="/change-fatigue/img/newtribe.png" alt="New Tribe Consulting"></span><span class="num">11 / 15</span></footer>
   </section>
 
-  <section class="page " aria-label="Actions and reflections">
-    <div class="head"><h2 class="title">Actions and <b>Reflections</b></h2><p class="sub">Take 5 minutes to reflect on the following questions:</p></div>
+  <section class="page" aria-label="Actions and reflections">
+    <header class="head a">
+      <div><p class="eyebrow">Closing and reflections</p><h2 class="section-title">Actions and <b>Reflections</b></h2></div>
+      <span class="chip a" style="--i:1">10:15 to 10:30</span>
+    </header>
     <div class="refl">
       <div class="refl__cards">
-        <div class="card refl__card"><span class="dot"><span class="ic"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7m2 11.7V16h-4v-2.3C8.48 12.63 7 11.53 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 2.49-1.51 3.65-3 4.7"></path></svg></span></span><div><p class="label">Key insight</p><p class="refl__q">&ldquo;Share one insight or learning that you had today&rdquo;</p></div></div>
-        <div class="card refl__card"><span class="dot"><span class="ic"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M11 21h-1l1-7H7.5c-.58 0-.57-.32-.38-.66s.05-.08.07-.12C8.48 10.94 10.42 7.54 13 3h1l-1 7h3.5c.49 0 .56.33.47.51l-.07.15C12.96 17.55 11 21 11 21"></path></svg></span></span><div><p class="label">Next steps</p><p class="refl__q">&ldquo;Share one action you will take based on this discussion today&rdquo;</p></div></div>
-        <div class="chip-line"><span class="ic"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 12.75c1.63 0 3.07.39 4.24.9 1.08.48 1.76 1.56 1.76 2.73V18H6v-1.61c0-1.18.68-2.26 1.76-2.73 1.17-.52 2.61-.91 4.24-.91M4 13c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2m1.13 1.1c-.37-.06-.74-.1-1.13-.1-.99 0-1.93.21-2.78.58A2.01 2.01 0 0 0 0 16.43V18h4.5v-1.61c0-.83.23-1.61.63-2.29M20 13c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2m4 3.43c0-.81-.48-1.53-1.22-1.85A6.95 6.95 0 0 0 20 14c-.39 0-.76.04-1.13.1.4.68.63 1.46.63 2.29V18H24zM12 6c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3"></path></svg></span><span>We&rsquo;ll then share as a group</span></div>
+        <p class="lede a" style="--i:1">Take 5 minutes to reflect on the following questions:</p>
+        <div class="card refl__card a" style="--i:2"><span class="dot"><span class="ic"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7m2 11.7V16h-4v-2.3C8.48 12.63 7 11.53 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 2.49-1.51 3.65-3 4.7"></path></svg></span></span><div><p class="label">Key insight</p><p class="refl__q">&ldquo;Share one insight or learning that you had today&rdquo;</p></div></div>
+        <div class="card refl__card a" style="--i:3"><span class="dot"><span class="ic"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M11 21h-1l1-7H7.5c-.58 0-.57-.32-.38-.66s.05-.08.07-.12C8.48 10.94 10.42 7.54 13 3h1l-1 7h3.5c.49 0 .56.33.47.51l-.07.15C12.96 17.55 11 21 11 21"></path></svg></span></span><div><p class="label">Next steps</p><p class="refl__q">&ldquo;Share one action you will take based on this discussion today&rdquo;</p></div></div>
+        <div class="band band--slim a" style="--i:4"><span class="ic"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 12.75c1.63 0 3.07.39 4.24.9 1.08.48 1.76 1.56 1.76 2.73V18H6v-1.61c0-1.18.68-2.26 1.76-2.73 1.17-.52 2.61-.91 4.24-.91M4 13c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2m1.13 1.1c-.37-.06-.74-.1-1.13-.1-.99 0-1.93.21-2.78.58A2.01 2.01 0 0 0 0 16.43V18h4.5v-1.61c0-.83.23-1.61.63-2.29M20 13c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2m4 3.43c0-.81-.48-1.53-1.22-1.85A6.95 6.95 0 0 0 20 14c-.39 0-.76.04-1.13.1.4.68.63 1.46.63 2.29V18H24zM12 6c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3"></path></svg></span><p class="band__text">We&rsquo;ll then share as a group</p></div>
       </div>
-      <img class="photo refl__photo" src="/change-fatigue/img/glassball.jpg" alt="A glass ball resting on a bench, reflecting the street">
+      <img class="photo refl__photo a" style="--i:2" src="/change-fatigue/img/glassball.jpg" alt="A glass ball resting on a bench, reflecting the street">
     </div>
     <footer class="pagefoot"><span class="logos logos--foot"><img src="/change-fatigue/img/oakleaf.png" alt="Oakleaf Partnership"><img src="/change-fatigue/img/tcs.png" alt="The Coaching Solution"><img src="/change-fatigue/img/futurehr.png" alt="Future HR"><img src="/change-fatigue/img/newtribe.png" alt="New Tribe Consulting"></span><span class="num">12 / 15</span></footer>
   </section>
 
-  <section class="page page--close" aria-label="Close">
-    <div class="close">
-      <div class="close__text">
-        <h2 class="close__title">Close</h2>
-        <p class="close__thanks">Thank you for joining us for this Breakfast Roundtable.</p>
+  <section class="page page--cover" aria-label="Close">
+    <img class="panel" src="/change-fatigue/img/close-panel.png" alt="A glass ball held up against a sunset over the sea">
+    <div class="closing">
+      <p class="eyebrow a">Close</p>
+      <h2 class="closing__title a" style="--i:1">Thank <b>you</b></h2>
+      <div class="rule a" style="--i:2"></div>
+      <p class="closing__sub a" style="--i:3">for joining us for this Breakfast Roundtable.</p>
+      <div class="closing__partners a" style="--i:4">
+        <p class="label">In partnership with</p>
+        <div class="logos logos--big"><img src="/change-fatigue/img/oakleaf.png" alt="Oakleaf Partnership"><img src="/change-fatigue/img/tcs.png" alt="The Coaching Solution"><img src="/change-fatigue/img/futurehr.png" alt="Future HR"><img src="/change-fatigue/img/newtribe.png" alt="New Tribe Consulting"></div>
       </div>
-      <img class="photo close__photo" src="/change-fatigue/img/sunset.jpg" alt="A glass ball held up against a sunset">
     </div>
-    <div class="close__partners">
-      <p class="label">In partnership with</p>
-      <div class="logos logos--big"><img src="/change-fatigue/img/oakleaf.png" alt="Oakleaf Partnership"><img src="/change-fatigue/img/tcs.png" alt="The Coaching Solution"><img src="/change-fatigue/img/futurehr.png" alt="Future HR"><img src="/change-fatigue/img/newtribe.png" alt="New Tribe Consulting"></div>
-    </div>
-    <footer class="pagefoot"><span class="logos logos--foot"><img src="/change-fatigue/img/oakleaf.png" alt="Oakleaf Partnership"><img src="/change-fatigue/img/tcs.png" alt="The Coaching Solution"><img src="/change-fatigue/img/futurehr.png" alt="Future HR"><img src="/change-fatigue/img/newtribe.png" alt="New Tribe Consulting"></span><span class="num">13 / 15</span></footer>
+    
   </section>
 
-  <section class="page " aria-label="Appendix">
-    <div class="divider"><h2 class="divider__title">Appendix</h2></div>
-    <footer class="pagefoot"><span class="logos logos--foot"><img src="/change-fatigue/img/oakleaf.png" alt="Oakleaf Partnership"><img src="/change-fatigue/img/tcs.png" alt="The Coaching Solution"><img src="/change-fatigue/img/futurehr.png" alt="Future HR"><img src="/change-fatigue/img/newtribe.png" alt="New Tribe Consulting"></span><span class="num">14 / 15</span></footer>
+  <section class="page page--glowbg page--dark" aria-label="Appendix">
+    <span class="ring ring--a"></span><span class="ring ring--b"></span>
+    <div class="divider"><h2 class="divider__title a">Appen<b>dix</b></h2><div class="rule a" style="--i:1"></div></div>
+    <footer class="pagefoot"><span class="logos logos--foot"><img src="/change-fatigue/img/oakleaf-white.png" alt="Oakleaf Partnership"><img src="/change-fatigue/img/tcs-white.png" alt="The Coaching Solution"><img src="/change-fatigue/img/futurehr-white.png" alt="Future HR"><img src="/change-fatigue/img/newtribe-white.png" alt="New Tribe Consulting"></span><span class="num">14 / 15</span></footer>
   </section>
 
-  <section class="page " aria-label="Workshop logistics">
-    <div class="head"><h2 class="title">Workshop <b>Logistics</b></h2></div>
-    <div class="log"><div class="card log__card"><span class="dot dot--lg"><span class="ic"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M19 3H4.99C3.89 3 3 3.9 3 5l.01 14c0 1.1.89 2 1.99 2h10l6-6V5c0-1.1-.9-2-2-2M7 8h10v2H7zm5 6H7v-2h5zm2 5.5V14h5.5z"></path></svg></span></span><p>Flip chart, post it notes and pens</p></div><div class="card log__card"><span class="dot dot--lg"><span class="ic"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M20 18c1.1 0 1.99-.9 1.99-2L22 5c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2H0c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2zM4 5h16v11H4zm8 14c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1"></path></svg></span></span><p>Laptop projection</p></div><div class="card log__card"><span class="dot dot--lg"><span class="ic"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="m21.96 9.73-1.43-5a.996.996 0 0 0-.96-.73H4.43c-.45 0-.84.3-.96.73l-1.43 5c-.18.63.3 1.27.96 1.27h2.2L4 20h2l.67-5h10.67l.66 5h2l-1.2-9H21c.66 0 1.14-.64.96-1.27M6.93 13l.27-2h9.6l.27 2z"></path></svg></span></span><p>Boardroom, interactive style</p></div><div class="card log__card"><span class="dot dot--lg"><span class="ic"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4z"></path><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m-5.99 13c-.59 0-1.05-.47-1.05-1.05 0-.59.47-1.04 1.05-1.04.59 0 1.04.45 1.04 1.04-.01.58-.45 1.05-1.04 1.05m2.5-6.17c-.63.93-1.23 1.21-1.56 1.81-.13.24-.18.4-.18 1.18h-1.52c0-.41-.06-1.08.26-1.65.41-.73 1.18-1.16 1.63-1.8.48-.68.21-1.94-1.14-1.94-.88 0-1.32.67-1.5 1.23l-1.37-.57C11.51 5.96 12.52 5 13.99 5c1.23 0 2.08.56 2.51 1.26.37.61.58 1.73.01 2.57"></path></svg></span></span><p>Prep for session: question?</p></div></div>
+  <section class="page" aria-label="Workshop logistics">
+    <header class="head a">
+      <div><p class="eyebrow">Appendix</p><h2 class="section-title">Workshop <b>Logistics</b></h2></div>
+      
+    </header>
+    <div class="log"><div class="card log__card a" style="--i:1"><span class="dot"><span class="ic"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M19 3H4.99C3.89 3 3 3.9 3 5l.01 14c0 1.1.89 2 1.99 2h10l6-6V5c0-1.1-.9-2-2-2M7 8h10v2H7zm5 6H7v-2h5zm2 5.5V14h5.5z"></path></svg></span></span><h3>Flip chart, post it notes and pens</h3></div><div class="card log__card a" style="--i:2"><span class="dot"><span class="ic"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M20 18c1.1 0 1.99-.9 1.99-2L22 5c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2H0c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2zM4 5h16v11H4zm8 14c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1"></path></svg></span></span><h3>Laptop projection</h3></div><div class="card log__card a" style="--i:3"><span class="dot"><span class="ic"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="m21.96 9.73-1.43-5a.996.996 0 0 0-.96-.73H4.43c-.45 0-.84.3-.96.73l-1.43 5c-.18.63.3 1.27.96 1.27h2.2L4 20h2l.67-5h10.67l.66 5h2l-1.2-9H21c.66 0 1.14-.64.96-1.27M6.93 13l.27-2h9.6l.27 2z"></path></svg></span></span><h3>Boardroom, interactive style</h3></div><div class="card log__card a" style="--i:4"><span class="dot"><span class="ic"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4z"></path><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m-5.99 13c-.59 0-1.05-.47-1.05-1.05 0-.59.47-1.04 1.05-1.04.59 0 1.04.45 1.04 1.04-.01.58-.45 1.05-1.04 1.05m2.5-6.17c-.63.93-1.23 1.21-1.56 1.81-.13.24-.18.4-.18 1.18h-1.52c0-.41-.06-1.08.26-1.65.41-.73 1.18-1.16 1.63-1.8.48-.68.21-1.94-1.14-1.94-.88 0-1.32.67-1.5 1.23l-1.37-.57C11.51 5.96 12.52 5 13.99 5c1.23 0 2.08.56 2.51 1.26.37.61.58 1.73.01 2.57"></path></svg></span></span><h3>Prep for session: question?</h3></div></div>
     <footer class="pagefoot"><span class="logos logos--foot"><img src="/change-fatigue/img/oakleaf.png" alt="Oakleaf Partnership"><img src="/change-fatigue/img/tcs.png" alt="The Coaching Solution"><img src="/change-fatigue/img/futurehr.png" alt="Future HR"><img src="/change-fatigue/img/newtribe.png" alt="New Tribe Consulting"></span><span class="num">15 / 15</span></footer>
   </section>
 
