@@ -6,6 +6,15 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Oakleaf Partnership &amp; Weil</title>
 <link rel="icon" href="/assets/favicon-32.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Oakleaf Partnership &amp; Weil">
+<meta property="og:description" content="Presented by Beth Hicks and Marie Robery-Bliss, Oakleaf Partnership">
+<meta property="og:url" content="https://cap.oakleafpartnership.com/weil/">
+<meta property="og:image" content="https://cap.oakleafpartnership.com/weil/img/og-weil.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cap.oakleafpartnership.com/weil/img/og-weil.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&family=DM+Sans:opsz,wght@9..40,200..700&display=swap" rel="stylesheet">
@@ -71,14 +80,16 @@
   .cover__title-wrap { margin-top: auto; margin-bottom: auto; padding-bottom: 10px; }
   .cover__client { width: 246px; height: auto; border-radius: 3px; }
   .cover__kicker { margin-top: 30px; font-size: 12px; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: var(--muted); }
-  .cover__subtitle { font-family: var(--font-display); font-weight: 200; font-size: 62px; line-height: 1.02; color: var(--navy); margin-top: 8px; letter-spacing: -0.02em; }
+  .cover__subtitle { font-family: var(--font-display); font-weight: 200; font-size: 50px; line-height: 1.06; color: var(--navy); margin-top: 38px; letter-spacing: -0.02em; }
   .cover__subtitle span { color: var(--green-ink); font-weight: 300; }
   .cover__rule { width: 74px; height: 4px; border-radius: 4px; background: var(--grad-brand); margin: 24px 0 20px; }
   .cover__prepared { font-size: 15px; line-height: 1.7; color: var(--ink); }
   .cover__prepared b { font-weight: 600; color: var(--navy); }
   .cover__meta { margin-top: 22px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
   .cover__meta b { color: var(--green-ink); font-weight: 600; letter-spacing: 0.1em; }
-  .cover__right { position: relative; background: var(--grad-deep); overflow: hidden; }
+  .cover { position: relative; }
+  .cover__right { position: relative; z-index: 2; background: var(--grad-deep); overflow: hidden; clip-path: polygon(96px 0, 100% 0, 100% 100%, 0 100%); }
+  .cover__edge { position: absolute; z-index: 1; top: 0; bottom: 0; right: 0; left: calc(100% * 1.15 / 2.15 - 16px); background: var(--grad-brand); clip-path: polygon(96px 0, 100% 0, 100% 100%, 0 100%); }
   .cover__right::after { content: ""; position: absolute; z-index: 2; left: -70px; top: -70px; width: 220px; height: 220px; border-radius: 50%; border: 1.5px solid rgba(161,254,208,0.35); }
   .cover__ring { position: absolute; z-index: 2; right: -90px; bottom: -90px; width: 300px; height: 300px; border-radius: 50%; border: 1.5px solid rgba(161,254,208,0.22); }
   .cover__photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; z-index: 0; }
@@ -190,7 +201,7 @@
   .close__sub { font-family: var(--font-display); font-weight: 300; font-size: 24px; color: rgba(255,255,255,0.85); margin-top: 12px; }
   .contacts { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 46px; }
   .contact { display: flex; gap: 24px; align-items: center; padding: 24px 28px; border-radius: var(--radius); background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); }
-  .contact__photo { width: 112px; height: 112px; border-radius: 50%; padding: 4px; background: var(--grad-brand); flex: none; }
+  .contact__photo { width: 96px; height: 96px; border-radius: 50%; padding: 4px; background: var(--grad-brand); flex: none; }
   .contact__photo img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 3px solid #12536a; }
   .contact__name { font-family: var(--font-display); font-size: 22px; font-weight: 400; }
   .contact__role { color: var(--mint); font-size: 14px; margin-bottom: 6px; }
@@ -208,10 +219,10 @@
   .market-card p { margin-top: 20px; font-family: var(--font-display); font-weight: 300; font-size: 22px; line-height: 1.45; color: var(--navy); }
   .market-card p b { font-weight: 500; color: var(--petrol); }
   .market-card.card--navy p { color: #fff; }
-  .body--center { justify-content: center; gap: 30px; padding-top: 96px; }
+  .body--center { justify-content: center; gap: 20px; padding-top: 92px; padding-bottom: 54px; }
   .body--center .stats { margin-top: 0; }
-  .body--center .stat { padding: 34px 30px 32px; }
-  .body--center .stat__value { font-size: 76px; }
+  .body--center .stat { padding: 24px 28px 22px; }
+  .body--center .stat__value { font-size: 60px; }
   .body--center .readmore { align-self: flex-start; gap: 18px; background: #fff; }
   .body--center .readmore b { font-size: 17px; }
   .way > p:first-of-type { margin-top: 0; }
@@ -266,6 +277,31 @@
   .star-card h3 { font-size: 34px; margin-top: 24px; }
   .star-card p { font-size: 19px; }
 
+
+  /* chart */
+  .chart-card { padding: 18px 24px 12px; margin: 0; }
+  .chart { width: 100%; height: auto; display: block; }
+  .chart .gl { stroke: #e6ece9; stroke-width: 1; }
+  .chart .ax { font: 500 12px var(--font); fill: #5a6f72; text-anchor: middle; }
+  .chart .ay { font: 500 11px var(--font); fill: #8a9c9e; text-anchor: end; }
+  .chart .band { font: 600 11px var(--font); fill: #2e6b4e; text-anchor: middle; letter-spacing: 0.12em; text-transform: uppercase; }
+  .chart-card figcaption { font-size: 11.5px; color: var(--muted); margin-top: 4px; }
+  /* contact QR */
+  .contact > div:not(.contact__photo) { min-width: 0; flex: 1; }
+  .contact { gap: 18px !important; padding: 20px 22px !important; }
+  .contact a { font-size: 13.5px; }
+  .contact__qr { width: 84px; height: 84px; border-radius: 10px; background: #fff; padding: 5px; flex: none; }
+  /* presenter mode */
+  .present-btn { position: fixed; right: 22px; bottom: 26px; z-index: 50; display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 999px; border: 1px solid var(--line); background: #fff; color: var(--navy); font: 500 14px var(--font); cursor: pointer; box-shadow: 0 6px 18px rgba(14,58,82,0.12); }
+  .present-btn svg { width: 13px; height: 13px; color: var(--green-ink); }
+  body.presenting { background: #0b2533; overflow: hidden; }
+  html.presenting-root { background: #0b2533; }
+  body.presenting .page { display: none; margin: 0; box-shadow: none; }
+  body.presenting .page.is-current { display: block; position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%) scale(var(--s, 1)); }
+  body.presenting .pdf-fab, body.presenting .present-btn { display: none; }
+  .present-hud { display: none; }
+  body.presenting .present-hud { display: block; position: fixed; right: 18px; bottom: 12px; z-index: 60; font: 500 12px var(--font); color: rgba(255,255,255,0.45); letter-spacing: 0.08em; }
+
   /* ---- floating PDF download ---- */
   .pdf-fab { position: fixed; bottom: 26px; left: 50%; transform: translateX(-50%); z-index: 50; display: inline-flex; align-items: center; gap: 9px; padding: 13px 26px; border-radius: 999px; font-family: var(--font); font-size: 15px; font-weight: 500; color: #07313f; text-decoration: none; background: var(--grad-brand); box-shadow: 0 8px 24px rgba(38,178,223,0.35); transition: transform 0.35s cubic-bezier(0.16,1,0.3,1), box-shadow 0.35s; }
   .pdf-fab:hover { transform: translateX(-50%) translateY(-3px); box-shadow: 0 14px 34px rgba(38,178,223,0.45); }
@@ -277,7 +313,7 @@
     html { background: #fff; }
     .page { margin: 0; box-shadow: none; page-break-after: always; }
     .page:last-child { page-break-after: auto; }
-    .pdf-fab { display: none; }
+    .pdf-fab, .present-btn, .present-hud { display: none !important; }
     * { box-shadow: none !important; text-shadow: none !important; backdrop-filter: none !important; }
   }
 
@@ -324,6 +360,11 @@
     .who__cards .who-card p { font-size: 18px; }
     .star-card h3 { font-size: 28px; }
     .body--center .stat__value { font-size: 60px; }
+    .cover__right { clip-path: none; }
+    .cover__edge { display: none; }
+    .present-btn { display: none; }
+    .contact { flex-wrap: wrap; }
+    .contact__qr { width: 84px; height: 84px; }
     .pdf-fab { bottom: 16px; padding: 11px 20px; font-size: 14px; }
   }
 </style>
@@ -350,6 +391,7 @@
       <p class="cover__meta">12 November 2026 &nbsp;&middot;&nbsp; <b>oakleafpartnership.com</b></p>
     </div>
   </div>
+  <span class="cover__edge"></span>
   <div class="cover__right">
     <span class="cover__ring"></span>
     <img class="cover__photo" src="/weil/img/city-of-london.jpg" alt="The City of London skyline">
@@ -395,6 +437,21 @@
       <div class="card stat"><p class="stat__value">+22.4%</p><p class="stat__label">New HR postings, July to September</p></div>
       <div class="card stat"><p class="stat__value">50.9</p><p class="stat__label">Permanent placements index, September</p></div>
     </div>
+    <figure class="card chart-card">
+      <svg class="chart" viewBox="0 0 1168 214" role="img" aria-label="Indeed Hiring Lab UK HR job postings index, 2026">
+<defs><linearGradient id="ln" x1="0" x2="1"><stop offset="0" stop-color="#69bc90"/><stop offset="1" stop-color="#26b2df"/></linearGradient>
+<linearGradient id="ar" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#26b2df" stop-opacity=".16"/><stop offset="1" stop-color="#26b2df" stop-opacity="0"/></linearGradient></defs>
+<rect x="701.1" y="18" width="330.4" height="166" rx="8" fill="#e3f5ea"/>
+<text x="866.3" y="34" class="band">Jul to Sep</text>
+<line x1="44" x2="1144" y1="168.9" y2="168.9" class="gl"/><text x="34" y="172.9" class="ay">60</text><line x1="44" x2="1144" y1="131.2" y2="131.2" class="gl"/><text x="34" y="135.2" class="ay">65</text><line x1="44" x2="1144" y1="93.5" y2="93.5" class="gl"/><text x="34" y="97.5" class="ay">70</text><line x1="44" x2="1144" y1="55.7" y2="55.7" class="gl"/><text x="34" y="59.7" class="ay">75</text><line x1="44" x2="1144" y1="18.0" y2="18.0" class="gl"/><text x="34" y="22.0" class="ay">80</text>
+<path d="M47.6 72.3 L73.0 80.6 L98.5 89.7 L123.9 97.2 L149.3 105.5 L174.7 107.0 L200.1 100.2 L225.5 95.0 L250.9 98.0 L276.3 85.9 L301.8 73.8 L327.2 73.1 L352.6 72.3 L378.0 70.8 L403.4 78.4 L428.8 98.0 L454.2 88.2 L479.6 88.9 L505.1 88.9 L530.5 83.6 L555.9 55.0 L581.3 66.3 L606.7 89.7 L632.1 105.5 L657.5 138.0 L682.9 132.7 L708.4 141.0 L733.8 142.5 L759.2 146.3 L784.6 147.8 L810.0 144.8 L835.4 141.7 L860.8 144.0 L886.2 135.7 L911.7 137.2 L937.1 135.0 L962.5 141.0 L987.9 139.5 L1013.3 131.9 L1038.7 119.9 L1064.1 121.4 L1089.5 122.9 L1115.0 128.2 L1115.0 184.0 L47.6 184.0 Z" fill="url(#ar)"/>
+<path d="M47.6 72.3 L73.0 80.6 L98.5 89.7 L123.9 97.2 L149.3 105.5 L174.7 107.0 L200.1 100.2 L225.5 95.0 L250.9 98.0 L276.3 85.9 L301.8 73.8 L327.2 73.1 L352.6 72.3 L378.0 70.8 L403.4 78.4 L428.8 98.0 L454.2 88.2 L479.6 88.9 L505.1 88.9 L530.5 83.6 L555.9 55.0 L581.3 66.3 L606.7 89.7 L632.1 105.5 L657.5 138.0 L682.9 132.7 L708.4 141.0 L733.8 142.5 L759.2 146.3 L784.6 147.8 L810.0 144.8 L835.4 141.7 L860.8 144.0 L886.2 135.7 L911.7 137.2 L937.1 135.0 L962.5 141.0 L987.9 139.5 L1013.3 131.9 L1038.7 119.9 L1064.1 121.4 L1089.5 122.9 L1115.0 128.2" fill="none" stroke="url(#ln)" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="777.3" cy="149.2" r="6" fill="#fff" stroke="#166484" stroke-width="3"/>
+<circle cx="1115.0" cy="128.2" r="6" fill="#26b2df" stroke="#fff" stroke-width="2.5"/>
+<text x="94.8" y="206" class="ax">Jan</text><text x="207.4" y="206" class="ax">Feb</text><text x="309.0" y="206" class="ax">Mar</text><text x="421.6" y="206" class="ax">Apr</text><text x="530.5" y="206" class="ax">May</text><text x="643.0" y="206" class="ax">Jun</text><text x="751.9" y="206" class="ax">Jul</text><text x="864.5" y="206" class="ax">Aug</text><text x="977.0" y="206" class="ax">Sep</text><text x="1085.9" y="206" class="ax">Oct</text>
+</svg>
+      <figcaption>Indeed Hiring Lab, UK HR job postings index, 2026</figcaption>
+    </figure>
     <a class="card readmore" href="https://www.oakleafpartnership.com/news-views/hr-market-pulse-2026-10-uk" target="_blank" rel="noopener"><span class="ico"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg></span><b>HR Market Update: July to September 2026, UK HR hiring shows early signs of recovery</b></a>
   </div>
   <div class="pagefoot"><span>Oakleaf Partnership &amp; Weil &nbsp;&middot;&nbsp; 12 November 2026</span><b>04</b></div>
@@ -514,8 +571,8 @@
   <div class="statement__inner statement__inner--qa">
     <h2 class="qa">Q<span>&amp;</span>A</h2>
     <div class="contacts">
-      <div class="contact"><div class="contact__photo"><img src="/weil/img/beth-hicks.jpg" alt="Beth Hicks"></div><div><p class="contact__name">Beth Hicks</p><p class="contact__role">Director</p><a href="mailto:bethhicks@oakleafpartnership.com">bethhicks@oakleafpartnership.com</a><a href="tel:+442073377611">020 7337 7611</a></div></div>
-      <div class="contact"><div class="contact__photo"><img src="/weil/img/marie-robery-bliss.jpg" alt="Marie Robery-Bliss"></div><div><p class="contact__name">Marie Robery-Bliss</p><p class="contact__role">Director</p><a href="mailto:marierobery-bliss@oakleafpartnership.com">marierobery-bliss@oakleafpartnership.com</a><a href="tel:+442073377639">020 7337 7639</a></div></div>
+      <div class="contact"><div class="contact__photo"><img src="/weil/img/beth-hicks.jpg" alt="Beth Hicks"></div><div><p class="contact__name">Beth Hicks</p><p class="contact__role">Director</p><a href="mailto:bethhicks@oakleafpartnership.com">bethhicks@oakleafpartnership.com</a><a href="tel:+442073377611">020 7337 7611</a></div><img class="contact__qr" src="/weil/img/qr-beth-hicks.png" alt="QR code to save Beth Hicks to your contacts"></div>
+      <div class="contact"><div class="contact__photo"><img src="/weil/img/marie-robery-bliss.jpg" alt="Marie Robery-Bliss"></div><div><p class="contact__name">Marie Robery-Bliss</p><p class="contact__role">Director</p><a href="mailto:marierobery-bliss@oakleafpartnership.com">marierobery-bliss@oakleafpartnership.com</a><a href="tel:+442073377639">020 7337 7639</a></div><img class="contact__qr" src="/weil/img/qr-marie-robery-bliss.png" alt="QR code to save Marie Robery-Bliss to your contacts"></div>
     </div>
   </div>
   <div class="pagefoot"><span>Oakleaf Partnership &amp; Weil &nbsp;&middot;&nbsp; 12 November 2026</span><b>11</b></div>
@@ -523,5 +580,58 @@
 
 <a class="pdf-fab" href="/weil/Oakleaf-Partnership-and-Weil.pdf" download><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 242.7-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7 288 32zM64 352c-35.3 0-64 28.7-64 64l0 32c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-32c0-35.3-28.7-64-64-64l-101.5 0-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352 64 352zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"></path></svg> Download PDF</a>
 
+<button class="present-btn" type="button" title="Present full screen (P)"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 384 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"></path></svg> Present</button>
+<div class="present-hud" aria-hidden="true"></div>
+<script>
+(function () {
+  var pages = Array.prototype.slice.call(document.querySelectorAll('.page'));
+  var hud = document.querySelector('.present-hud');
+  var i = 0, on = false;
+  function fit() {
+    var w = document.documentElement.clientWidth, h = document.documentElement.clientHeight;
+    document.body.style.setProperty('--s', Math.min(w / 1280, h / 720));
+  }
+  function show(n) {
+    i = Math.max(0, Math.min(pages.length - 1, n));
+    pages.forEach(function (p, k) { p.classList.toggle('is-current', k === i); });
+    hud.textContent = (i + 1) + ' / ' + pages.length;
+    history.replaceState(null, '', '#present/' + (i + 1));
+  }
+  function nearest() {
+    var best = 0, d = Infinity;
+    pages.forEach(function (p, k) { var t = Math.abs(p.getBoundingClientRect().top); if (t < d) { d = t; best = k; } });
+    return best;
+  }
+  function start(n) {
+    on = true; document.body.classList.add('presenting'); document.documentElement.classList.add('presenting-root');
+    fit(); show(n == null ? nearest() : n);
+    if (document.documentElement.requestFullscreen && !document.fullscreenElement) { document.documentElement.requestFullscreen().catch(function () {}); }
+  }
+  function stop() {
+    if (!on) return; on = false;
+    document.body.classList.remove('presenting'); document.documentElement.classList.remove('presenting-root');
+    pages.forEach(function (p) { p.classList.remove('is-current'); });
+    history.replaceState(null, '', location.pathname);
+    if (document.fullscreenElement) { document.exitFullscreen().catch(function () {}); }
+    pages[i].scrollIntoView();
+  }
+  document.querySelector('.present-btn').addEventListener('click', function () { start(); });
+  document.addEventListener('keydown', function (e) {
+    if (!on) { if ((e.key === 'p' || e.key === 'P') && !e.metaKey && !e.ctrlKey) { start(); } return; }
+    if (['ArrowRight', 'ArrowDown', 'PageDown', ' ', 'Enter'].indexOf(e.key) > -1) { e.preventDefault(); show(i + 1); }
+    else if (['ArrowLeft', 'ArrowUp', 'PageUp', 'Backspace'].indexOf(e.key) > -1) { e.preventDefault(); show(i - 1); }
+    else if (e.key === 'Home') { show(0); } else if (e.key === 'End') { show(pages.length - 1); }
+    else if (e.key === 'Escape') { stop(); }
+  });
+  document.addEventListener('click', function (e) {
+    if (!on || e.target.closest('a')) return;
+    if (e.clientX < window.innerWidth * 0.3) { show(i - 1); } else { show(i + 1); }
+  });
+  document.addEventListener('fullscreenchange', function () { if (!document.fullscreenElement && on) { stop(); } });
+  window.addEventListener('resize', function () { if (on) fit(); });
+  var m = location.hash.match(/^#present(?:\/(\d+))?$/);
+  if (m) { start(m[1] ? parseInt(m[1], 10) - 1 : 0); }
+})();
+</script>
 </body>
 </html>
