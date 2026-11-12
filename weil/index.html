@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Making your next move | Oakleaf Partnership and Weil</title>
+<title>Oakleaf Partnership &amp; Weil</title>
 <link rel="icon" href="/assets/favicon-32.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -79,15 +79,10 @@
   .cover__meta { margin-top: 22px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
   .cover__meta b { color: var(--green-ink); font-weight: 600; letter-spacing: 0.1em; }
   .cover__right { position: relative; background: var(--grad-deep); overflow: hidden; }
-  .cover__right::before { content: ""; position: absolute; inset: 0;
-    background: radial-gradient(560px 420px at 82% 8%, rgba(161,254,208,0.16), transparent 60%), radial-gradient(640px 520px at 12% 96%, rgba(38,178,223,0.22), transparent 62%); }
-  .cover__right::after { content: ""; position: absolute; left: -70px; top: -70px; width: 220px; height: 220px; border-radius: 50%; border: 1.5px solid rgba(161,254,208,0.35); }
-  .cover__ring { position: absolute; right: -90px; bottom: -90px; width: 300px; height: 300px; border-radius: 50%; border: 1.5px solid rgba(161,254,208,0.22); }
-  .roundel { position: absolute; left: 50%; top: 47%; transform: translate(-50%, -50%); width: 380px; height: 380px; border-radius: 50%; border: 2px solid rgba(105,188,144,0.85); display: flex; align-items: center; justify-content: center; z-index: 2; }
-  .roundel__inner { width: 324px; height: 324px; border-radius: 50%; background: rgba(255,255,255,0.06); border: 1px solid rgba(38,178,223,0.55); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #fff; }
-  .roundel__num { font-family: var(--font-display); font-weight: 200; font-size: 132px; line-height: 0.9; letter-spacing: -0.03em; }
-  .roundel__years { margin-top: 12px; font-size: 13px; font-weight: 600; letter-spacing: 0.4em; padding-left: 0.4em; text-transform: uppercase; color: var(--mint); }
-  .roundel__strap { margin-top: 14px; max-width: 220px; font-size: 14px; line-height: 1.45; color: rgba(255,255,255,0.82); }
+  .cover__right::after { content: ""; position: absolute; z-index: 2; left: -70px; top: -70px; width: 220px; height: 220px; border-radius: 50%; border: 1.5px solid rgba(161,254,208,0.35); }
+  .cover__ring { position: absolute; z-index: 2; right: -90px; bottom: -90px; width: 300px; height: 300px; border-radius: 50%; border: 1.5px solid rgba(161,254,208,0.22); }
+  .cover__photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; z-index: 0; }
+  .cover__shade { position: absolute; inset: 0; z-index: 1; background: linear-gradient(0deg, rgba(14,58,82,0.85) 0%, rgba(14,58,82,0.25) 30%, rgba(14,58,82,0) 55%); }
   .cover__right-tag { position: absolute; left: 0; right: 0; bottom: 26px; text-align: center; font-size: 11.5px; letter-spacing: 0.26em; text-transform: uppercase; color: rgba(255,255,255,0.75); font-weight: 500; z-index: 2; }
 
   /* ============================================================
@@ -204,6 +199,73 @@
   .close .pagefoot { color: rgba(255,255,255,0.65); }
   .close .pagefoot b { color: var(--green); }
 
+
+  /* exact-content layouts */
+  .lead--big { font-size: 26px; line-height: 1.4; color: var(--navy); max-width: 1060px; }
+  .who__cards .who-card p { margin-top: 20px; font-size: 17px; color: var(--ink); line-height: 1.55; }
+  .market2 { margin-top: auto; }
+  .market-card { padding: 30px 32px; }
+  .market-card p { margin-top: 20px; font-family: var(--font-display); font-weight: 300; font-size: 22px; line-height: 1.45; color: var(--navy); }
+  .market-card p b { font-weight: 500; color: var(--petrol); }
+  .market-card.card--navy p { color: #fff; }
+  .body--center { justify-content: center; gap: 30px; padding-top: 96px; }
+  .body--center .stats { margin-top: 0; }
+  .body--center .stat { padding: 34px 30px 32px; }
+  .body--center .stat__value { font-size: 76px; }
+  .body--center .readmore { align-self: flex-start; gap: 18px; background: #fff; }
+  .body--center .readmore b { font-size: 17px; }
+  .way > p:first-of-type { margin-top: 0; }
+  .cv-list ol { margin-top: 4px; gap: 22px; }
+  .formula { display: flex; align-items: center; }
+  .formula__lines { margin-top: 0; font-size: 44px; }
+  .star-label { margin: 22px 0 12px; }
+  .star { margin-top: 0; }
+  .step { align-items: center; }
+  .step p { font-size: 19px; color: var(--navy); line-height: 1.45; }
+  .statement { background: var(--grad-deep); color: #fff; }
+  .statement::before { content: ""; position: absolute; inset: 0; background: radial-gradient(620px 460px at 88% 6%, rgba(161,254,208,0.14), transparent 60%), radial-gradient(700px 520px at 6% 100%, rgba(38,178,223,0.22), transparent 62%); }
+  .statement::after { content: ""; position: absolute; right: -120px; top: -120px; width: 420px; height: 420px; border-radius: 50%; border: 1.5px solid rgba(161,254,208,0.25); }
+  .statement .chrome img.weil { height: 34px; }
+  .statement__inner { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: center; padding: 0 56px; }
+  .statement__title { color: var(--mint); font-size: 15px; font-family: var(--font); font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; }
+  .statement__big { font-family: var(--font-display); font-weight: 200; font-size: 112px; line-height: 1; letter-spacing: -0.03em; color: #fff; margin-top: 18px; }
+  .statement__big span { color: var(--green); font-weight: 300; }
+  .qa { color: #fff; font-weight: 200; font-size: 190px; line-height: 0.9; letter-spacing: -0.03em; }
+  .qa span { color: var(--green); font-weight: 300; }
+  .statement .pagefoot { color: rgba(255,255,255,0.65); }
+  .statement .pagefoot b { color: var(--green); }
+  .li__point h3 { font-size: 24px; line-height: 1.3; }
+  .li__formula { margin-top: 8px; font-size: 18px; color: var(--navy); font-weight: 500; }
+  .li__point { align-items: center; }
+  .li__point > div { min-width: 0; }
+  .bar { display: block; height: 14px; border-radius: 7px; background: #e6ece9; }
+  .bar--name { width: 46%; height: 20px; background: #c9d8d1; }
+  .bar--head { width: 88%; margin-top: 16px; }
+  .bar--head2 { width: 64%; margin-top: 10px; }
+  .bar--line { width: 92%; margin-top: 22px; }
+  .bar--line2 { width: 70%; margin-top: 10px; }
+  .profile__chips { display: flex; gap: 8px; margin-top: 22px; }
+  .pchip { width: 34px; height: 34px; border-radius: 50%; background: #e3f5ea; color: var(--green-ink); display: inline-flex; align-items: center; justify-content: center; }
+  .pchip svg { width: 14px; height: 14px; }
+
+
+  /* spacing polish */
+  .who__cards .who-card { padding: 30px 30px 34px; }
+  .who__cards .who-card p { font-family: var(--font-display); font-weight: 300; font-size: 21px; line-height: 1.45; color: var(--navy); }
+  .way { padding: 30px 30px; }
+  .way h3 { font-size: 30px; }
+  .way p { font-size: 19px; line-height: 1.45; }
+  .cv-list { padding: 34px 36px; display: flex; align-items: center; }
+  .cv-list ol { gap: 30px; margin-top: 0; }
+  .cv-list li { font-size: 21px; }
+  .cv-list .num { width: 40px; height: 40px; font-size: 16px; }
+  .star { flex: 1; }
+  .star-card { display: flex; flex-direction: column; justify-content: flex-start; padding: 44px 32px 30px; }
+  .star-label { font-size: 13px; }
+  .star-card__letter { width: 86px; height: 86px; font-size: 52px; }
+  .star-card h3 { font-size: 34px; margin-top: 24px; }
+  .star-card p { font-size: 19px; }
+
   /* ---- floating PDF download ---- */
   .pdf-fab { position: fixed; bottom: 26px; left: 50%; transform: translateX(-50%); z-index: 50; display: inline-flex; align-items: center; gap: 9px; padding: 13px 26px; border-radius: 999px; font-family: var(--font); font-size: 15px; font-weight: 500; color: #07313f; text-decoration: none; background: var(--grad-brand); box-shadow: 0 8px 24px rgba(38,178,223,0.35); transition: transform 0.35s cubic-bezier(0.16,1,0.3,1), box-shadow 0.35s; }
   .pdf-fab:hover { transform: translateX(-50%) translateY(-3px); box-shadow: 0 14px 34px rgba(38,178,223,0.45); }
@@ -243,10 +305,6 @@
     .cover__subtitle { font-size: 44px; }
     .cover__right { height: 380px; }
     .cover__ring { display: none; }
-    .roundel { width: 280px; height: 280px; top: 46%; }
-    .roundel__inner { width: 238px; height: 238px; }
-    .roundel__num { font-size: 96px; }
-    .roundel__strap { font-size: 12.5px; max-width: 180px; }
     .close { overflow: hidden; }
     .close { padding-bottom: 10px; }
     .close__inner { padding: 26px 20px 0; }
@@ -254,6 +312,18 @@
     .contacts { grid-template-columns: 1fr; }
     .contact a { overflow-wrap: anywhere; }
     .profile__body { padding: 66px 20px 22px; }
+    .statement { min-height: 420px; }
+    .statement__inner { padding: 40px 20px 20px; height: auto; }
+    .statement__big { font-size: 64px; }
+    .qa { font-size: 120px; }
+    .statement { overflow: hidden; }
+    .lead--big { font-size: 21px; }
+    .market-card p { font-size: 19px; }
+    .formula__lines { font-size: 34px; }
+    .cv-list li { font-size: 18px; }
+    .who__cards .who-card p { font-size: 18px; }
+    .star-card h3 { font-size: 28px; }
+    .body--center .stat__value { font-size: 60px; }
     .pdf-fab { bottom: 16px; padding: 11px 20px; font-size: 14px; }
   }
 </style>
@@ -270,8 +340,7 @@
     </div>
     <div class="cover__title-wrap">
       <img class="cover__client" src="/weil/img/weil-logo.svg" alt="Weil">
-      <p class="cover__kicker">Career insights session</p>
-      <h1 class="cover__subtitle">Making your <span>next move</span></h1>
+      <h1 class="cover__subtitle">Oakleaf Partnership<br><span>&amp; Weil</span></h1>
       <div class="cover__rule"></div>
       <div class="cover__prepared">
         <span class="muted">Presented by</span><br>
@@ -283,199 +352,172 @@
   </div>
   <div class="cover__right">
     <span class="cover__ring"></span>
-    <div class="roundel">
-      <div class="roundel__inner">
-        <p class="roundel__num">21</p>
-        <p class="roundel__years">Years</p>
-        <p class="roundel__strap">Your trusted partner in HR recruitment and executive search</p>
-      </div>
-    </div>
-    <p class="cover__right-tag">HR recruitment &middot; Executive search &middot; Interim</p>
+    <img class="cover__photo" src="/weil/img/city-of-london.jpg" alt="The City of London skyline">
+    <span class="cover__shade"></span>
   </div>
 </section>
 
-<!-- 2. Who we are -->
+<!-- 2. Oakleaf Partnership -->
 <section class="page page--soft">
   <div class="chrome"><img class="oakleaf" src="/weil/img/oakleaf-partnership.svg" alt="Oakleaf Partnership"><img class="weil" src="/weil/img/weil-logo.svg" alt="Weil"></div>
   <div class="body">
-    <p class="eyebrow">Who we are</p>
     <h2 class="section-title">Oakleaf Partnership</h2>
-    <p class="lead">A market leading boutique HR recruitment and executive search business. We combine deep subject matter and market expertise with a global client base across multiple industry sectors.</p>
+    <p class="lead">A market-leading boutique HR recruitment and executive search business.</p>
     <div class="grid3 who__cards">
-      <div class="card who-card"><span class="ico"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M128 0c13.3 0 24 10.7 24 24l0 40 144 0 0-40c0-13.3 10.7-24 24-24s24 10.7 24 24l0 40 40 0c35.3 0 64 28.7 64 64l0 16 0 48 0 256c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 192l0-48 0-16C0 92.7 28.7 64 64 64l40 0 0-40c0-13.3 10.7-24 24-24zM400 192L48 192l0 256c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-256zM329 297L217 409c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47 95-95c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path></svg></span><h3>21 years</h3><p>Of successful delivery in partnership with clients across multiple industry sectors.</p></div>
-      <div class="card who-card"><span class="ico"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M266.3 48.3L232.5 73.6c-5.4 4-8.5 10.4-8.5 17.1l0 9.1c0 6.8 5.5 12.3 12.3 12.3c2.4 0 4.8-.7 6.8-2.1l41.8-27.9c2-1.3 4.4-2.1 6.8-2.1l1 0c6.2 0 11.3 5.1 11.3 11.3c0 3-1.2 5.9-3.3 8l-19.9 19.9c-5.8 5.8-12.9 10.2-20.7 12.8l-26.5 8.8c-5.8 1.9-9.6 7.3-9.6 13.4c0 3.7-1.5 7.3-4.1 10l-17.9 17.9c-6.4 6.4-9.9 15-9.9 24l0 4.3c0 16.4 13.6 29.7 29.9 29.7c11 0 21.2-6.2 26.1-16l4-8.1c2.4-4.8 7.4-7.9 12.8-7.9c4.5 0 8.7 2.1 11.4 5.7l16.3 21.7c2.1 2.9 5.5 4.5 9.1 4.5c8.4 0 13.9-8.9 10.1-16.4l-1.1-2.3c-3.5-7 0-15.5 7.5-18l21.2-7.1c7.6-2.5 12.7-9.6 12.7-17.6c0-10.3 8.3-18.6 18.6-18.6l29.4 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-20.7 0c-7.2 0-14.2 2.9-19.3 8l-4.7 4.7c-2.1 2.1-3.3 5-3.3 8c0 6.2 5.1 11.3 11.3 11.3l11.3 0c6 0 11.8 2.4 16 6.6l6.5 6.5c1.8 1.8 2.8 4.3 2.8 6.8s-1 5-2.8 6.8l-7.5 7.5C386 262 384 266.9 384 272s2 10 5.7 13.7L408 304c10.2 10.2 24.1 16 38.6 16l7.3 0c6.5-20.2 10-41.7 10-64c0-111.4-87.6-202.4-197.7-207.7zm172 307.9c-3.7-2.6-8.2-4.1-13-4.1c-6 0-11.8-2.4-16-6.6L396 332c-7.7-7.7-18-12-28.9-12c-9.7 0-19.2-3.5-26.6-9.8L314 287.4c-11.6-9.9-26.4-15.4-41.7-15.4l-20.9 0c-12.6 0-25 3.7-35.5 10.7L188.5 301c-17.8 11.9-28.5 31.9-28.5 53.3l0 3.2c0 17 6.7 33.3 18.7 45.3l16 16c8.5 8.5 20 13.3 32 13.3l21.3 0c13.3 0 24 10.7 24 24c0 2.5 .4 5 1.1 7.3c71.3-5.8 132.5-47.6 165.2-107.2zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM187.3 100.7c-6.2-6.2-16.4-6.2-22.6 0l-32 32c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l32-32c6.2-6.2 6.2-16.4 0-22.6z"></path></svg></span><h3>UK and US</h3><p>Offices in London and New York, with consultants who know their sectors and talent pools in depth.</p></div>
-      <div class="card who-card"><span class="ico"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M323.4 85.2l-96.8 78.4c-16.1 13-19.2 36.4-7 53.1c12.9 17.8 38 21.3 55.3 7.8l99.3-77.2c7-5.4 17-4.2 22.5 2.8s4.2 17-2.8 22.5l-20.9 16.2L512 316.8 512 128l-.7 0-3.9-2.5L434.8 79c-15.3-9.8-33.2-15-51.4-15c-21.8 0-43 7.5-60 21.2zm22.8 124.4l-51.7 40.2C263 274.4 217.3 268 193.7 235.6c-22.2-30.5-16.6-73.1 12.7-96.8l83.2-67.3c-11.6-4.9-24.1-7.4-36.8-7.4C234 64 215.7 69.6 200 80l-72 48 0 224 28.2 0 91.4 83.4c19.6 17.9 49.9 16.5 67.8-3.1c5.5-6.1 9.2-13.2 11.1-20.6l17 15.6c19.5 17.9 49.9 16.6 67.8-2.9c4.5-4.9 7.8-10.6 9.9-16.5c19.4 13 45.8 10.3 62.1-7.5c17.9-19.5 16.6-49.9-2.9-67.8l-134.2-123zM16 128c-8.8 0-16 7.2-16 16L0 352c0 17.7 14.3 32 32 32l32 0c17.7 0 32-14.3 32-32l0-224-80 0zM48 320a16 16 0 1 1 0 32 16 16 0 1 1 0-32zM544 128l0 224c0 17.7 14.3 32 32 32l32 0c17.7 0 32-14.3 32-32l0-208c0-8.8-7.2-16-16-16l-80 0zm32 208a16 16 0 1 1 32 0 16 16 0 1 1 -32 0z"></path></svg></span><h3>Trust first</h3><p>We care deeply about the people we serve and the relationships we build, founded on trust, confidentiality and delivery.</p></div>
+      <div class="card who-card"><span class="ico"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M128 0c13.3 0 24 10.7 24 24l0 40 144 0 0-40c0-13.3 10.7-24 24-24s24 10.7 24 24l0 40 40 0c35.3 0 64 28.7 64 64l0 16 0 48 0 256c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 192l0-48 0-16C0 92.7 28.7 64 64 64l40 0 0-40c0-13.3 10.7-24 24-24zM400 192L48 192l0 256c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-256zM329 297L217 409c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47 95-95c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path></svg></span><p>We combine deep subject matter and market expertise, gained over 21 years of successful delivery in partnership with a global client base across multiple industry sectors.</p></div>
+      <div class="card who-card"><span class="ico"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M266.3 48.3L232.5 73.6c-5.4 4-8.5 10.4-8.5 17.1l0 9.1c0 6.8 5.5 12.3 12.3 12.3c2.4 0 4.8-.7 6.8-2.1l41.8-27.9c2-1.3 4.4-2.1 6.8-2.1l1 0c6.2 0 11.3 5.1 11.3 11.3c0 3-1.2 5.9-3.3 8l-19.9 19.9c-5.8 5.8-12.9 10.2-20.7 12.8l-26.5 8.8c-5.8 1.9-9.6 7.3-9.6 13.4c0 3.7-1.5 7.3-4.1 10l-17.9 17.9c-6.4 6.4-9.9 15-9.9 24l0 4.3c0 16.4 13.6 29.7 29.9 29.7c11 0 21.2-6.2 26.1-16l4-8.1c2.4-4.8 7.4-7.9 12.8-7.9c4.5 0 8.7 2.1 11.4 5.7l16.3 21.7c2.1 2.9 5.5 4.5 9.1 4.5c8.4 0 13.9-8.9 10.1-16.4l-1.1-2.3c-3.5-7 0-15.5 7.5-18l21.2-7.1c7.6-2.5 12.7-9.6 12.7-17.6c0-10.3 8.3-18.6 18.6-18.6l29.4 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-20.7 0c-7.2 0-14.2 2.9-19.3 8l-4.7 4.7c-2.1 2.1-3.3 5-3.3 8c0 6.2 5.1 11.3 11.3 11.3l11.3 0c6 0 11.8 2.4 16 6.6l6.5 6.5c1.8 1.8 2.8 4.3 2.8 6.8s-1 5-2.8 6.8l-7.5 7.5C386 262 384 266.9 384 272s2 10 5.7 13.7L408 304c10.2 10.2 24.1 16 38.6 16l7.3 0c6.5-20.2 10-41.7 10-64c0-111.4-87.6-202.4-197.7-207.7zm172 307.9c-3.7-2.6-8.2-4.1-13-4.1c-6 0-11.8-2.4-16-6.6L396 332c-7.7-7.7-18-12-28.9-12c-9.7 0-19.2-3.5-26.6-9.8L314 287.4c-11.6-9.9-26.4-15.4-41.7-15.4l-20.9 0c-12.6 0-25 3.7-35.5 10.7L188.5 301c-17.8 11.9-28.5 31.9-28.5 53.3l0 3.2c0 17 6.7 33.3 18.7 45.3l16 16c8.5 8.5 20 13.3 32 13.3l21.3 0c13.3 0 24 10.7 24 24c0 2.5 .4 5 1.1 7.3c71.3-5.8 132.5-47.6 165.2-107.2zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM187.3 100.7c-6.2-6.2-16.4-6.2-22.6 0l-32 32c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0l32-32c6.2-6.2 6.2-16.4 0-22.6z"></path></svg></span><p>With offices in the UK and the USA, our consultants have deep, holistic knowledge of their sectors and the talent pools that lie within them</p></div>
+      <div class="card who-card"><span class="ico"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M323.4 85.2l-96.8 78.4c-16.1 13-19.2 36.4-7 53.1c12.9 17.8 38 21.3 55.3 7.8l99.3-77.2c7-5.4 17-4.2 22.5 2.8s4.2 17-2.8 22.5l-20.9 16.2L512 316.8 512 128l-.7 0-3.9-2.5L434.8 79c-15.3-9.8-33.2-15-51.4-15c-21.8 0-43 7.5-60 21.2zm22.8 124.4l-51.7 40.2C263 274.4 217.3 268 193.7 235.6c-22.2-30.5-16.6-73.1 12.7-96.8l83.2-67.3c-11.6-4.9-24.1-7.4-36.8-7.4C234 64 215.7 69.6 200 80l-72 48 0 224 28.2 0 91.4 83.4c19.6 17.9 49.9 16.5 67.8-3.1c5.5-6.1 9.2-13.2 11.1-20.6l17 15.6c19.5 17.9 49.9 16.6 67.8-2.9c4.5-4.9 7.8-10.6 9.9-16.5c19.4 13 45.8 10.3 62.1-7.5c17.9-19.5 16.6-49.9-2.9-67.8l-134.2-123zM16 128c-8.8 0-16 7.2-16 16L0 352c0 17.7 14.3 32 32 32l32 0c17.7 0 32-14.3 32-32l0-224-80 0zM48 320a16 16 0 1 1 0 32 16 16 0 1 1 0-32zM544 128l0 224c0 17.7 14.3 32 32 32l32 0c17.7 0 32-14.3 32-32l0-208c0-8.8-7.2-16-16-16l-80 0zm32 208a16 16 0 1 1 32 0 16 16 0 1 1 -32 0z"></path></svg></span><p>Critically, we care deeply about the customers we serve and the relationships we build over the years, on a foundation of trust, confidentiality and delivery.</p></div>
     </div>
   </div>
-  <div class="pagefoot"><span>Oakleaf Partnership and Weil &nbsp;&middot;&nbsp; 12 November 2026</span><b>02</b></div>
+  <div class="pagefoot"><span>Oakleaf Partnership &amp; Weil &nbsp;&middot;&nbsp; 12 November 2026</span><b>02</b></div>
 </section>
 
-<!-- 3. Market -->
+<!-- 3. HR Market -->
 <section class="page page--soft">
   <div class="chrome"><img class="oakleaf" src="/weil/img/oakleaf-partnership.svg" alt="Oakleaf Partnership"><img class="weil" src="/weil/img/weil-logo.svg" alt="Weil"></div>
   <div class="body">
-    <p class="eyebrow">UK HR Market Update &nbsp;&middot;&nbsp; July to September 2026</p>
-    <h2 class="section-title">UK HR hiring shows early signs of recovery</h2>
+    <h2 class="section-title">HR Market</h2>
+    <p class="lead lead--big">UK HR hiring showed early signs of recovery across July to September 2026, our second fiscal quarter.</p>
+    <div class="grid2 market2">
+      <div class="card market-card"><span class="ico"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64L0 400c0 44.2 35.8 80 80 80l400 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 416c-8.8 0-16-7.2-16-16L64 64zm406.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L320 210.7l-57.4-57.4c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L240 221.3l57.4 57.4c12.5 12.5 32.8 12.5 45.3 0l128-128z"></path></svg></span><p>The Indeed Hiring Lab index of HR postings closed the quarter a little higher after a <b>10.9%</b> spring fall, and permanent placements grew for the first time in nearly four years.</p></div>
+      <div class="card card--navy market-card"><span class="ico"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M384 160c-17.7 0-32-14.3-32-32s14.3-32 32-32l160 0c17.7 0 32 14.3 32 32l0 160c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-82.7L342.6 374.6c-12.5 12.5-32.8 12.5-45.3 0L192 269.3 54.6 406.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160c12.5-12.5 32.8-12.5 45.3 0L320 306.7 466.7 160 384 160z"></path></svg></span><p>The growth is marginal and the wider market still soft, but the direction has changed.</p></div>
+    </div>
+  </div>
+  <div class="pagefoot"><span>Oakleaf Partnership &amp; Weil &nbsp;&middot;&nbsp; 12 November 2026</span><b>03</b></div>
+</section>
+
+<!-- 4. Market figures -->
+<section class="page page--soft">
+  <div class="chrome"><img class="oakleaf" src="/weil/img/oakleaf-partnership.svg" alt="Oakleaf Partnership"><img class="weil" src="/weil/img/weil-logo.svg" alt="Weil"></div>
+  <div class="body body--center">
     <div class="grid3 stats">
-      <div class="card card--navy stat"><p class="stat__value">+2.5%</p><p class="stat__label">UK HR job postings,<br>July to September</p><p class="stat__src">Indeed Hiring Lab index</p></div>
-      <div class="card stat"><p class="stat__value">+22.4%</p><p class="stat__label">New HR postings,<br>July to September</p><p class="stat__src">Indeed Hiring Lab</p></div>
-      <div class="card stat"><p class="stat__value">50.9</p><p class="stat__label">Permanent placements,<br>September</p><p class="stat__src">KPMG and REC index, above 50 means growth</p></div>
+      <div class="card card--navy stat"><p class="stat__value">+2.5%</p><p class="stat__label">UK HR postings, July to September</p></div>
+      <div class="card stat"><p class="stat__value">+22.4%</p><p class="stat__label">New HR postings, July to September</p></div>
+      <div class="card stat"><p class="stat__value">50.9%</p><p class="stat__label">Permanent placements index, September</p></div>
     </div>
-    <div class="market__foot">
-      <p class="market__text">HR postings closed the quarter a little higher after a 10.9% fall in the spring, and permanent placements grew for the first time in nearly four years. Growth is marginal and the wider market is still soft, but the direction has changed.</p>
-      <a class="card readmore" href="https://www.oakleafpartnership.com/news-views/hr-market-pulse-2026-10-uk" target="_blank" rel="noopener"><span class="ico"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg></span><div><b>Read the full update</b><span>oakleafpartnership.com/news-views</span></div></a>
-    </div>
+    <a class="card readmore" href="https://www.oakleafpartnership.com/news-views/hr-market-pulse-2026-10-uk" target="_blank" rel="noopener"><span class="ico"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg></span><b>HR Market Update: July to September 2026, UK HR hiring shows early signs of recovery</b></a>
   </div>
-  <div class="pagefoot"><span>Oakleaf Partnership and Weil &nbsp;&middot;&nbsp; 12 November 2026</span><b>03</b></div>
+  <div class="pagefoot"><span>Oakleaf Partnership &amp; Weil &nbsp;&middot;&nbsp; 12 November 2026</span><b>04</b></div>
 </section>
 
-<!-- 4. Perm or contracting -->
+<!-- 5. Perm or Contracting -->
 <section class="page page--soft">
   <div class="chrome"><img class="oakleaf" src="/weil/img/oakleaf-partnership.svg" alt="Oakleaf Partnership"><img class="weil" src="/weil/img/weil-logo.svg" alt="Weil"></div>
   <div class="body">
-    <p class="eyebrow">Ways of working</p>
-    <h2 class="section-title">Perm or contracting?</h2>
+    <h2 class="section-title">Perm or Contracting?</h2>
     <div class="grid3 ways">
-      <div class="card way"><span class="ico"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M184 48l144 0c4.4 0 8 3.6 8 8l0 40L176 96l0-40c0-4.4 3.6-8 8-8zm-56 8l0 40L64 96C28.7 96 0 124.7 0 160l0 96 192 0 128 0 192 0 0-96c0-35.3-28.7-64-64-64l-64 0 0-40c0-30.9-25.1-56-56-56L184 0c-30.9 0-56 25.1-56 56zM512 288l-192 0 0 32c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32-14.3-32-32l0-32L0 288 0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-128z"></path></svg></span><h3>Permanent role</h3><span class="label">What it is</span><p>Ongoing employment, with potential for longer term development.</p><hr><span class="label">What to clarify</span><p class="ask">Responsibilities, benefits and progression.</p></div>
-      <div class="card way"><span class="ico"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 384 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M32 0C14.3 0 0 14.3 0 32S14.3 64 32 64l0 11c0 42.4 16.9 83.1 46.9 113.1L146.7 256 78.9 323.9C48.9 353.9 32 394.6 32 437l0 11c-17.7 0-32 14.3-32 32s14.3 32 32 32l32 0 256 0 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l0-11c0-42.4-16.9-83.1-46.9-113.1L237.3 256l67.9-67.9c30-30 46.9-70.7 46.9-113.1l0-11c17.7 0 32-14.3 32-32s-14.3-32-32-32L320 0 64 0 32 0zM96 75l0-11 192 0 0 11c0 19-5.6 37.4-16 53L112 128c-10.3-15.6-16-34-16-53zm16 309c3.5-5.3 7.6-10.3 12.1-14.9L192 301.3l67.9 67.9c4.6 4.6 8.6 9.6 12.1 14.9L112 384z"></path></svg></span><h3>Interim assignment</h3><span class="label">What it is</span><p>A defined role that addresses an immediate need.</p><hr><span class="label">What to clarify</span><p class="ask">Deliverables, duration, start date and extension terms.</p></div>
-      <div class="card way"><span class="ico"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-19.3c-2.7 1.1-5.4 2-8.2 2.7l-60.1 15c-3 .7-6 1.2-9 1.4c-.9 .1-1.8 .2-2.7 .2l-64 0c-6.1 0-11.6-3.4-14.3-8.8l-8.8-17.7c-1.7-3.4-5.1-5.5-8.8-5.5s-7.2 2.1-8.8 5.5l-8.8 17.7c-2.9 5.9-9.2 9.4-15.7 8.8s-12.1-5.1-13.9-11.3L144 381l-9.8 32.8c-6.1 20.3-24.8 34.2-46 34.2L80 448c-8.8 0-16-7.2-16-16s7.2-16 16-16l8.2 0c7.1 0 13.3-4.6 15.3-11.4l14.9-49.5c3.4-11.3 13.8-19.1 25.6-19.1s22.2 7.8 25.6 19.1l11.6 38.6c7.4-6.2 16.8-9.7 26.8-9.7c15.9 0 30.4 9 37.5 23.2l4.4 8.8 8.9 0c-3.1-8.8-3.7-18.4-1.4-27.8l15-60.1c2.8-11.3 8.6-21.5 16.8-29.7L384 203.6l0-43.6-128 0c-17.7 0-32-14.3-32-32L224 0 64 0zM256 0l0 128 128 0L256 0zM549.8 139.7c-15.6-15.6-40.9-15.6-56.6 0l-29.4 29.4 71 71 29.4-29.4c15.6-15.6 15.6-40.9 0-56.6l-14.4-14.4zM311.9 321c-4.1 4.1-7 9.2-8.4 14.9l-15 60.1c-1.4 5.5 .2 11.2 4.2 15.2s9.7 5.6 15.2 4.2l60.1-15c5.6-1.4 10.8-4.3 14.9-8.4L512.1 262.7l-71-71L311.9 321z"></path></svg></span><h3>Contract role</h3><span class="label">What it is</span><p>Project based or specialist work.</p><hr><span class="label">What to clarify</span><p class="ask">Scope, rate, duration and IR35 status.</p></div>
+      <div class="card way"><span class="ico"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M184 48l144 0c4.4 0 8 3.6 8 8l0 40L176 96l0-40c0-4.4 3.6-8 8-8zm-56 8l0 40L64 96C28.7 96 0 124.7 0 160l0 96 192 0 128 0 192 0 0-96c0-35.3-28.7-64-64-64l-64 0 0-40c0-30.9-25.1-56-56-56L184 0c-30.9 0-56 25.1-56 56zM512 288l-192 0 0 32c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32-14.3-32-32l0-32L0 288 0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-128z"></path></svg></span><h3>Permanent role</h3><p>Ongoing employment and potential longer-term development</p><hr><p class="ask">Responsibilities, benefits, and progression</p></div>
+      <div class="card way"><span class="ico"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 384 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M32 0C14.3 0 0 14.3 0 32S14.3 64 32 64l0 11c0 42.4 16.9 83.1 46.9 113.1L146.7 256 78.9 323.9C48.9 353.9 32 394.6 32 437l0 11c-17.7 0-32 14.3-32 32s14.3 32 32 32l32 0 256 0 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l0-11c0-42.4-16.9-83.1-46.9-113.1L237.3 256l67.9-67.9c30-30 46.9-70.7 46.9-113.1l0-11c17.7 0 32-14.3 32-32s-14.3-32-32-32L320 0 64 0 32 0zM96 75l0-11 192 0 0 11c0 19-5.6 37.4-16 53L112 128c-10.3-15.6-16-34-16-53zm16 309c3.5-5.3 7.6-10.3 12.1-14.9L192 301.3l67.9 67.9c4.6 4.6 8.6 9.6 12.1 14.9L112 384z"></path></svg></span><h3>Interim assignment</h3><p>A defined role addressing an immediate need</p><hr><p class="ask">Deliverables, duration, start date, and extension terms</p></div>
+      <div class="card way"><span class="ico"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-19.3c-2.7 1.1-5.4 2-8.2 2.7l-60.1 15c-3 .7-6 1.2-9 1.4c-.9 .1-1.8 .2-2.7 .2l-64 0c-6.1 0-11.6-3.4-14.3-8.8l-8.8-17.7c-1.7-3.4-5.1-5.5-8.8-5.5s-7.2 2.1-8.8 5.5l-8.8 17.7c-2.9 5.9-9.2 9.4-15.7 8.8s-12.1-5.1-13.9-11.3L144 381l-9.8 32.8c-6.1 20.3-24.8 34.2-46 34.2L80 448c-8.8 0-16-7.2-16-16s7.2-16 16-16l8.2 0c7.1 0 13.3-4.6 15.3-11.4l14.9-49.5c3.4-11.3 13.8-19.1 25.6-19.1s22.2 7.8 25.6 19.1l11.6 38.6c7.4-6.2 16.8-9.7 26.8-9.7c15.9 0 30.4 9 37.5 23.2l4.4 8.8 8.9 0c-3.1-8.8-3.7-18.4-1.4-27.8l15-60.1c2.8-11.3 8.6-21.5 16.8-29.7L384 203.6l0-43.6-128 0c-17.7 0-32-14.3-32-32L224 0 64 0zM256 0l0 128 128 0L256 0zM549.8 139.7c-15.6-15.6-40.9-15.6-56.6 0l-29.4 29.4 71 71 29.4-29.4c15.6-15.6 15.6-40.9 0-56.6l-14.4-14.4zM311.9 321c-4.1 4.1-7 9.2-8.4 14.9l-15 60.1c-1.4 5.5 .2 11.2 4.2 15.2s9.7 5.6 15.2 4.2l60.1-15c5.6-1.4 10.8-4.3 14.9-8.4L512.1 262.7l-71-71L311.9 321z"></path></svg></span><h3>Contract role</h3><p>Project-based or specialist work</p></div>
     </div>
   </div>
-  <div class="pagefoot"><span>Oakleaf Partnership and Weil &nbsp;&middot;&nbsp; 12 November 2026</span><b>04</b></div>
+  <div class="pagefoot"><span>Oakleaf Partnership &amp; Weil &nbsp;&middot;&nbsp; 12 November 2026</span><b>05</b></div>
 </section>
 
-<!-- 5. CV -->
+<!-- 6. CV -->
 <section class="page page--soft">
   <div class="chrome"><img class="oakleaf" src="/weil/img/oakleaf-partnership.svg" alt="Oakleaf Partnership"><img class="weil" src="/weil/img/weil-logo.svg" alt="Weil"></div>
   <div class="body">
-    <p class="eyebrow">Your CV</p>
     <h2 class="section-title">Make your CV tell the right story</h2>
     <div class="grid2 cv">
       <div class="card cv-list">
-        <span class="label">What to include</span>
         <ol>
           <li><span class="num">1</span>Target role or professional headline</li>
           <li><span class="num">2</span>Short profile linking your experience to your next step</li>
           <li><span class="num">3</span>Relevant skills, backed up by examples</li>
           <li><span class="num">4</span>Work history with achievements and outcomes</li>
-          <li><span class="num">5</span>Education, qualifications and relevant training</li>
+          <li><span class="num">5</span>Education, qualifications, and relevant training</li>
         </ol>
       </div>
       <div class="card card--navy formula">
-        <span class="label">For every achievement</span>
         <p class="formula__lines">What you did<br><i>+</i> the challenge or scope<br><i>+</i> the result</p>
-        <hr>
-        <span class="label">For example</span>
-        <p class="formula__eg">Led a new performance framework across a 1,200 person business, lifting completion rates from 60% to 95% in one cycle.</p>
       </div>
     </div>
   </div>
-  <div class="pagefoot"><span>Oakleaf Partnership and Weil &nbsp;&middot;&nbsp; 12 November 2026</span><b>05</b></div>
+  <div class="pagefoot"><span>Oakleaf Partnership &amp; Weil &nbsp;&middot;&nbsp; 12 November 2026</span><b>06</b></div>
 </section>
 
-<!-- 6. STAR -->
+<!-- 7. Interview Prep -->
 <section class="page page--soft">
   <div class="chrome"><img class="oakleaf" src="/weil/img/oakleaf-partnership.svg" alt="Oakleaf Partnership"><img class="weil" src="/weil/img/weil-logo.svg" alt="Weil"></div>
   <div class="body">
-    <p class="eyebrow">Interview preparation</p>
-    <h2 class="section-title">Competency based interviews: use STAR</h2>
-    <p class="lead">Answer each question with a real example, structured in four steps.</p>
+    <h2 class="section-title">Interview Prep:</h2>
+    <p class="lead">Competency Based IV&rsquo;s</p>
+    <p class="label star-label">STAR structure:</p>
     <div class="grid2 star">
-      <div class="card star-card"><div class="star-card__letter">S</div><h3>Situation</h3><p>What was happening?</p></div>
-      <div class="card star-card"><div class="star-card__letter">T</div><h3>Task</h3><p>What were you responsible for?</p></div>
-      <div class="card star-card"><div class="star-card__letter">A</div><h3>Action</h3><p>What did you do?</p></div>
-      <div class="card star-card"><div class="star-card__letter">R</div><h3>Result</h3><p>What changed?</p></div>
+      <div class="card star-card"><div class="star-card__letter">S</div><h3>Situation</h3><p>(what was happening)</p></div>
+      <div class="card star-card"><div class="star-card__letter">T</div><h3>Task</h3><p>(what were you responsible for?)</p></div>
+      <div class="card star-card"><div class="star-card__letter">A</div><h3>Action</h3><p>(what did you do?)</p></div>
+      <div class="card star-card"><div class="star-card__letter">R</div><h3>Result</h3><p>(what changed?)</p></div>
     </div>
-    <p class="tip"><b>Tip</b>Spend most of your answer on the action and the result, and say &ldquo;I&rdquo; rather than &ldquo;we&rdquo;.</p>
   </div>
-  <div class="pagefoot"><span>Oakleaf Partnership and Weil &nbsp;&middot;&nbsp; 12 November 2026</span><b>06</b></div>
+  <div class="pagefoot"><span>Oakleaf Partnership &amp; Weil &nbsp;&middot;&nbsp; 12 November 2026</span><b>07</b></div>
 </section>
 
-<!-- 7. Salary -->
+<!-- 8. Salary Benchmarking -->
 <section class="page page--soft">
   <div class="chrome"><img class="oakleaf" src="/weil/img/oakleaf-partnership.svg" alt="Oakleaf Partnership"><img class="weil" src="/weil/img/weil-logo.svg" alt="Weil"></div>
   <div class="body">
-    <p class="eyebrow">Salary benchmarking</p>
-    <h2 class="section-title">Know your worth before the conversation</h2>
+    <h2 class="section-title">Salary Benchmarking</h2>
     <div class="grid2 steps">
-      <div class="card step"><span class="num">1</span><div><h3>Compare like for like</h3><p>Roles with similar responsibilities, experience and location.</p></div></div>
-      <div class="card step"><span class="num">2</span><div><h3>Use several current sources</h3><p>Salary surveys, job postings and recruiter insight.</p></div></div>
-      <div class="card step"><span class="num">3</span><div><h3>Look at the full package</h3><p>Bonus, benefits, pension or retirement contributions, leave and contract terms, not only base salary.</p></div></div>
-      <div class="card step"><span class="num">4</span><div><h3>Know your range</h3><p>Decide the range and overall package you would consider before the conversation.</p></div></div>
+      <div class="card step"><span class="num">1</span><p>Compare roles with similar responsibilities, experience, and location.</p></div>
+      <div class="card step"><span class="num">2</span><p>Check several current sources, such as salary surveys, job postings, and recruiter insights.</p></div>
+      <div class="card step"><span class="num">3</span><p>Consider the full package, not only base salary, including bonus, benefits, pension or retirement contributions, leave, and contract terms.</p></div>
+      <div class="card step"><span class="num">4</span><p>Decide what range and overall package you would consider before the conversation</p></div>
     </div>
   </div>
-  <div class="pagefoot"><span>Oakleaf Partnership and Weil &nbsp;&middot;&nbsp; 12 November 2026</span><b>07</b></div>
+  <div class="pagefoot"><span>Oakleaf Partnership &amp; Weil &nbsp;&middot;&nbsp; 12 November 2026</span><b>08</b></div>
 </section>
 
-<!-- 8. Recruiters -->
+<!-- 9. Recruiters -->
+<section class="page statement">
+  <div class="chrome"><img class="oakleaf" src="/weil/img/oakleaf-partnership-white.svg" alt="Oakleaf Partnership"><img class="weil" src="/weil/img/weil-logo.svg" alt="Weil"></div>
+  <div class="statement__inner">
+    <h2 class="statement__title">Recruiters</h2>
+    <p class="statement__big">How can <span>we help?</span></p>
+  </div>
+  <div class="pagefoot"><span>Oakleaf Partnership &amp; Weil &nbsp;&middot;&nbsp; 12 November 2026</span><b>09</b></div>
+</section>
+
+<!-- 10. LinkedIn -->
 <section class="page page--soft">
   <div class="chrome"><img class="oakleaf" src="/weil/img/oakleaf-partnership.svg" alt="Oakleaf Partnership"><img class="weil" src="/weil/img/weil-logo.svg" alt="Weil"></div>
   <div class="body">
-    <p class="eyebrow">Working with recruiters</p>
-    <h2 class="section-title">How can we help?</h2>
-    <div class="help">
-      <div class="help__intro">
-        <p class="big">A good recruiter is a partner for your whole career, not only your next role.</p>
-        <p class="small">Talk to us at any stage, even when you are not actively looking.</p>
-      </div>
-      <div class="help__grid">
-        <div class="card help-tile"><span class="ico"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64L0 400c0 44.2 35.8 80 80 80l400 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 416c-8.8 0-16-7.2-16-16L64 64zm406.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L320 210.7l-57.4-57.4c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L240 221.3l57.4 57.4c12.5 12.5 32.8 12.5 45.3 0l128-128z"></path></svg></span><h3>Market insight</h3><p>Where hiring demand is, and why.</p></div>
-        <div class="card help-tile"><span class="ico"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M112 160.4c0-35.5 28.8-64.4 64.4-64.4c6.9 0 13.8 1.1 20.4 3.3l81.2 27.1c16.8 5.6 34.9-3.5 40.5-20.2s-3.5-34.9-20.2-40.5L217 38.6c-13.1-4.4-26.8-6.6-40.6-6.6C105.5 32 48 89.5 48 160.4L48 224l-16 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l16 0 0 44.5c0 17.4-4.7 34.5-13.7 49.4L4.6 431.5c-5.9 9.9-6.1 22.2-.4 32.2S20.5 480 32 480l256 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L88.5 416l.7-1.1C104.1 390 112 361.5 112 332.5l0-44.5 112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-112 0 0-63.6z"></path></svg></span><h3>Salary benchmarking</h3><p>What your experience is worth today.</p></div>
-        <div class="card help-tile"><span class="ico"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 384 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M64 464c-8.8 0-16-7.2-16-16L48 64c0-8.8 7.2-16 16-16l160 0 0 80c0 17.7 14.3 32 32 32l80 0 0 288c0 8.8-7.2 16-16 16L64 464zM64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-293.5c0-17-6.7-33.3-18.7-45.3L274.7 18.7C262.7 6.7 246.5 0 229.5 0L64 0zm56 256c-13.3 0-24 10.7-24 24s10.7 24 24 24l144 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-144 0zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24l144 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-144 0z"></path></svg></span><h3>CV feedback</h3><p>Honest advice on your CV and LinkedIn.</p></div>
-        <div class="card help-tile"><span class="ico"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M88.2 309.1c9.8-18.3 6.8-40.8-7.5-55.8C59.4 230.9 48 204 48 176c0-63.5 63.8-128 160-128s160 64.5 160 128s-63.8 128-160 128c-13.1 0-25.8-1.3-37.8-3.6c-10.4-2-21.2-.6-30.7 4.2c-4.1 2.1-8.3 4.1-12.6 6c-16 7.2-32.9 13.5-49.9 18c2.8-4.6 5.4-9.1 7.9-13.6c1.1-1.9 2.2-3.9 3.2-5.9zM208 352c114.9 0 208-78.8 208-176S322.9 0 208 0S0 78.8 0 176c0 41.8 17.2 80.1 45.9 110.3c-.9 1.7-1.9 3.5-2.8 5.1c-10.3 18.4-22.3 36.5-36.6 52.1c-6.6 7-8.3 17.2-4.6 25.9C5.8 378.3 14.4 384 24 384c43 0 86.5-13.3 122.7-29.7c4.8-2.2 9.6-4.5 14.2-6.8c15.1 3 30.9 4.5 47.1 4.5zM432 480c16.2 0 31.9-1.6 47.1-4.5c4.6 2.3 9.4 4.6 14.2 6.8C529.5 498.7 573 512 616 512c9.6 0 18.2-5.7 22-14.5c3.8-8.8 2-19-4.6-25.9c-14.2-15.6-26.2-33.7-36.6-52.1c-.9-1.7-1.9-3.4-2.8-5.1C622.8 384.1 640 345.8 640 304c0-94.4-87.9-171.5-198.2-175.8c4.1 15.2 6.2 31.2 6.2 47.8l0 .6c87.2 6.7 144 67.5 144 127.4c0 28-11.4 54.9-32.7 77.2c-14.3 15-17.3 37.6-7.5 55.8c1.1 2 2.2 4 3.2 5.9c2.5 4.5 5.2 9 7.9 13.6c-17-4.5-33.9-10.7-49.9-18c-4.3-1.9-8.5-3.9-12.6-6c-9.5-4.8-20.3-6.2-30.7-4.2c-12.1 2.4-24.8 3.6-37.8 3.6c-61.7 0-110-26.5-136.8-62.3c-16 5.4-32.8 9.4-50 11.8C279 439.8 350 480 432 480z"></path></svg></span><h3>Interview preparation</h3><p>Briefings on the role, people and process.</p></div>
-        <div class="card help-tile"><span class="ico"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M320 32c0-9.9-4.5-19.2-12.3-25.2S289.8-1.4 280.2 1l-179.9 45C79 51.3 64 70.5 64 92.5L64 448l-32 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l64 0 192 0 32 0 0-32 0-448zM256 256c0 17.7-10.7 32-24 32s-24-14.3-24-32s10.7-32 24-32s24 14.3 24 32zm96-128l96 0 0 352c0 17.7 14.3 32 32 32l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-32 0 0-320c0-35.3-28.7-64-64-64l-96 0 0 64z"></path></svg></span><h3>Access to roles</h3><p>Opportunities that are not always advertised.</p></div>
-        <div class="card help-tile"><span class="ico"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0zm0 66.8l0 378.1C394 378 431.1 230.1 432 141.4L256 66.8s0 0 0 0z"></path></svg></span><h3>Confidential advice</h3><p>A sounding board whenever you need one.</p></div>
-      </div>
-    </div>
-  </div>
-  <div class="pagefoot"><span>Oakleaf Partnership and Weil &nbsp;&middot;&nbsp; 12 November 2026</span><b>08</b></div>
-</section>
-
-<!-- 9. LinkedIn -->
-<section class="page page--soft">
-  <div class="chrome"><img class="oakleaf" src="/weil/img/oakleaf-partnership.svg" alt="Oakleaf Partnership"><img class="weil" src="/weil/img/weil-logo.svg" alt="Weil"></div>
-  <div class="body">
-    <p class="eyebrow">LinkedIn</p>
-    <h2 class="section-title">Get recognised in the market</h2>
+    <h2 class="section-title">LinkedIn</h2>
+    <p class="lead">Use LinkedIn to help get recognised in the market:</p>
     <div class="li">
       <div class="li__points">
-        <div class="li__point"><span class="ico"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M288 80c-65.2 0-118.8 29.6-159.9 67.7C89.6 183.5 63 226 49.4 256c13.6 30 40.2 72.5 78.6 108.3C169.2 402.4 222.8 432 288 432s118.8-29.6 159.9-67.7C486.4 328.5 513 286 526.6 256c-13.6-30-40.2-72.5-78.6-108.3C406.8 109.6 353.2 80 288 80zM95.4 112.6C142.5 68.8 207.2 32 288 32s145.5 36.8 192.6 80.6c46.8 43.5 78.1 95.4 93 131.1c3.3 7.9 3.3 16.7 0 24.6c-14.9 35.7-46.2 87.7-93 131.1C433.5 443.2 368.8 480 288 480s-145.5-36.8-192.6-80.6C48.6 356 17.3 304 2.5 268.3c-3.3-7.9-3.3-16.7 0-24.6C17.3 208 48.6 156 95.4 112.6zM288 336c44.2 0 80-35.8 80-80s-35.8-80-80-80c-.7 0-1.3 0-2 0c1.3 5.1 2 10.5 2 16c0 35.3-28.7 64-64 64c-5.5 0-10.9-.7-16-2c0 .7 0 1.3 0 2c0 44.2 35.8 80 80 80zm0-208a128 128 0 1 1 0 256 128 128 0 1 1 0-256z"></path></svg></span><div><h3>Make your profile easy to understand</h3><p>Someone outside your organisation should see what you do in seconds.</p></div></div>
-        <div class="li__point"><span class="ico"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M368.4 18.3L312.7 74.1 437.9 199.3l55.7-55.7c21.9-21.9 21.9-57.3 0-79.2L447.6 18.3c-21.9-21.9-57.3-21.9-79.2 0zM288 94.6l-9.2 2.8L134.7 140.6c-19.9 6-35.7 21.2-42.3 41L3.8 445.8c-3.8 11.3-1 23.9 7.3 32.4L164.7 324.7c-3-6.3-4.7-13.3-4.7-20.7c0-26.5 21.5-48 48-48s48 21.5 48 48s-21.5 48-48 48c-7.4 0-14.4-1.7-20.7-4.7L33.7 500.9c8.6 8.3 21.1 11.2 32.4 7.3l264.3-88.6c19.7-6.6 35-22.4 41-42.3l43.2-144.1 2.7-9.2L288 94.6z"></path></svg></span><div><h3>Write a clear headline</h3><p>Use the formula: function, strengths, experience or sector.</p></div></div>
-        <div class="li__point"><span class="ico"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M287.9 0c9.2 0 17.6 5.2 21.6 13.5l68.6 141.3 153.2 22.6c9 1.3 16.5 7.6 19.3 16.3s.5 18.1-5.9 24.5L433.6 328.4l26.2 155.6c1.5 9-2.2 18.1-9.7 23.5s-17.3 6-25.3 1.7l-137-73.2L151 509.1c-8.1 4.3-17.9 3.7-25.3-1.7s-11.2-14.5-9.7-23.5l26.2-155.6L31.1 218.2c-6.5-6.4-8.7-15.9-5.9-24.5s10.3-14.9 19.3-16.3l153.2-22.6L266.3 13.5C270.4 5.2 278.7 0 287.9 0zm0 79L235.4 187.2c-3.5 7.1-10.2 12.1-18.1 13.3L99 217.9 184.9 303c5.5 5.5 8.1 13.3 6.8 21L171.4 443.7l105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2L384.2 324.1c-1.3-7.7 1.2-15.5 6.8-21l85.9-85.1L358.6 200.5c-7.8-1.2-14.6-6.1-18.1-13.3L287.9 79z"></path></svg></span><div><h3>Ask for recommendations</h3><p>A few words from people you have worked with carry real weight.</p></div></div>
+        <div class="li__point"><span class="ico"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M288 80c-65.2 0-118.8 29.6-159.9 67.7C89.6 183.5 63 226 49.4 256c13.6 30 40.2 72.5 78.6 108.3C169.2 402.4 222.8 432 288 432s118.8-29.6 159.9-67.7C486.4 328.5 513 286 526.6 256c-13.6-30-40.2-72.5-78.6-108.3C406.8 109.6 353.2 80 288 80zM95.4 112.6C142.5 68.8 207.2 32 288 32s145.5 36.8 192.6 80.6c46.8 43.5 78.1 95.4 93 131.1c3.3 7.9 3.3 16.7 0 24.6c-14.9 35.7-46.2 87.7-93 131.1C433.5 443.2 368.8 480 288 480s-145.5-36.8-192.6-80.6C48.6 356 17.3 304 2.5 268.3c-3.3-7.9-3.3-16.7 0-24.6C17.3 208 48.6 156 95.4 112.6zM288 336c44.2 0 80-35.8 80-80s-35.8-80-80-80c-.7 0-1.3 0-2 0c1.3 5.1 2 10.5 2 16c0 35.3-28.7 64-64 64c-5.5 0-10.9-.7-16-2c0 .7 0 1.3 0 2c0 44.2 35.8 80 80 80zm0-208a128 128 0 1 1 0 256 128 128 0 1 1 0-256z"></path></svg></span><h3>Your profile should be easy for other people to understand</h3></div>
+        <div class="li__point"><span class="ico"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M368.4 18.3L312.7 74.1 437.9 199.3l55.7-55.7c21.9-21.9 21.9-57.3 0-79.2L447.6 18.3c-21.9-21.9-57.3-21.9-79.2 0zM288 94.6l-9.2 2.8L134.7 140.6c-19.9 6-35.7 21.2-42.3 41L3.8 445.8c-3.8 11.3-1 23.9 7.3 32.4L164.7 324.7c-3-6.3-4.7-13.3-4.7-20.7c0-26.5 21.5-48 48-48s48 21.5 48 48s-21.5 48-48 48c-7.4 0-14.4-1.7-20.7-4.7L33.7 500.9c8.6 8.3 21.1 11.2 32.4 7.3l264.3-88.6c19.7-6.6 35-22.4 41-42.3l43.2-144.1 2.7-9.2L288 94.6z"></path></svg></span><div><h3>Headline formula:</h3><p class="li__formula">Target function<span class="sep">|</span>Key strengths<span class="sep">|</span>Relevant experience or sector</p></div></div>
+        <div class="li__point"><span class="ico"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M287.9 0c9.2 0 17.6 5.2 21.6 13.5l68.6 141.3 153.2 22.6c9 1.3 16.5 7.6 19.3 16.3s.5 18.1-5.9 24.5L433.6 328.4l26.2 155.6c1.5 9-2.2 18.1-9.7 23.5s-17.3 6-25.3 1.7l-137-73.2L151 509.1c-8.1 4.3-17.9 3.7-25.3-1.7s-11.2-14.5-9.7-23.5l26.2-155.6L31.1 218.2c-6.5-6.4-8.7-15.9-5.9-24.5s10.3-14.9 19.3-16.3l153.2-22.6L266.3 13.5C270.4 5.2 278.7 0 287.9 0zm0 79L235.4 187.2c-3.5 7.1-10.2 12.1-18.1 13.3L99 217.9 184.9 303c5.5 5.5 8.1 13.3 6.8 21L171.4 443.7l105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2L384.2 324.1c-1.3-7.7 1.2-15.5 6.8-21l85.9-85.1L358.6 200.5c-7.8-1.2-14.6-6.1-18.1-13.3L287.9 79z"></path></svg></span><h3>Recommendations!</h3></div>
       </div>
-      <div class="card profile">
+      <div class="card profile" aria-hidden="true">
         <div class="profile__banner"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></div>
         <div class="profile__avatar"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"></path></svg></div>
         <div class="profile__body">
-          <p class="profile__name">Your name</p>
-          <span class="label">Headline formula</span>
-          <p class="profile__formula">Target function<span class="sep">|</span>Key strengths<span class="sep">|</span>Relevant experience or sector</p>
-          <span class="label">For example</span>
-          <p class="profile__eg">HR Business Partner<span class="sep">|</span>Employee relations and change<span class="sep">|</span>Professional services</p>
-          <span class="profile__chip"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg> Recommendations</span>
+          <span class="bar bar--name"></span>
+          <span class="bar bar--head"></span>
+          <span class="bar bar--head2"></span>
+          <div class="profile__chips"><span class="pchip"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg></span><span class="pchip"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg></span><span class="pchip"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg></span></div>
+          <span class="bar bar--line"></span>
+          <span class="bar bar--line2"></span>
         </div>
       </div>
     </div>
   </div>
-  <div class="pagefoot"><span>Oakleaf Partnership and Weil &nbsp;&middot;&nbsp; 12 November 2026</span><b>09</b></div>
+  <div class="pagefoot"><span>Oakleaf Partnership &amp; Weil &nbsp;&middot;&nbsp; 12 November 2026</span><b>10</b></div>
 </section>
 
-<!-- 10. Q&A -->
-<section class="page close">
+<!-- 11. Q&A -->
+<section class="page statement">
   <div class="chrome"><img class="oakleaf" src="/weil/img/oakleaf-partnership-white.svg" alt="Oakleaf Partnership"><img class="weil" src="/weil/img/weil-logo.svg" alt="Weil"></div>
-  <div class="close__inner">
-    <p class="eyebrow">Thank you</p>
-    <h2>Q<span>&amp;</span>A</h2>
-    <p class="close__sub">Let&rsquo;s keep the conversation going.</p>
-    <div class="contacts">
-      <div class="contact"><div><p class="contact__name">Beth Hicks</p><p class="contact__role">Director</p><a href="mailto:bethhicks@oakleafpartnership.com">bethhicks@oakleafpartnership.com</a><a href="tel:+442073377611">020 7337 7611</a></div></div>
-      <div class="contact"><div><p class="contact__name">Marie Robery-Bliss</p><p class="contact__role">Director</p><a href="mailto:marierobery-bliss@oakleafpartnership.com">marierobery-bliss@oakleafpartnership.com</a><a href="tel:+442073377639">020 7337 7639</a></div></div>
-    </div>
+  <div class="statement__inner statement__inner--qa">
+    <h2 class="qa">Q<span>&amp;</span>A</h2>
   </div>
-  <div class="pagefoot"><span><b>oakleafpartnership.com</b></span><b>10</b></div>
+  <div class="pagefoot"><span>Oakleaf Partnership &amp; Weil &nbsp;&middot;&nbsp; 12 November 2026</span><b>11</b></div>
 </section>
 
-<a class="pdf-fab" href="/weil/Oakleaf-Partnership-and-Weil-Making-your-next-move.pdf" download><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 242.7-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7 288 32zM64 352c-35.3 0-64 28.7-64 64l0 32c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-32c0-35.3-28.7-64-64-64l-101.5 0-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352 64 352zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"></path></svg> Download PDF</a>
+<a class="pdf-fab" href="/weil/Oakleaf-Partnership-and-Weil.pdf" download><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 242.7-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7 288 32zM64 352c-35.3 0-64 28.7-64 64l0 32c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-32c0-35.3-28.7-64-64-64l-101.5 0-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352 64 352zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"></path></svg> Download PDF</a>
 
 </body>
 </html>
