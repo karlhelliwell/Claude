@@ -176,6 +176,12 @@
     content: ""; position: absolute; inset: 0;
     background: linear-gradient(200deg, rgba(38, 178, 223, 0.18) 0%, rgba(14, 58, 82, 0.05) 45%, rgba(105, 188, 144, 0.22) 100%);
   }
+  /* thin brand blue stroke along the slant */
+  .cover__right::after {
+    content: ""; position: absolute; inset: 0; z-index: 1;
+    background: var(--teal, #26b2df);
+    clip-path: polygon(22% 0, calc(22% + 4px) 0, 4px 100%, 0 100%);
+  }
 
   .cover__ring {
     position: absolute; right: -110px; bottom: -110px;
@@ -351,7 +357,7 @@
   .move--wide { grid-column: 1 / -1; }
   .shortage {
     background: var(--grad-deep); color: #fff; border-radius: var(--radius-lg);
-    padding: 16px 28px; display: grid; grid-template-columns: auto 1fr; gap: 26px; align-items: center;
+    padding: 22px 28px; display: grid; grid-template-columns: 1fr; gap: 26px; align-items: center;
     position: relative; overflow: hidden;
   }
   .shortage::before {
@@ -361,7 +367,8 @@
   .shortage > * { position: relative; }
   .shortage__num { font-family: var(--font-display); font-weight: 200; font-size: 46px; line-height: 1; letter-spacing: -0.02em; color: var(--mint); white-space: nowrap; }
   .shortage__num small { font-size: 18px; font-weight: 300; margin-left: 6px; color: #fff; }
-  .shortage p { font-family: var(--font-display); font-weight: 300; font-size: 17.5px; line-height: 1.4; }
+  .shortage p { font-family: var(--font-display); font-weight: 300; font-size: 20px; line-height: 1.4; }
+  .shortage p b { font-weight: 500; color: var(--mint); }
 
   /* ============================================================
      Page 7, Salary benchmarking
@@ -457,6 +464,7 @@
     .cover__right { height: 330px; }
     .cover__mark img { width: 72px; }
     .cover__right { clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%); }
+    .cover__right::after { clip-path: polygon(0 14%, 100% 0, 100% 4px, 0 calc(14% + 4px)); }
 
     .toc { display: block; height: auto; padding: 26px 20px 6px; }
     .toc > div + div { margin-top: 30px; }
@@ -706,11 +714,11 @@
     <div class="why__photos">
       <figure class="why__photo">
         <img src="/houlihan-lokey/img/london.jpg" alt="Our London office at Huckletree Liverpool Street">
-        <figcaption><b>London</b>On the ground in the UK</figcaption>
+        <figcaption><b>London</b></figcaption>
       </figure>
       <figure class="why__photo why__photo--nyc">
         <img src="/houlihan-lokey/img/new-york.jpg" alt="Our New York team in Manhattan">
-        <figcaption><b>New York</b>On the ground in the US</figcaption>
+        <figcaption><b>US</b></figcaption>
       </figure>
     </div>
   </div>
@@ -759,7 +767,7 @@
         <p class="eyebrow">Search strategy</p>
         <h2 class="section-title" style="margin-bottom:0">The Current <b>Workday Market</b></h2>
       </div>
-      <span class="chip">London and US</span>
+      <span class="chip">London &amp; US</span>
     </div>
     <div class="market__cols">
       <div class="card market-card">
@@ -783,8 +791,7 @@
       </div>
     </div>
     <div class="shortage">
-      <span class="shortage__num">3 to 8<small>years</small></span>
-      <p>This has created a shortage of experienced Workday reporting professionals with 3 to 8 years of experience.</p>
+      <p>This has created a shortage of experienced Workday reporting professionals with <b>3 to 8 years</b> of experience.</p>
     </div>
   </div>
   <div class="pagefoot"><span>Houlihan Lokey &middot; Workday HR Reporting Analyst Search Proposal</span><b>06</b></div>
@@ -804,7 +811,7 @@
         <p class="eyebrow">Search strategy</p>
         <h2 class="section-title" style="margin-bottom:0">The Current <b>Workday Market</b></h2>
       </div>
-      <span class="chip">London and US</span>
+      <span class="chip">London &amp; US</span>
     </div>
     <p class="salary__lede">Therefore we are currently seeing a rise in salary for Workday candidates:</p>
     <div class="salary__cols">
