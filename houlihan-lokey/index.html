@@ -169,13 +169,12 @@
   .cover__right {
     position: relative; overflow: hidden;
     background: #0f4257 url("/houlihan-lokey/img/mountain.jpg") center / cover no-repeat;
+    clip-path: polygon(22% 0, 100% 0, 100% 100%, 0 100%); /* Cap doc hero slant */
   }
-  /* the photo melts into the white left half and deepens to navy at the foot */
+  /* Cap doc hero tint */
   .cover__right::before {
-    content: ""; position: absolute; inset: 0 0 0 -3px;
-    background:
-      linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0.55) 9%, rgba(255, 255, 255, 0) 26%),
-      linear-gradient(180deg, rgba(14, 58, 82, 0) 38%, rgba(14, 58, 82, 0.55) 72%, rgba(14, 58, 82, 0.92) 100%);
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(200deg, rgba(38, 178, 223, 0.18) 0%, rgba(14, 58, 82, 0.05) 45%, rgba(105, 188, 144, 0.22) 100%);
   }
 
   .cover__ring {
@@ -457,7 +456,7 @@
     .presenters { flex-direction: column; gap: 14px; }
     .cover__right { height: 330px; }
     .cover__mark img { width: 72px; }
-    .cover__right::before { background: linear-gradient(180deg, rgba(14, 58, 82, 0) 40%, rgba(14, 58, 82, 0.85) 100%); }
+    .cover__right { clip-path: polygon(0 14%, 100% 0, 100% 100%, 0 100%); }
 
     .toc { display: block; height: auto; padding: 26px 20px 6px; }
     .toc > div + div { margin-top: 30px; }
