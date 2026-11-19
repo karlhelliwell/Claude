@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Houlihan Lokey | Workday HR Reporting Analyst Search Proposal | Oakleaf Partnership</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&family=DM+Sans:opsz,wght@9..40,200..700&display=swap" rel="stylesheet">
+<style>
+  /* ============================================================
+     Oakleaf Partnership, pitch document
+     Design tokens shared with the Capabilities microsite
+     ============================================================ */
+  :root {
+    --green:        #69bc90;
+    --green-ink:    #2e6b4e;
+    --mint:         #a1fed0;
+    --teal:         #26b2df;
+    --petrol:       #166484;
+    --navy:         #0e3a52;
+
+    --ink:          #15333f;
+    --muted:        #5a6f72;
+    --bg:           #ffffff;
+    --tint:         #f4f8f6;
+    --line:         #e6ece9;
+
+    --grad-brand:   linear-gradient(120deg, var(--green) 0%, var(--teal) 100%);
+    --grad-deep:    linear-gradient(135deg, #0f4257 0%, #166484 55%, #1b7d8f 100%);
+
+    --font: "Inter Tight", "Helvetica Neue", Arial, sans-serif;
+    --font-display: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+
+    --radius: 14px;
+    --radius-lg: 22px;
+    --shadow-sm: 0 2px 10px rgba(14, 58, 82, 0.06);
+    --shadow-md: 0 10px 34px rgba(14, 58, 82, 0.10);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { background: #d9e2e0; }
+  body {
+    font-family: var(--font);
+    font-weight: 300;
+    color: var(--ink);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { display: block; }
+  ul { list-style: none; }
+
+  .page {
+    width: 1280px;
+    height: 720px;
+    background: var(--bg);
+    margin: 28px auto;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+  }
+
+  /* ---- shared chrome ---- */
+  .chrome {
+    position: absolute; inset: 0 0 auto 0;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 26px 44px 0;
+    z-index: 5;
+  }
+  .chrome img.oakleaf { height: 34px; width: auto; }
+  .chrome img.client { height: 34px; width: auto; }
+  .chrome .client-chip {
+    background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(6px);
+    padding: 7px 14px; border-radius: 12px; box-shadow: var(--shadow-sm);
+  }
+  .chrome .client-chip img.client { height: 28px; }
+  .pagefoot {
+    position: absolute; inset: auto 0 0 0;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 44px 20px;
+    font-size: 11px; letter-spacing: 0.08em; color: var(--muted);
+    z-index: 5;
+  }
+  .pagefoot b { font-weight: 500; color: var(--green-ink); letter-spacing: 0.08em; }
+  .pagefoot a { color: var(--green-ink); font-weight: 500; text-decoration: none; }
+
+  .eyebrow {
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--green-ink); margin-bottom: 10px;
+  }
+  h1, h2, h3 { font-family: var(--font-display); color: var(--navy); letter-spacing: -0.015em; }
+  .section-title { font-size: 34px; font-weight: 200; line-height: 1.1; margin-bottom: 18px; }
+  .section-title b { font-weight: 500; }
+  .head-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; }
+
+  .card {
+    background: #fff; border: 1px solid var(--line);
+    border-radius: var(--radius); box-shadow: var(--shadow-sm);
+  }
+
+  .chip {
+    display: inline-flex; align-items: center; gap: 7px;
+    border: 1px solid var(--line); border-radius: 999px;
+    background: #fff; padding: 7px 15px;
+    font-size: 12.5px; font-weight: 500; color: var(--navy);
+  }
+  .chip::before {
+    content: ""; width: 7px; height: 7px; border-radius: 50%;
+    background: var(--grad-brand);
+  }
+
+  .tick-list li {
+    position: relative; padding-left: 22px; margin-bottom: 7px;
+  }
+  .tick-list li::before {
+    content: ""; position: absolute; left: 0; top: 7px;
+    width: 9px; height: 9px; border-radius: 50%;
+    background: var(--grad-brand);
+  }
+
+  /* ============================================================
+     Page 1, Cover
+     ============================================================ */
+  .cover { display: grid; grid-template-columns: 1.15fr 1fr; }
+  .cover__left { padding: 32px 20px 30px 56px; display: flex; flex-direction: column; position: relative; z-index: 2; }
+  .cover__brandrow img { height: 44px; width: auto; }
+  .cover__badges { display: flex; gap: 10px; margin-top: 22px; }
+  .cover__title-wrap { margin-top: auto; margin-bottom: auto; padding-bottom: 10px; }
+  .cover__title img { width: 300px; height: auto; }
+  .cover__subtitle {
+    font-family: var(--font-display); font-weight: 300;
+    font-size: 30px; line-height: 1.2; color: var(--navy); margin-top: 22px; letter-spacing: -0.01em;
+  }
+  .cover__subtitle span { color: var(--green-ink); }
+  .cover__rule { width: 74px; height: 4px; border-radius: 4px; background: var(--grad-brand); margin: 24px 0 22px; }
+  .cover__label { font-size: 11px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--green-ink); margin-bottom: 12px; }
+  .presenters { display: flex; gap: 30px; }
+  .presenter { display: flex; align-items: center; gap: 13px; }
+  .presenter img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2.5px solid var(--green); }
+  .presenter b { display: block; font-family: var(--font-display); font-weight: 500; font-size: 17px; color: var(--navy); line-height: 1.2; }
+  .presenter span { font-size: 12.5px; color: var(--muted); }
+  .cover__meta { margin-top: 26px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  .cover__meta b { color: var(--green-ink); font-weight: 600; letter-spacing: 0.1em; }
+  .cover__right {
+    position: relative; background: var(--grad-deep); overflow: hidden;
+  }
+  .cover__right::before {
+    content: ""; position: absolute; inset: 0;
+    background:
+      radial-gradient(560px 420px at 82% 8%, rgba(161, 254, 208, 0.16), transparent 60%),
+      radial-gradient(640px 520px at 12% 96%, rgba(38, 178, 223, 0.22), transparent 62%);
+  }
+  .cover__right::after {
+    content: ""; position: absolute; left: -70px; top: -70px;
+    width: 220px; height: 220px; border-radius: 50%;
+    border: 1.5px solid rgba(161, 254, 208, 0.35);
+  }
+  .cover__ring {
+    position: absolute; right: -110px; bottom: -110px;
+    width: 320px; height: 320px; border-radius: 50%;
+    border: 1.5px solid rgba(161, 254, 208, 0.25);
+  }
+  .cover__mark {
+    position: absolute; inset: 0; z-index: 1;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 30px;
+  }
+  .cover__mark img { width: 250px; height: auto; }
+  .cover__markets { display: flex; gap: 12px; }
+  .cover__markets span {
+    color: #fff; border: 1px solid rgba(255, 255, 255, 0.28); border-radius: 999px;
+    padding: 8px 18px; font-size: 13px; font-weight: 500; letter-spacing: 0.04em;
+    background: rgba(255, 255, 255, 0.06);
+  }
+  .cover__right-tag {
+    position: absolute; left: 0; right: 0; bottom: 26px; z-index: 1; text-align: center;
+    font-size: 11.5px; letter-spacing: 0.26em; text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75); font-weight: 500;
+  }
+
+  /* ============================================================
+     Page 2, Contents and team
+     ============================================================ */
+  .toc { display: grid; grid-template-columns: 1fr 1.15fr; gap: 56px; padding: 108px 56px 66px; height: 100%; }
+  .toc__list { counter-reset: toc; margin-top: 8px; }
+  .toc__list li {
+    counter-increment: toc;
+    display: flex; align-items: baseline; gap: 18px;
+    padding: 12px 2px; border-bottom: 1px solid var(--line);
+    font-family: var(--font-display); font-weight: 300;
+    font-size: 20px; color: var(--navy);
+  }
+  .toc__list li::before {
+    content: "0" counter(toc);
+    font-size: 13px; font-weight: 500; letter-spacing: 0.06em;
+    color: var(--green-ink); min-width: 26px;
+  }
+  .team-card {
+    display: grid; grid-template-columns: auto 1fr; gap: 20px; align-items: center;
+    padding: 20px 24px; margin-bottom: 16px; position: relative;
+  }
+  .team-card__photo {
+    width: 96px; height: 96px; border-radius: 50%; object-fit: cover;
+    border: 3px solid var(--green); background: var(--navy);
+  }
+  .team-card__name { font-family: var(--font-display); font-weight: 500; font-size: 21px; color: var(--navy); }
+  .team-card__role { font-size: 13.5px; font-weight: 500; color: var(--green-ink); margin: 2px 0 9px; }
+  .team-card__contact { font-size: 13.5px; color: var(--muted); line-height: 1.7; }
+  .team-card__contact b { font-weight: 400; color: var(--ink); }
+  .team-card__contact a { color: inherit; text-decoration: none; }
+  .team-card__contact a:hover { color: var(--green-ink); }
+  .team-card .chip { position: absolute; top: 18px; right: 20px; padding: 5px 12px; font-size: 11.5px; letter-spacing: 0.08em; }
+  .team-note { margin-top: 6px; font-size: 13px; color: var(--muted); line-height: 1.55; }
+
+  /* ============================================================
+     Page 3, Introduction
+     ============================================================ */
+  .intro { padding: 104px 56px 62px; height: 100%; display: grid; grid-template-rows: auto 1fr auto; }
+  .intro__cols { display: grid; grid-template-columns: 1.05fr 1fr; gap: 44px; align-items: start; }
+  .intro__cols p { font-size: 14.5px; color: var(--ink); margin-bottom: 11px; }
+  .purpose {
+    background: var(--tint); border-radius: var(--radius);
+    border-left: 4px solid var(--green);
+    padding: 16px 20px; margin-top: 4px;
+  }
+  .purpose small { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; color: var(--green-ink); }
+  .purpose p {
+    font-family: var(--font-display); font-weight: 300;
+    font-size: 19px; line-height: 1.35; color: var(--navy); margin: 6px 0 0;
+  }
+  .services { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 14px; }
+  .values { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 20px; }
+  .value-tile { padding: 14px 16px 15px; border-top: 3px solid var(--green); }
+  .value-tile:nth-child(2n) { border-top-color: var(--teal); }
+  .value-tile h4 {
+    font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--green-ink); font-weight: 600; margin-bottom: 6px; font-family: var(--font);
+  }
+  .value-tile p { font-size: 11.8px; color: var(--muted); line-height: 1.5; }
+
+  /* ============================================================
+     Page 4, Why Oakleaf
+     ============================================================ */
+  .why { display: grid; grid-template-columns: 1.5fr 1fr; height: 100%; }
+  .why__left { padding: 80px 44px 62px 56px; display: flex; flex-direction: column; }
+  .why__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: stretch; }
+  .why__col { display: flex; flex-direction: column; gap: 12px; }
+  .why__col .why-card { flex: 1; }
+  .why-card { padding: 13px 18px; }
+  .why-card--wide {
+    margin-top: 10px; padding: 13px 18px 14px;
+    display: grid; grid-template-columns: 1fr 1fr 1.25fr; gap: 18px;
+  }
+  .practice h4 {
+    font-family: var(--font); font-size: 13.5px; font-weight: 600; color: var(--navy);
+    margin-bottom: 4px;
+  }
+  .practice p {
+    font-size: 12.5px; color: var(--ink); line-height: 1.45;
+    position: relative; padding-left: 17px;
+  }
+  .practice p::before {
+    content: ""; position: absolute; left: 0; top: 5px;
+    width: 9px; height: 9px; border-radius: 50%;
+    background: var(--grad-brand);
+  }
+  .why-card h3 { font-size: 15px; font-weight: 600; font-family: var(--font); color: var(--navy); margin-bottom: 7px; }
+  .why-card li { font-size: 13px; color: var(--ink); }
+  .why-card .tick-list li { margin-bottom: 5px; }
+  .why-card p.note { font-size: 12.5px; color: var(--muted); margin-top: 6px; }
+  .why__stats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 10px; }
+  .stat { padding: 10px 16px 11px; background: var(--tint); border: 1px solid var(--line); border-radius: var(--radius); }
+  .stat b {
+    display: block; font-family: var(--font-display); font-weight: 300;
+    font-size: 26px; letter-spacing: -0.02em; color: var(--navy); line-height: 1.1;
+  }
+  .stat span { font-size: 12.5px; color: var(--muted); }
+  .why__photos { display: grid; grid-template-rows: 1fr 1fr; gap: 4px; background: #fff; height: 720px; }
+  .why__photo { min-height: 0; }
+  .page--photo-right .pagefoot b { color: #fff; }
+  .why__photo { position: relative; overflow: hidden; }
+  .why__photo img { width: 100%; height: 100%; object-fit: cover; }
+  .why__photo--nyc img { object-position: 50% 40%; }
+  .why__photo::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(200deg, rgba(14, 58, 82, 0) 45%, rgba(14, 58, 82, 0.6) 100%);
+  }
+  .why__photo figcaption {
+    position: absolute; left: 24px; right: 24px; bottom: 18px; z-index: 2;
+    color: #fff; font-size: 12.5px; line-height: 1.45;
+  }
+  .why__photo figcaption b { font-family: var(--font-display); font-weight: 500; font-size: 16px; display: block; }
+
+  /* ============================================================
+     Page 5, Workday mandates
+     ============================================================ */
+  .mandates { padding: 100px 56px 66px; height: 100%; display: flex; flex-direction: column; }
+  .mandate-grid { flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 1fr; gap: 14px; }
+  .mandate {
+    padding: 16px 20px 16px 22px; display: flex; flex-direction: column; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  .mandate::before {
+    content: ""; position: absolute; left: 0; top: 16px; bottom: 16px; width: 3px;
+    border-radius: 0 3px 3px 0; background: var(--grad-brand);
+  }
+  .mandate h3 { font-size: 18px; font-weight: 400; line-height: 1.25; }
+  .mandate p { font-size: 13px; color: var(--muted); margin-top: 4px; }
+  .mandate__tag {
+    align-self: flex-start; margin-top: 9px;
+    font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--green-ink); background: var(--tint); border: 1px solid var(--line);
+    border-radius: 999px; padding: 3px 9px;
+  }
+
+  /* ============================================================
+     Page 6, Workday market
+     ============================================================ */
+  .market { padding: 100px 56px 66px; height: 100%; display: grid; grid-template-rows: auto 1fr auto; gap: 14px; }
+  .market__cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .market-card { padding: 22px 26px; display: flex; flex-direction: column; }
+  .market-card h3 { font-size: 15px; font-weight: 600; font-family: var(--font); color: var(--navy); margin-bottom: 4px; }
+  .market-card .lede { font-size: 13.5px; color: var(--muted); margin-bottom: 16px; }
+  .skills { display: flex; flex-direction: column; justify-content: space-between; flex: 1; }
+  .skills li {
+    display: grid; grid-template-columns: 28px 1fr; gap: 12px; align-items: center;
+    font-size: 15.5px; color: var(--ink);
+  }
+  .skills li span {
+    width: 30px; height: 30px; border-radius: 50%; background: var(--tint); border: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11.5px; font-weight: 600; color: var(--green-ink);
+  }
+  .moves { display: grid; grid-template-columns: 1fr 1fr; grid-auto-rows: 1fr; gap: 12px; flex: 1; }
+  .move { background: var(--tint); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; display: flex; flex-direction: column; justify-content: center; }
+  .move b { display: block; font-family: var(--font-display); font-weight: 400; font-size: 20px; color: var(--navy); }
+  .move small { font-size: 13px; color: var(--muted); line-height: 1.45; display: block; margin-top: 3px; }
+  .move--wide { grid-column: 1 / -1; }
+  .shortage {
+    background: var(--grad-deep); color: #fff; border-radius: var(--radius-lg);
+    padding: 16px 28px; display: grid; grid-template-columns: auto 1fr; gap: 26px; align-items: center;
+    position: relative; overflow: hidden;
+  }
+  .shortage::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(420px 200px at 90% 0%, rgba(161, 254, 208, 0.18), transparent 65%);
+  }
+  .shortage > * { position: relative; }
+  .shortage__num { font-family: var(--font-display); font-weight: 200; font-size: 46px; line-height: 1; letter-spacing: -0.02em; color: var(--mint); white-space: nowrap; }
+  .shortage__num small { font-size: 18px; font-weight: 300; margin-left: 6px; color: #fff; }
+  .shortage p { font-family: var(--font-display); font-weight: 300; font-size: 17.5px; line-height: 1.4; }
+
+  /* ============================================================
+     Page 7, Salary benchmarking
+     ============================================================ */
+  .salary { padding: 100px 56px 66px; height: 100%; display: grid; grid-template-rows: auto 1fr auto; gap: 14px; }
+  .salary__cols { display: grid; grid-template-columns: 1.18fr 0.92fr 1.1fr; gap: 16px; }
+  .sal-card { padding: 18px 22px; display: flex; flex-direction: column; }
+  .sal-card h3 { font-size: 15px; font-weight: 600; font-family: var(--font); color: var(--navy); margin-bottom: 2px; }
+  .sal-card .lede { font-size: 13px; color: var(--muted); margin-bottom: 14px; }
+  .sal-table { width: 100%; border-collapse: collapse; }
+  .sal-table th {
+    text-align: left; font-size: 10.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--green-ink); padding: 0 0 8px; border-bottom: 1px solid var(--line);
+  }
+  .sal-table th:last-child, .sal-table td:last-child { text-align: right; }
+  .sal-table td { font-size: 14.5px; color: var(--ink); padding: 17px 0; border-bottom: 1px solid var(--line); }
+  .sal-table tr:last-child td { border-bottom: none; }
+  .sal-table td:last-child { font-family: var(--font-display); font-weight: 400; font-size: 15.5px; color: var(--navy); white-space: nowrap; }
+  .premium { margin: 4px 0 12px; }
+  .premium b { display: block; font-family: var(--font-display); font-weight: 200; font-size: 52px; line-height: 1; letter-spacing: -0.03em; color: var(--navy); }
+  .premium span { font-size: 12.5px; color: var(--muted); }
+  .sal-card .tick-list li { font-size: 13.5px; margin-bottom: 7px; }
+  .expect {
+    background: var(--grad-deep); color: #fff; border-radius: var(--radius-lg);
+    padding: 16px 28px; display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 26px; align-items: center;
+    position: relative; overflow: hidden;
+  }
+  .expect::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(420px 200px at 90% 0%, rgba(161, 254, 208, 0.18), transparent 65%);
+  }
+  .expect > * { position: relative; }
+  .expect__lead small { font-size: 11px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--mint); }
+  .expect__lead p { font-family: var(--font-display); font-weight: 300; font-size: 17px; line-height: 1.35; margin-top: 4px; }
+  .expect__figure { border-left: 1px solid rgba(255, 255, 255, 0.2); padding-left: 24px; }
+  .expect__figure small { font-size: 12px; color: rgba(255, 255, 255, 0.75); display: block; }
+  .expect__figure b { font-family: var(--font-display); font-weight: 300; font-size: 26px; letter-spacing: -0.01em; color: var(--mint); white-space: nowrap; }
+  .expect__figure span { font-size: 12px; color: rgba(255, 255, 255, 0.75); }
+
+  /* ============================================================
+     Page 8, Selection process timeline
+     ============================================================ */
+  .process { padding: 104px 50px 60px; height: 100%; display: flex; flex-direction: column; }
+  .process__head { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 8px; padding-right: 6px; }
+  .process__meta { display: flex; gap: 10px; }
+  .timeline { flex: 1; display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; align-items: stretch; position: relative; padding-top: 8px; }
+  .tl-col { display: grid; grid-template-rows: 1fr auto 1fr; gap: 0; }
+  .tl-card { padding: 14px 15px; display: flex; flex-direction: column; }
+  .tl-card p { font-size: 12.3px; line-height: 1.45; color: var(--ink); }
+  .tl-card .wk {
+    align-self: flex-start;
+    font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--green-ink); background: var(--tint); border: 1px solid var(--line);
+    border-radius: 999px; padding: 3px 9px; margin-bottom: 8px;
+  }
+  .tl-card--top { align-self: end; border-top: 3px solid var(--navy); margin-bottom: 14px; }
+  .tl-card--bottom { align-self: start; border-top: 3px solid var(--green); margin-top: 14px; }
+  .tl-spine { position: relative; height: 14px; }
+  .tl-spine::before {
+    content: ""; position: absolute; left: -14px; right: -14px; top: 50%;
+    height: 3px; transform: translateY(-50%);
+    background: var(--grad-brand); opacity: 0.5;
+  }
+  .tl-col:first-child .tl-spine::before { left: 0; border-radius: 3px; }
+  .tl-col:last-child .tl-spine::before { right: 0; border-radius: 3px; }
+  .tl-spine::after {
+    content: ""; position: absolute; left: 50%; top: 50%;
+    width: 13px; height: 13px; border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff; border: 3.5px solid var(--petrol);
+  }
+
+  /* ============================================================
+     Page 9, Proposal
+     ============================================================ */
+  .proposal { display: grid; grid-template-columns: 1.62fr 1fr; height: 100%; }
+  .proposal__left { padding: 98px 44px 74px 56px; display: flex; flex-direction: column; gap: 13px; }
+  .fee { display: grid; grid-template-columns: auto 1fr auto; gap: 22px; padding: 20px 24px; align-items: center; }
+  .fee__value { text-align: center; padding-right: 22px; border-right: 1px solid var(--line); }
+  .fee__value b {
+    display: block; font-family: var(--font-display); font-weight: 200;
+    font-size: 62px; line-height: 1; letter-spacing: -0.03em; color: var(--navy);
+  }
+  .fee__value span { font-size: 11.5px; color: var(--muted); display: block; max-width: 14ch; margin: 6px auto 0; line-height: 1.4; }
+  .fee__detail li { font-size: 13.5px; }
+  .installments {
+    display: flex; flex-direction: column; gap: 8px;
+    border-left: 1px solid var(--line); padding-left: 22px;
+  }
+  .installments span {
+    font-size: 12px; font-weight: 500; color: var(--navy);
+    background: var(--tint); border: 1px solid var(--line); border-radius: 999px; padding: 7px 16px;
+  }
+  .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .duo .card { padding: 17px 20px; }
+  .duo h3 { font-size: 14.5px; font-weight: 600; font-family: var(--font); color: var(--navy); margin-bottom: 7px; }
+  .duo li, .duo p { font-size: 12.8px; }
+  .guarantee-badge {
+    display: inline-flex; align-items: baseline; gap: 8px; margin-bottom: 8px;
+    font-family: var(--font-display); font-weight: 300; font-size: 26px; color: var(--navy);
+  }
+  .guarantee-badge small { font-size: 12px; color: var(--green-ink); font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+  .dei { background: var(--tint); border: 1px solid var(--line); border-radius: var(--radius); padding: 13px 20px; }
+  .dei h3 { font-size: 13px; font-weight: 600; font-family: var(--font); color: var(--green-ink); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 6px; }
+  .dei p { font-size: 12.8px; color: var(--ink); }
+  .proposal__photo { position: relative; overflow: hidden; }
+  .proposal__photo img { width: 100%; height: 100%; object-fit: cover; }
+  .proposal__photo::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(200deg, rgba(14, 58, 82, 0) 30%, rgba(14, 58, 82, 0.7) 100%);
+  }
+  .proposal__photo figcaption {
+    position: absolute; left: 26px; right: 26px; bottom: 24px; z-index: 2; color: #fff;
+    font-size: 13px; line-height: 1.6;
+  }
+  .proposal__photo figcaption b { font-family: var(--font-display); font-weight: 500; font-size: 16px; display: block; margin-bottom: 4px; }
+  .proposal__photo figcaption a { color: inherit; text-decoration: none; }
+  .proposal__photo figcaption .who { display: block; margin-top: 6px; }
+
+  /* ---- floating PDF download ---- */
+  .pdf-fab {
+    position: fixed; bottom: 26px; left: 50%; transform: translateX(-50%);
+    z-index: 50;
+    display: inline-flex; align-items: center; gap: 9px;
+    padding: 13px 26px; border-radius: 999px;
+    font-family: var(--font); font-size: 15px; font-weight: 500;
+    color: #07313f; text-decoration: none;
+    background: var(--grad-brand);
+    box-shadow: 0 8px 24px rgba(38, 178, 223, 0.35);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s;
+  }
+  .pdf-fab:hover {
+    transform: translateX(-50%) translateY(-3px);
+    box-shadow: 0 14px 34px rgba(38, 178, 223, 0.45);
+  }
+  .pdf-fab svg { width: 16px; height: 16px; }
+
+  /* ---- print ---- */
+  @page { size: 1280px 720px; margin: 0; }
+  @media print {
+    html { background: #fff; }
+    .page { margin: 0; box-shadow: none; page-break-after: always; }
+    .page:last-of-type { page-break-after: auto; }
+    .pdf-fab { display: none; }
+    /* shadows and filters rasterize as grey halos in PDF output */
+    * { box-shadow: none !important; text-shadow: none !important; backdrop-filter: none !important; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+
+  /* ============================================================
+     Mobile, reflow the fixed 16:9 pages into a single column
+     (screen only; print and PDF keep the 1280x720 layout)
+     ============================================================ */
+  @media screen and (max-width: 900px) {
+    html { background: #eef2f1; }
+    .page { width: 100%; height: auto; min-height: 0; margin: 0 0 14px; overflow: visible; }
+    .chrome { position: static; padding: 18px 20px 0; }
+    .chrome img.oakleaf { height: 30px; }
+    .chrome img.client, .chrome .client-chip img.client { height: 24px; }
+    .chrome .client-chip { padding: 0; background: none; box-shadow: none; backdrop-filter: none; }
+    .pagefoot { position: static; padding: 16px 20px 20px; flex-wrap: wrap; gap: 6px; }
+    .section-title { font-size: 27px; }
+    .head-row { display: block; }
+
+    .cover { display: block; }
+    .cover__left { padding: 18px 20px 30px; }
+    .cover__badges { flex-wrap: wrap; }
+    .cover__title-wrap { margin: 34px 0 0; }
+    .cover__title img { width: 230px; }
+    .cover__subtitle { font-size: 24px; }
+    .presenters { flex-direction: column; gap: 14px; }
+    .cover__right { height: 330px; }
+    .cover__mark img { width: 170px; }
+
+    .toc { display: block; height: auto; padding: 26px 20px 6px; }
+    .toc > div + div { margin-top: 30px; }
+    .toc__list li { font-size: 17px; }
+    .team-card { grid-template-columns: 1fr; padding: 18px; }
+    .team-card .chip { top: 18px; right: 18px; }
+    .team-card__contact { overflow-wrap: anywhere; }
+
+    .intro { display: block; height: auto; padding: 26px 20px 6px; }
+    .intro__cols { display: block; }
+    .values { grid-template-columns: 1fr 1fr; margin-top: 16px; }
+
+    .why { display: block; height: auto; }
+    .why__left { padding: 26px 20px 20px; }
+    .why__grid { grid-template-columns: 1fr; }
+    .why-card--wide { grid-template-columns: 1fr; gap: 12px; }
+    .why__photos { grid-template-rows: 240px 240px; }
+
+    .mandates, .market, .salary { display: block; height: auto; padding: 26px 20px 6px; }
+    .mandate-grid { grid-template-columns: 1fr; grid-auto-rows: auto; }
+    .market__cols, .salary__cols { grid-template-columns: 1fr; }
+    .market-card, .sal-card { margin-bottom: 14px; }
+    .moves { grid-template-columns: 1fr; }
+    .shortage, .expect { grid-template-columns: 1fr; gap: 14px; }
+    .expect__figure { border-left: none; padding-left: 0; border-top: 1px solid rgba(255, 255, 255, 0.2); padding-top: 12px; }
+
+    .process { display: block; height: auto; padding: 26px 20px 6px; }
+    .process__head { display: block; margin-bottom: 14px; }
+    .process__meta { flex-wrap: wrap; margin-top: 12px; }
+    .timeline { display: flex; flex-direction: column; gap: 10px; padding-top: 0; }
+    .tl-col { display: contents; }
+    .tl-spine { display: none; }
+    .tl-card--top, .tl-card--bottom { margin: 0; align-self: stretch; }
+    .tl-col:last-child .tl-card--bottom { display: none; }
+
+    .proposal { display: block; height: auto; }
+    .proposal__left { padding: 26px 20px 20px; }
+    .fee { grid-template-columns: 1fr; gap: 14px; }
+    .fee__value { border-right: none; border-bottom: 1px solid var(--line); padding: 0 0 14px; }
+    .installments { border-left: none; padding-left: 0; }
+    .duo { grid-template-columns: 1fr; }
+    .proposal__photo { height: 340px; }
+    .proposal__photo figcaption a { overflow-wrap: anywhere; }
+
+    .pdf-fab { left: auto; right: 14px; bottom: 14px; transform: none; width: 48px; height: 48px; padding: 0; justify-content: center; border-radius: 50%; }
+    .pdf-fab:hover { transform: none; }
+    .pdf-fab svg { width: 20px; height: 20px; }
+    .pdf-fab__label { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     1. Cover
+     ============================================================ -->
+<section class="page cover">
+  <div class="cover__left">
+    <div class="cover__brandrow">
+      <img src="/houlihan-lokey/img/oakleaf-partnership.svg" alt="Oakleaf Partnership">
+    </div>
+    <div class="cover__badges">
+      <span class="chip">Your trusted partner for over 21 years</span>
+      <span class="chip">real peOPle</span>
+    </div>
+    <div class="cover__title-wrap">
+      <h1 class="cover__title"><img src="/houlihan-lokey/img/houlihan-lokey.svg" alt="Houlihan Lokey"></h1>
+      <p class="cover__subtitle">Workday HR Reporting Analyst<br><span>Search Proposal</span></p>
+      <div class="cover__rule"></div>
+      <p class="cover__label">Presented by</p>
+      <div class="presenters">
+        <div class="presenter">
+          <img src="/houlihan-lokey/img/meg-park.jpg" alt="Meg Park">
+          <div><b>Meg Park</b><span>Senior Consultant, London</span></div>
+        </div>
+        <div class="presenter">
+          <img src="/houlihan-lokey/img/riley-garnett.jpg" alt="Riley Garnett">
+          <div><b>Riley Garnett</b><span>Senior Manager, New York</span></div>
+        </div>
+      </div>
+      <p class="cover__meta">November 2026 &nbsp;&middot;&nbsp; <b>oakleafpartnership.com</b></p>
+    </div>
+  </div>
+  <div class="cover__right">
+    <span class="cover__ring" aria-hidden="true"></span>
+    <div class="cover__mark">
+      <img src="/houlihan-lokey/img/houlihan-lokey-mark-white.svg" alt="">
+      <div class="cover__markets"><span>London</span><span>New York</span></div>
+    </div>
+    <p class="cover__right-tag">HR Search &middot; Workday &middot; Financial Services</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     2. Contents and team
+     ============================================================ -->
+<section class="page">
+  <div class="chrome">
+    <img class="oakleaf" src="/houlihan-lokey/img/oakleaf-partnership.svg" alt="Oakleaf Partnership">
+    <img class="client" src="/houlihan-lokey/img/houlihan-lokey.svg" alt="Houlihan Lokey">
+  </div>
+  <div class="toc">
+    <div>
+      <p class="eyebrow">In this proposal</p>
+      <h2 class="section-title">Contents</h2>
+      <ul class="toc__list">
+        <li>Introduction to Oakleaf</li>
+        <li>Why Partner with Oakleaf</li>
+        <li>Workday Mandates</li>
+        <li>The Current Workday Market</li>
+        <li>Salary Benchmarking</li>
+        <li>The Selection Process</li>
+        <li>Proposal</li>
+      </ul>
+    </div>
+    <div>
+      <p class="eyebrow">Your team</p>
+      <h2 class="section-title">Your Oakleaf Team</h2>
+      <div class="card team-card">
+        <img class="team-card__photo" src="/houlihan-lokey/img/meg-park.jpg" alt="Meg Park">
+        <div>
+          <p class="team-card__name">Meg Park</p>
+          <p class="team-card__role">Senior Consultant &middot; Financial and Professional Services</p>
+          <p class="team-card__contact"><b><a href="mailto:megpark@oakleafpartnership.com">megpark@oakleafpartnership.com</a></b><br><a href="tel:+442073377650">+44 20 7337 7650</a></p>
+        </div>
+        <span class="chip">UK</span>
+      </div>
+      <div class="card team-card">
+        <img class="team-card__photo" src="/houlihan-lokey/img/riley-garnett.jpg" alt="Riley Garnett">
+        <div>
+          <p class="team-card__name">Riley Garnett</p>
+          <p class="team-card__role">Senior Manager &middot; New York</p>
+          <p class="team-card__contact"><b><a href="mailto:rileygarnett@oakleafpartnership.com">rileygarnett@oakleafpartnership.com</a></b><br><a href="tel:+19172000164">+1 (917) 200-0164</a></p>
+        </div>
+        <span class="chip">US</span>
+      </div>
+      <p class="team-note">One team across London and New York, so your search covers both markets with a single point of contact on each side.</p>
+    </div>
+  </div>
+  <div class="pagefoot"><span>Houlihan Lokey &middot; Workday HR Reporting Analyst Search Proposal</span><b>02</b></div>
+</section>
+
+<!-- ============================================================
+     3. Introduction to Oakleaf
+     ============================================================ -->
+<section class="page">
+  <div class="chrome">
+    <img class="oakleaf" src="/houlihan-lokey/img/oakleaf-partnership.svg" alt="Oakleaf Partnership">
+    <img class="client" src="/houlihan-lokey/img/houlihan-lokey.svg" alt="Houlihan Lokey">
+  </div>
+  <div class="intro">
+    <div>
+      <p class="eyebrow">Who we are</p>
+      <h2 class="section-title">Introduction to Oakleaf</h2>
+    </div>
+    <div class="intro__cols">
+      <div>
+        <p>We specialise in sourcing, tracking and identifying the very best talent in the HR profession.</p>
+        <p>Founded in 2005, Oakleaf Group is now in its 21st year. With offices in the UK and the US, Oakleaf is a brand that is associated with the very best talent in the global HR community.</p>
+        <p>We have an exceptional record of placing people into HR jobs at all levels across industry.</p>
+        <p>We embrace both candidates and clients as customers so do not differentiate the two. We believe in exceptional service to all parties.</p>
+        <div class="purpose">
+          <small>Our purpose</small>
+          <p>Proudly redefine the HR recruitment experience, one person at a time.</p>
+        </div>
+      </div>
+      <div>
+        <p>Our philosophy is based on constant communication. Where time is critical, we are market leaders in the speed of delivery from proposal acceptance to shortlist submission.</p>
+        <p>We can apply a range of methodologies to best support a particular assignment. We adopt an agile approach to search through our dedicated research capability, as well as our own extensive network of active and passive job seekers.</p>
+        <p>HR search is our expertise and we consider ourselves as true and trusted partners to the HR profession, delivering executive search, market intelligence and research to our customers.</p>
+        <div class="services">
+          <span class="chip">Retained Search</span>
+          <span class="chip">Market Mapping</span>
+          <span class="chip">Bespoke Recruitment Solutions</span>
+          <span class="chip">Advertised Campaigns</span>
+          <span class="chip">Psychometric Assessment</span>
+          <span class="chip">Interim / Fractional</span>
+        </div>
+      </div>
+    </div>
+    <div class="values">
+      <div class="card value-tile">
+        <h4>A Community</h4>
+        <p>We care deeply about working collaboratively with our colleagues and customers to build lasting partnerships.</p>
+      </div>
+      <div class="card value-tile">
+        <h4>Courageous</h4>
+        <p>We have the moral courage to always do the right thing, standing by our principles and challenging the status quo.</p>
+      </div>
+      <div class="card value-tile">
+        <h4>Authentic</h4>
+        <p>We embrace individual differences and encourage the freedom to express our opinions and be who we are.</p>
+      </div>
+      <div class="card value-tile">
+        <h4>Respectful</h4>
+        <p>We are professional at all times and our behaviours will always make our colleagues and customers feel welcome and comfortable.</p>
+      </div>
+      <div class="card value-tile">
+        <h4>Ambitious</h4>
+        <p>We will always challenge ourselves to deliver our goals with vigour and enthusiasm.</p>
+      </div>
+    </div>
+  </div>
+  <div class="pagefoot"><span>Houlihan Lokey &middot; Workday HR Reporting Analyst Search Proposal</span><b>03</b></div>
+</section>
+
+<!-- ============================================================
+     4. Why Oakleaf
+     ============================================================ -->
+<section class="page page--photo-right">
+  <div class="chrome">
+    <img class="oakleaf" src="/houlihan-lokey/img/oakleaf-partnership.svg" alt="Oakleaf Partnership">
+    <span class="client-chip"><img class="client" src="/houlihan-lokey/img/houlihan-lokey.svg" alt="Houlihan Lokey"></span>
+  </div>
+  <div class="why">
+    <div class="why__left">
+      <p class="eyebrow">The Oakleaf difference</p>
+      <h2 class="section-title">Why Partner with Oakleaf</h2>
+      <div class="why__grid">
+        <div class="why__col">
+          <div class="card why-card">
+            <h3>Agile, '360' approach</h3>
+            <p class="note">Oakleaf doesn't have separate sales and research teams. We lead from the front and use our personal knowledge of your culture to sell this opportunity to the market.</p>
+          </div>
+          <div class="card why-card">
+            <h3>One team across the UK and US</h3>
+            <p class="note">With teams in London and New York, we search both markets side by side and give you a live view of Workday talent on each side of the Atlantic.</p>
+          </div>
+        </div>
+        <div class="why__col">
+          <div class="card why-card">
+            <h3>Workday and HR technology networks</h3>
+            <ul class="tick-list">
+              <li>Highly experienced HR search specialists.</li>
+              <li>Active network of Workday reporting, HRIS and people analytics professionals.</li>
+              <li>AI enabled advertising campaigns.</li>
+            </ul>
+          </div>
+          <div class="card why-card">
+            <h3>Assessment framework</h3>
+            <ul class="tick-list">
+              <li>Workday reporting capability tested against your brief</li>
+              <li>Competency and behavioural interviews</li>
+              <li>Psychometrics</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card why-card why-card--wide">
+        <div class="practice">
+          <h4>UK</h4>
+          <p>London team covering financial and professional services</p>
+        </div>
+        <div class="practice">
+          <h4>US</h4>
+          <p>New York team working across the US market</p>
+        </div>
+        <div class="practice">
+          <h4>Workday</h4>
+          <p>Nine recent Workday mandates across banking, asset management and fintech</p>
+        </div>
+      </div>
+      <div class="why__stats">
+        <div class="stat"><b>100%</b><span>Project fill rate</span></div>
+        <div class="stat"><b>#1</b><span>Market leading time to fill</span></div>
+      </div>
+    </div>
+    <div class="why__photos">
+      <figure class="why__photo">
+        <img src="/houlihan-lokey/img/london.jpg" alt="Our London office at Huckletree Liverpool Street">
+        <figcaption><b>London</b>Huckletree Liverpool Street</figcaption>
+      </figure>
+      <figure class="why__photo why__photo--nyc">
+        <img src="/houlihan-lokey/img/new-york.jpg" alt="Our New York team in Manhattan">
+        <figcaption><b>New York</b>On the ground in the US</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="pagefoot"><span>Houlihan Lokey &middot; Workday HR Reporting Analyst Search Proposal</span><b>04</b></div>
+</section>
+
+<!-- ============================================================
+     5. Workday mandates
+     ============================================================ -->
+<section class="page">
+  <div class="chrome">
+    <img class="oakleaf" src="/houlihan-lokey/img/oakleaf-partnership.svg" alt="Oakleaf Partnership">
+    <img class="client" src="/houlihan-lokey/img/houlihan-lokey.svg" alt="Houlihan Lokey">
+  </div>
+  <div class="mandates">
+    <div class="head-row">
+      <div>
+        <p class="eyebrow">Track record</p>
+        <h2 class="section-title">Workday <b>Mandates</b></h2>
+      </div>
+      <span class="chip" style="margin-bottom:22px">Banking, asset management and fintech</span>
+    </div>
+    <div class="mandate-grid">
+      <div class="card mandate"><h3>Workday Analyst</h3><p>N. M. Rothschild &amp; Sons Limited</p><span class="mandate__tag">Investment banking</span></div>
+      <div class="card mandate"><h3>Workday HCM Specialist VP</h3><p>MUFG Bank Ltd</p><span class="mandate__tag">12 month FTC</span></div>
+      <div class="card mandate"><h3>Workday Consultant</h3><p>Brevan Howard Asset Management Services Limited</p><span class="mandate__tag">Hedge fund</span></div>
+      <div class="card mandate"><h3>Workday Consultant</h3><p>Starling Bank Limited</p><span class="mandate__tag">Fintech</span></div>
+      <div class="card mandate"><h3>Senior Workday Report Writer</h3><p>Resource Solutions (Deutsche Bank)</p><span class="mandate__tag">Reporting</span></div>
+      <div class="card mandate"><h3>Workday Technical Lead</h3><p>Qube Research and Technologies Limited</p><span class="mandate__tag">Quantitative investment</span></div>
+      <div class="card mandate"><h3>Workday Manager</h3><p>IG Group Holdings Plc</p><span class="mandate__tag">Fintech</span></div>
+      <div class="card mandate"><h3>Workday Consultant</h3><p>ICG FMC Limited</p><span class="mandate__tag">Asset management</span></div>
+      <div class="card mandate"><h3>Workday EMEA / APAC</h3><p>Pimco Europe Ltd</p><span class="mandate__tag">Asset management</span></div>
+    </div>
+  </div>
+  <div class="pagefoot"><span>Houlihan Lokey &middot; Workday HR Reporting Analyst Search Proposal</span><b>05</b></div>
+</section>
+
+<!-- ============================================================
+     6. Search strategy: the current Workday market
+     ============================================================ -->
+<section class="page">
+  <div class="chrome">
+    <img class="oakleaf" src="/houlihan-lokey/img/oakleaf-partnership.svg" alt="Oakleaf Partnership">
+    <img class="client" src="/houlihan-lokey/img/houlihan-lokey.svg" alt="Houlihan Lokey">
+  </div>
+  <div class="market">
+    <div class="head-row">
+      <div>
+        <p class="eyebrow">Search strategy</p>
+        <h2 class="section-title" style="margin-bottom:0">The Current <b>Workday Market</b></h2>
+      </div>
+      <span class="chip">London and US</span>
+    </div>
+    <div class="market__cols">
+      <div class="card market-card">
+        <h3>Where demand is strongest</h3>
+        <p class="lede">We are seeing the strongest demand for candidates who can:</p>
+        <ul class="skills">
+          <li><span>01</span>Build complex Workday reports and calculated fields</li>
+          <li><span>02</span>Produce executive dashboards and workforce analytics</li>
+          <li><span>03</span>Translate HR data into business insights</li>
+          <li><span>04</span>Understand Workday security and governance</li>
+          <li><span>05</span>Upskill HR teams rather than simply run reports themselves</li>
+        </ul>
+      </div>
+      <div class="card market-card">
+        <h3>Why the candidate pool is tight</h3>
+        <p class="lede">Many experienced Workday reporting specialists have moved into:</p>
+        <div class="moves">
+          <div class="move"><b>HR Product Owner roles</b></div>
+          <div class="move"><b>People Analytics teams</b></div>
+          <div class="move"><b>HR Transformation functions</b></div>
+          <div class="move"><b>Workday consulting roles</b><small>Deloitte, PwC, EY, KPMG, Accenture and Alight</small></div>
+        </div>
+      </div>
+    </div>
+    <div class="shortage">
+      <span class="shortage__num">3 to 8<small>years</small></span>
+      <p>This has created a shortage of experienced Workday reporting professionals with 3 to 8 years of experience, and we are currently seeing salaries rise for Workday candidates.</p>
+    </div>
+  </div>
+  <div class="pagefoot"><span>Houlihan Lokey &middot; Workday HR Reporting Analyst Search Proposal</span><b>06</b></div>
+</section>
+
+<!-- ============================================================
+     7. Search strategy: salary benchmarking
+     ============================================================ -->
+<section class="page">
+  <div class="chrome">
+    <img class="oakleaf" src="/houlihan-lokey/img/oakleaf-partnership.svg" alt="Oakleaf Partnership">
+    <img class="client" src="/houlihan-lokey/img/houlihan-lokey.svg" alt="Houlihan Lokey">
+  </div>
+  <div class="salary">
+    <div class="head-row">
+      <div>
+        <p class="eyebrow">Search strategy</p>
+        <h2 class="section-title" style="margin-bottom:0">Salary <b>Benchmarking</b></h2>
+      </div>
+      <span class="chip">London and US</span>
+    </div>
+    <div class="salary__cols">
+      <div class="card sal-card">
+        <h3>London market</h3>
+        <p class="lede">Base salary by position</p>
+        <table class="sal-table">
+          <thead><tr><th>Position</th><th>Base salary</th></tr></thead>
+          <tbody>
+            <tr><td>Workday Analyst</td><td>£55,000 to £75,000</td></tr>
+            <tr><td>Senior Workday Analyst</td><td>£75,000 to £95,000</td></tr>
+            <tr><td>Workday Reporting Specialist</td><td>£75,000 to £100,000</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card sal-card">
+        <h3>Financial services premium</h3>
+        <p class="lede">Investment banks, private equity firms and asset managers typically pay</p>
+        <div class="premium"><b>10 to 20%</b><span>higher than the broader industry for Workday talent, due to:</span></div>
+        <ul class="tick-list">
+          <li>Complex compensation structures</li>
+          <li>Global employee populations</li>
+          <li>Regulatory reporting requirements</li>
+          <li>Higher stakeholder expectations</li>
+        </ul>
+      </div>
+      <div class="card sal-card">
+        <h3>US market comparison</h3>
+        <p class="lede">Average Workday Reporting Analyst salaries</p>
+        <table class="sal-table">
+          <thead><tr><th>Market</th><th>Average salary</th></tr></thead>
+          <tbody>
+            <tr><td>United States average</td><td>$92,000 to $94,000</td></tr>
+            <tr><td>Financial services</td><td>$100,000 to $130,000+</td></tr>
+            <tr><td>New York City</td><td>$110,000 to $140,000+</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="expect">
+      <div class="expect__lead">
+        <small>Our expectation</small>
+        <p>For a role matching this specification, we would expect</p>
+      </div>
+      <div class="expect__figure"><small>Permanent equivalent</small><b>£85,000 to £110,000</b> <span>base</span></div>
+      <div class="expect__figure"><small>12 month FTC</small><b>£90,000 to £120,000</b> <span>pro rata</span></div>
+    </div>
+  </div>
+  <div class="pagefoot"><span>Houlihan Lokey &middot; Workday HR Reporting Analyst Search Proposal</span><b>07</b></div>
+</section>
+
+<!-- ============================================================
+     8. Selection process timeline
+     ============================================================ -->
+<section class="page">
+  <div class="chrome">
+    <img class="oakleaf" src="/houlihan-lokey/img/oakleaf-partnership.svg" alt="Oakleaf Partnership">
+    <img class="client" src="/houlihan-lokey/img/houlihan-lokey.svg" alt="Houlihan Lokey">
+  </div>
+  <div class="process">
+    <div class="process__head">
+      <div>
+        <p class="eyebrow">The selection process</p>
+        <h2 class="section-title" style="margin-bottom:0">Example Roadmap</h2>
+      </div>
+      <div class="process__meta">
+        <span class="chip">Agile, dedicated approach</span>
+        <span class="chip">Execution focused</span>
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="tl-col">
+        <div class="card tl-card tl-card--top">
+          <span class="wk">Week 1</span>
+          <p>Meeting to define role criteria, specific requirements, and culture.</p>
+        </div>
+        <div class="tl-spine"></div>
+        <div class="card tl-card tl-card--bottom">
+          <span class="wk">Week 1</span>
+          <p>Create a candidate briefing document detailing the role and organisation.</p>
+        </div>
+      </div>
+      <div class="tl-col">
+        <div class="card tl-card tl-card--top">
+          <span class="wk">Weeks 2 to 4</span>
+          <p>Produce a diverse target list of potential candidates.</p>
+        </div>
+        <div class="tl-spine"></div>
+        <div class="card tl-card tl-card--bottom">
+          <span class="wk">Weeks 2 to 4</span>
+          <p>Screen longlist candidates to qualify experience, aspirations and compensation.</p>
+        </div>
+      </div>
+      <div class="tl-col">
+        <div class="card tl-card tl-card--top">
+          <span class="wk">Weeks 4 to 7</span>
+          <p>Present market map. Manage the interview process and provide comprehensive feedback before and after interviews.</p>
+        </div>
+        <div class="tl-spine"></div>
+        <div class="card tl-card tl-card--bottom">
+          <span class="wk">Weeks 4 to 7</span>
+          <p>Formal interviews to evaluate against competencies and culture fit.</p>
+        </div>
+      </div>
+      <div class="tl-col">
+        <div class="card tl-card tl-card--top">
+          <span class="wk">Weeks 7 to 10</span>
+          <p>Optional behavioural and psychometric assessments and final interviews.</p>
+        </div>
+        <div class="tl-spine"></div>
+        <div class="card tl-card tl-card--bottom">
+          <span class="wk">Weeks 10 to 13</span>
+          <p>Manage offer and resignation processes with regular contact.</p>
+        </div>
+      </div>
+      <div class="tl-col">
+        <div class="card tl-card tl-card--top">
+          <span class="wk">Beyond</span>
+          <p>Provide 6 months onboarding support.</p>
+        </div>
+        <div class="tl-spine"></div>
+        <div class="card tl-card tl-card--bottom" style="visibility:hidden"></div>
+      </div>
+    </div>
+  </div>
+  <div class="pagefoot"><span>Houlihan Lokey &middot; Workday HR Reporting Analyst Search Proposal</span><b>08</b></div>
+</section>
+
+<!-- ============================================================
+     9. Proposal
+     ============================================================ -->
+<section class="page">
+  <div class="chrome">
+    <img class="oakleaf" src="/houlihan-lokey/img/oakleaf-partnership.svg" alt="Oakleaf Partnership">
+    <span class="client-chip"><img class="client" src="/houlihan-lokey/img/houlihan-lokey.svg" alt="Houlihan Lokey"></span>
+  </div>
+  <div class="proposal">
+    <div class="proposal__left">
+      <div>
+        <h2 class="section-title" style="margin-bottom:12px">Fee Proposal</h2>
+      </div>
+      <div class="card fee">
+        <div class="fee__value">
+          <b>30%</b>
+          <span>of first year's guaranteed compensation</span>
+        </div>
+        <div class="fee__detail">
+          <ul class="tick-list">
+            <li>Competitive pricing structure.</li>
+            <li>No admin fees.</li>
+            <li>Split into 3 instalments.</li>
+          </ul>
+        </div>
+        <div class="installments">
+          <span>1 &middot; Commencement</span>
+          <span>2 &middot; Agreed shortlist period (30 days)</span>
+          <span>3 &middot; Start date</span>
+        </div>
+      </div>
+      <div class="duo">
+        <div class="card">
+          <div class="guarantee-badge"><small>Guarantee period</small> 12 months</div>
+          <ul class="tick-list">
+            <li>Our confidence in delivery is demonstrated in our commitment to partner with you long term.</li>
+            <li>12 month free replacement.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Partnership expectations</h3>
+          <ul class="tick-list">
+            <li>Weekly cadence meetings after the initial 2 week period.</li>
+            <li>Fast turnaround on feedback.</li>
+            <li>Insights on and facetime with key stakeholders.</li>
+            <li>We expect a two way partnership.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="dei">
+        <h3>Our DE&amp;I commitment</h3>
+        <p>Diverse target lists and shortlists are standard on every Oakleaf search, supported by our HR community diversity networks including ProudHR and Women of Impact.</p>
+      </div>
+    </div>
+    <figure class="proposal__photo">
+      <img src="/houlihan-lokey/img/office.jpg" alt="Modern office with a living green wall">
+      <figcaption>
+        <b>Let's get started</b>
+        <span class="who">Meg Park &middot; <a href="tel:+442073377650">+44 20 7337 7650</a><br><a href="mailto:megpark@oakleafpartnership.com">megpark@oakleafpartnership.com</a></span>
+        <span class="who">Riley Garnett &middot; <a href="tel:+19172000164">+1 (917) 200-0164</a><br><a href="mailto:rileygarnett@oakleafpartnership.com">rileygarnett@oakleafpartnership.com</a></span>
+      </figcaption>
+    </figure>
+  </div>
+  <div class="pagefoot"><span>Houlihan Lokey &middot; Workday HR Reporting Analyst Search Proposal &nbsp;&middot;&nbsp; To view our full capabilities visit <a href="https://cap.oakleafpartnership.com">cap.oakleafpartnership.com</a></span><b>09</b></div>
+</section>
+
+<a class="pdf-fab" href="/houlihan-lokey/Houlihan-Lokey-Workday-HR-Reporting-Analyst-Search-Proposal-Oakleaf-Partnership.pdf" download aria-label="Download PDF">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M12 3v12"/><path d="m6 11 6 6 6-6"/><path d="M4 21h16"/>
+  </svg>
+  <span class="pdf-fab__label">Download PDF</span>
+</a>
+
+</body>
+</html>
