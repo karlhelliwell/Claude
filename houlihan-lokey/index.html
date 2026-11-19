@@ -339,18 +339,35 @@
   .side-photo figcaption b { font-family: var(--font-display); font-weight: 500; font-size: 15px; display: block; margin-bottom: 3px; }
   .side-photo figcaption a { color: inherit; text-decoration: none; }
 
-  .mandates { padding: 100px 40px 66px 56px; height: 100%; display: flex; flex-direction: column; }
-  .mandate-grid { flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 1fr; gap: 14px; }
+  .mandates { padding: 96px 40px 74px 56px; height: 720px; display: flex; flex-direction: column; }
+  .mandate-grid { flex: 1; min-height: 0; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, minmax(0, 1fr)); gap: 12px; }
   .mandate {
-    padding: 16px 20px 16px 22px; display: flex; flex-direction: column; justify-content: center;
+    padding: 15px 20px 12px; display: flex; flex-direction: column; min-height: 0;
     position: relative; overflow: hidden;
   }
+  /* brand strip along the top edge */
   .mandate::before {
-    content: ""; position: absolute; left: 0; top: 16px; bottom: 16px; width: 3px;
-    border-radius: 0 3px 3px 0; background: var(--grad-brand);
+    content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px;
+    background: var(--grad-brand);
   }
-  .mandate h3 { font-size: 16.5px; font-weight: 400; line-height: 1.25; }
-  .mandate p { font-size: 12.5px; color: var(--muted); margin-top: 4px; }
+  .mandate__no {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.18em; color: var(--green-ink);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .mandate__no::after { content: ""; width: 18px; height: 1px; background: var(--green); }
+  .mandate h3 {
+    font-family: var(--font-display); font-size: 21px; font-weight: 400; line-height: 1.16;
+    letter-spacing: -0.01em; color: var(--navy); margin: 7px 0 8px;
+  }
+  .mandate__tag {
+    display: inline-block; margin-top: 7px; padding: 3px 9px; border-radius: 999px;
+    font-family: var(--font); font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--green-ink); background: var(--tint); border: 1px solid var(--line); vertical-align: middle;
+  }
+  .mandate p {
+    margin-top: auto; padding-top: 7px; border-top: 1px solid var(--line);
+    font-size: 11.5px; line-height: 1.4; letter-spacing: 0.02em; color: var(--muted);
+  }
 
   /* ============================================================
      Page 6, Workday market
@@ -509,7 +526,7 @@
     .why__photos { grid-template-rows: 240px 240px; }
 
     .mandates, .market, .salary { display: block; height: auto; padding: 26px 20px 6px; }
-    .mandate-grid { grid-template-columns: 1fr; grid-auto-rows: auto; }
+    .mandate-grid { grid-template-columns: 1fr; grid-template-rows: none; grid-auto-rows: auto; }
     .market__cols, .salary__cols { grid-template-columns: 1fr; }
     .market-card, .sal-card { margin-bottom: 14px; }
     .moves { grid-template-columns: 1fr; }
@@ -768,15 +785,15 @@
       <h2 class="section-title">Workday <b>Mandates</b></h2>
     </div>
     <div class="mandate-grid">
-      <div class="card mandate"><h3>Workday Analyst</h3><p>N. M. Rothschild &amp; Sons Limited</p></div>
-      <div class="card mandate"><h3>Workday HCM Specialist VP (12 Month FTC)</h3><p>MUFG Bank Ltd</p></div>
-      <div class="card mandate"><h3>Workday Consultant</h3><p>Brevan Howard Asset Management Services Limited</p></div>
-      <div class="card mandate"><h3>Workday Consultant</h3><p>Starling Bank Limited</p></div>
-      <div class="card mandate"><h3>Senior Workday Report Writer</h3><p>Resource Solutions (Deutsche Bank)</p></div>
-      <div class="card mandate"><h3>Workday Technical Lead</h3><p>Qube Research and Technologies Limited</p></div>
-      <div class="card mandate"><h3>Workday Manager</h3><p>IG Group Holdings Plc</p></div>
-      <div class="card mandate"><h3>Workday Consultant</h3><p>ICG FMC Limited</p></div>
-      <div class="card mandate"><h3>Workday EMEA/APAC</h3><p>Pimco Europe Ltd</p></div>
+      <div class="card mandate"><span class="mandate__no">01</span><h3>Workday Analyst</h3><p>N. M. Rothschild &amp; Sons Limited</p></div>
+      <div class="card mandate"><span class="mandate__no">02</span><h3>Workday HCM Specialist VP<br><span class="mandate__tag">12 Month FTC</span></h3><p>MUFG Bank Ltd</p></div>
+      <div class="card mandate"><span class="mandate__no">03</span><h3>Workday Consultant</h3><p>Brevan Howard Asset Management Services Limited</p></div>
+      <div class="card mandate"><span class="mandate__no">04</span><h3>Workday Consultant</h3><p>Starling Bank Limited</p></div>
+      <div class="card mandate"><span class="mandate__no">05</span><h3>Senior Workday Report Writer</h3><p>Resource Solutions (Deutsche Bank)</p></div>
+      <div class="card mandate"><span class="mandate__no">06</span><h3>Workday Technical Lead</h3><p>Qube Research and Technologies Limited</p></div>
+      <div class="card mandate"><span class="mandate__no">07</span><h3>Workday Manager</h3><p>IG Group Holdings Plc</p></div>
+      <div class="card mandate"><span class="mandate__no">08</span><h3>Workday Consultant</h3><p>ICG FMC Limited</p></div>
+      <div class="card mandate"><span class="mandate__no">09</span><h3>Workday EMEA/APAC</h3><p>Pimco Europe Ltd</p></div>
     </div>
   </div>
   <figure class="side-photo">
