@@ -221,8 +221,12 @@
     font-size: 13px; font-weight: 500; letter-spacing: 0.06em;
     color: var(--green-ink); min-width: 26px;
   }
+  .toc > div { min-height: 0; }
+  .toc > div:first-child { display: flex; flex-direction: column; }
+  .toc__photo { flex: 1; min-height: 0; margin: 30px 0 0; border-radius: var(--radius-lg); overflow: hidden; position: relative; }
+  .toc__photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
   .team-card {
-    display: grid; grid-template-columns: auto 1fr; gap: 20px; align-items: center;
+    display: grid; grid-template-columns: auto 1fr auto; gap: 20px; align-items: center;
     padding: 20px 24px; margin-bottom: 16px; position: relative;
   }
   .team-card__photo {
@@ -235,7 +239,8 @@
   .team-card__contact b { font-weight: 400; color: var(--ink); }
   .team-card__contact a { color: inherit; text-decoration: none; }
   .team-card__contact a:hover { color: var(--green-ink); }
-  .team-card .chip { position: absolute; top: 18px; right: 20px; padding: 5px 12px; font-size: 11.5px; letter-spacing: 0.08em; }
+  .team-card .chip { vertical-align: 3px; margin-left: 8px; padding: 4px 10px; font-size: 11px; letter-spacing: 0.08em; }
+  .team-card__qr { width: 84px; height: 84px; border-radius: 12px; border: 1px solid var(--line); }
 
   /* ============================================================
      Page 3, Introduction
@@ -319,7 +324,22 @@
   /* ============================================================
      Page 5, Workday mandates
      ============================================================ */
-  .mandates { padding: 100px 56px 66px; height: 100%; display: flex; flex-direction: column; }
+  /* photo column on the right, as on the Rael proposal page */
+  .split { display: grid; grid-template-columns: 2.1fr 1fr; height: 100%; }
+  .side-photo { position: relative; overflow: hidden; margin: 0; height: 720px; }
+  .side-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .side-photo::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(200deg, rgba(14, 58, 82, 0) 35%, rgba(14, 58, 82, 0.55) 100%);
+  }
+  .side-photo figcaption {
+    position: absolute; left: 26px; right: 26px; bottom: 24px; z-index: 2; color: #fff;
+    font-size: 13px; line-height: 1.55;
+  }
+  .side-photo figcaption b { font-family: var(--font-display); font-weight: 500; font-size: 15px; display: block; margin-bottom: 3px; }
+  .side-photo figcaption a { color: inherit; text-decoration: none; }
+
+  .mandates { padding: 100px 40px 66px 56px; height: 100%; display: flex; flex-direction: column; }
   .mandate-grid { flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 1fr; gap: 14px; }
   .mandate {
     padding: 16px 20px 16px 22px; display: flex; flex-direction: column; justify-content: center;
@@ -329,8 +349,8 @@
     content: ""; position: absolute; left: 0; top: 16px; bottom: 16px; width: 3px;
     border-radius: 0 3px 3px 0; background: var(--grad-brand);
   }
-  .mandate h3 { font-size: 18px; font-weight: 400; line-height: 1.25; }
-  .mandate p { font-size: 13px; color: var(--muted); margin-top: 4px; }
+  .mandate h3 { font-size: 16.5px; font-weight: 400; line-height: 1.25; }
+  .mandate p { font-size: 12.5px; color: var(--muted); margin-top: 4px; }
 
   /* ============================================================
      Page 6, Workday market
@@ -373,28 +393,29 @@
   /* ============================================================
      Page 7, Salary benchmarking
      ============================================================ */
-  .salary { padding: 96px 56px 64px; height: 100%; display: grid; grid-template-rows: auto auto 1fr auto; gap: 12px; }
+  .salary { padding: 86px 40px 62px 56px; height: 100%; display: grid; grid-template-rows: auto auto auto 1fr auto; gap: 9px; }
   .salary__lede { font-size: 15px; color: var(--muted); margin-top: -4px; }
-  .salary__cols { display: grid; grid-template-columns: 1.18fr 0.92fr 1.1fr; gap: 16px; }
-  .sal-card { padding: 18px 22px; display: flex; flex-direction: column; }
+  .salary__cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .sal-card { padding: 12px 20px; display: flex; flex-direction: column; }
   .sal-card h3 { font-size: 15px; font-weight: 600; font-family: var(--font); color: var(--navy); margin-bottom: 2px; }
-  .sal-card .lede { font-size: 13px; color: var(--muted); margin-bottom: 14px; }
+  .sal-card .lede { font-size: 12.5px; color: var(--muted); margin-bottom: 8px; }
   .sal-table { width: 100%; border-collapse: collapse; }
   .sal-table th {
     text-align: left; font-size: 10.5px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
     color: var(--green-ink); padding: 0 0 8px; border-bottom: 1px solid var(--line);
   }
   .sal-table th:last-child, .sal-table td:last-child { text-align: right; }
-  .sal-table td { font-size: 14.5px; color: var(--ink); padding: 17px 0; border-bottom: 1px solid var(--line); }
+  .sal-table td { font-size: 13.5px; color: var(--ink); padding: 8px 0; border-bottom: 1px solid var(--line); }
   .sal-table tr:last-child td { border-bottom: none; }
-  .sal-table td:last-child { font-family: var(--font-display); font-weight: 400; font-size: 15.5px; color: var(--navy); white-space: nowrap; }
-  .premium { margin: 4px 0 12px; }
-  .premium b { display: block; font-family: var(--font-display); font-weight: 200; font-size: 52px; line-height: 1; letter-spacing: -0.03em; color: var(--navy); }
+  .sal-table td:last-child { font-family: var(--font-display); font-weight: 400; font-size: 14.5px; color: var(--navy); white-space: nowrap; }
+  .sal-card--premium { display: grid; grid-template-columns: 1.1fr 1fr; gap: 22px; align-items: center; }
+  .premium { margin: 4px 0 0; }
+  .premium b { display: block; font-family: var(--font-display); font-weight: 200; font-size: 36px; line-height: 1; letter-spacing: -0.03em; color: var(--navy); }
   .premium span { font-size: 12.5px; color: var(--muted); }
-  .sal-card .tick-list li { font-size: 13.5px; margin-bottom: 7px; }
+  .sal-card .tick-list li { font-size: 13px; margin-bottom: 7px; }
   .expect {
     background: var(--grad-deep); color: #fff; border-radius: var(--radius-lg);
-    padding: 16px 28px; display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 26px; align-items: center;
+    padding: 12px 24px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; align-items: center;
     position: relative; overflow: hidden;
   }
   .expect::before {
@@ -403,10 +424,10 @@
   }
   .expect > * { position: relative; }
   .expect__lead small { font-size: 11px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--mint); }
-  .expect__lead p { font-family: var(--font-display); font-weight: 300; font-size: 17px; line-height: 1.35; margin-top: 4px; }
-  .expect__figure { border-left: 1px solid rgba(255, 255, 255, 0.2); padding-left: 24px; }
+  .expect__lead p { font-family: var(--font-display); font-weight: 300; font-size: 16px; line-height: 1.35; margin-top: 4px; }
+  .expect__figure { border-left: 1px solid rgba(255, 255, 255, 0.2); padding-left: 18px; }
   .expect__figure small { font-size: 12px; color: rgba(255, 255, 255, 0.75); display: block; }
-  .expect__figure b { font-family: var(--font-display); font-weight: 300; font-size: 26px; letter-spacing: -0.01em; color: var(--mint); white-space: nowrap; }
+  .expect__figure b { font-family: var(--font-display); font-weight: 300; font-size: 21px; letter-spacing: -0.01em; color: var(--mint); white-space: nowrap; }
   .expect__figure span { display: block; font-size: 12px; color: rgba(255, 255, 255, 0.75); margin-top: 2px; }
 
   /* ---- floating PDF download ---- */
@@ -470,7 +491,11 @@
     .toc > div + div { margin-top: 30px; }
     .toc__list li { font-size: 17px; }
     .team-card { grid-template-columns: 1fr; padding: 18px; }
-    .team-card .chip { top: 18px; right: 18px; }
+    .team-card__qr { display: none; }
+    .toc__photo { height: 220px; flex: none; }
+    .split { display: block; height: auto; }
+    .side-photo { height: 300px; }
+    .sal-card--premium { grid-template-columns: 1fr; gap: 10px; }
     .team-card__contact { overflow-wrap: anywhere; }
 
     .intro { display: block; height: auto; padding: 26px 20px 6px; }
@@ -559,6 +584,9 @@
         <li>Workday Mandates</li>
         <li>Search Strategy</li>
       </ul>
+      <figure class="toc__photo">
+        <img src="/houlihan-lokey/img/hl-office-meeting.jpg" alt="Houlihan Lokey colleagues in a meeting">
+      </figure>
     </div>
     <div>
       <p class="eyebrow">Your team</p>
@@ -566,20 +594,20 @@
       <div class="card team-card">
         <img class="team-card__photo" src="/houlihan-lokey/img/meg-park.jpg" alt="Meg Park">
         <div>
-          <p class="team-card__name">Meg Park</p>
+          <p class="team-card__name">Meg Park<span class="chip">UK</span></p>
           <p class="team-card__role">Senior Consultant &middot; Financial and Professional Services</p>
           <p class="team-card__contact"><b><a href="mailto:megpark@oakleafpartnership.com">megpark@oakleafpartnership.com</a></b><br><a href="tel:+442073377650">+44 20 7337 7650</a></p>
         </div>
-        <span class="chip">UK</span>
+        <img class="team-card__qr" src="/houlihan-lokey/img/qr-meg-park.png" alt="QR code for Meg Park">
       </div>
       <div class="card team-card">
         <img class="team-card__photo" src="/houlihan-lokey/img/riley-garnett.jpg" alt="Riley Garnett">
         <div>
-          <p class="team-card__name">Riley Garnett</p>
+          <p class="team-card__name">Riley Garnett<span class="chip">US</span></p>
           <p class="team-card__role">Senior Manager &middot; New York</p>
           <p class="team-card__contact"><b><a href="mailto:rileygarnett@oakleafpartnership.com">rileygarnett@oakleafpartnership.com</a></b><br><a href="tel:+19172000164">+1 (917) 200-0164</a></p>
         </div>
-        <span class="chip">US</span>
+        <img class="team-card__qr" src="/houlihan-lokey/img/qr-riley-garnett.png" alt="QR code for Riley Garnett">
       </div>
     </div>
   </div>
@@ -728,11 +756,12 @@
 <!-- ============================================================
      5. Workday mandates
      ============================================================ -->
-<section class="page">
+<section class="page page--photo-right">
   <div class="chrome">
     <img class="oakleaf" src="/houlihan-lokey/img/oakleaf-partnership.svg" alt="Oakleaf Partnership">
-    <img class="client" src="/houlihan-lokey/img/houlihan-lokey.svg" alt="Houlihan Lokey">
+    <span class="client-chip"><img class="client" src="/houlihan-lokey/img/houlihan-lokey.svg" alt="Houlihan Lokey"></span>
   </div>
+  <div class="split">
   <div class="mandates">
     <div>
       <p class="eyebrow">Oakleaf portfolio</p>
@@ -749,6 +778,10 @@
       <div class="card mandate"><h3>Workday Consultant</h3><p>ICG FMC Limited</p></div>
       <div class="card mandate"><h3>Workday EMEA/APAC</h3><p>Pimco Europe Ltd</p></div>
     </div>
+  </div>
+  <figure class="side-photo">
+    <img src="/houlihan-lokey/img/hl-office-team.jpg" alt="Houlihan Lokey colleagues around a conference table">
+  </figure>
   </div>
   <div class="pagefoot"><span>Houlihan Lokey &middot; Workday HR Reporting Analyst Search Proposal</span><b>05</b></div>
 </section>
@@ -800,11 +833,12 @@
 <!-- ============================================================
      7. Search strategy: salaries
      ============================================================ -->
-<section class="page">
+<section class="page page--photo-right">
   <div class="chrome">
     <img class="oakleaf" src="/houlihan-lokey/img/oakleaf-partnership.svg" alt="Oakleaf Partnership">
-    <img class="client" src="/houlihan-lokey/img/houlihan-lokey.svg" alt="Houlihan Lokey">
+    <span class="client-chip"><img class="client" src="/houlihan-lokey/img/houlihan-lokey.svg" alt="Houlihan Lokey"></span>
   </div>
+  <div class="split">
   <div class="salary">
     <div class="head-row">
       <div>
@@ -826,17 +860,6 @@
         </table>
       </div>
       <div class="card sal-card">
-        <h3>Financial Services Premium</h3>
-        <p class="lede">Investment banks, private equity firms and asset managers typically pay:</p>
-        <div class="premium"><b>10 to 20%</b><span>higher than broader industry for Workday talent due to:</span></div>
-        <ul class="tick-list">
-          <li>Complex compensation structures</li>
-          <li>Global employee populations</li>
-          <li>Regulatory reporting requirements</li>
-          <li>Higher stakeholder expectations</li>
-        </ul>
-      </div>
-      <div class="card sal-card">
         <h3>US Market Comparison</h3>
         <p class="lede">Average US Workday Reporting Analyst salaries sit around:</p>
         <table class="sal-table">
@@ -849,6 +872,19 @@
         </table>
       </div>
     </div>
+    <div class="card sal-card sal-card--premium">
+      <div>
+        <h3>Financial Services Premium</h3>
+        <p class="lede">Investment banks, private equity firms and asset managers typically pay:</p>
+        <div class="premium"><b>10 to 20%</b><span>higher than broader industry for Workday talent due to:</span></div>
+      </div>
+      <ul class="tick-list">
+        <li>Complex compensation structures</li>
+        <li>Global employee populations</li>
+        <li>Regulatory reporting requirements</li>
+        <li>Higher stakeholder expectations</li>
+      </ul>
+    </div>
     <div class="expect">
       <div class="expect__lead">
         <p>For a role matching this specification, I would expect:</p>
@@ -856,6 +892,14 @@
       <div class="expect__figure"><small>Permanent Equivalent</small><b>£85,000 to £110,000</b> <span>base</span></div>
       <div class="expect__figure"><small>or 12 Month FTC</small><b>£90,000 to £120,000</b> <span>pro rated salary</span></div>
     </div>
+  </div>
+  <figure class="side-photo">
+    <img src="/houlihan-lokey/img/office.jpg" alt="Modern office with a living green wall">
+    <figcaption>
+      <b>Let's get started</b>
+      Meg Park &middot; <a href="tel:+442073377650">+44 20 7337 7650</a> &middot; <a href="mailto:megpark@oakleafpartnership.com">megpark@oakleafpartnership.com</a>
+    </figcaption>
+  </figure>
   </div>
   <div class="pagefoot"><span>Houlihan Lokey &middot; Workday HR Reporting Analyst Search Proposal &nbsp;&middot;&nbsp; To view our full capabilities visit <a href="https://cap.oakleafpartnership.com">cap.oakleafpartnership.com</a></span><b>07</b></div>
 </section>
